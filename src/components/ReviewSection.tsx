@@ -9,9 +9,11 @@ const ReviewSection = () => {
   const { t } = useLanguage();
 
   const reviews = [
-    { text: t('reviews.1.text'), author: t('reviews.1.author') },
-    { text: t('reviews.2.text'), author: t('reviews.2.author') },
-    { text: t('reviews.3.text'), author: t('reviews.3.author') },
+    { name: t('reviews.1.name'), text: t('reviews.1.text') },
+    { name: t('reviews.2.name'), text: t('reviews.2.text') },
+    { name: t('reviews.3.name'), text: t('reviews.3.text') },
+    { name: t('reviews.4.name'), text: t('reviews.4.text') },
+    { name: t('reviews.5.name'), text: t('reviews.5.text') },
   ];
 
   return (
@@ -44,15 +46,17 @@ const ReviewSection = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              className="bg-white p-10 rounded-[2.5rem] shadow-sm border border-[#0D6D7E]/5 relative group hover:shadow-xl transition-all duration-500"
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+              className={`bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-[#0D6D7E]/5 relative group hover:shadow-xl transition-all duration-500 flex flex-col ${
+                i >= 3 ? 'lg:col-span-1' : ''
+              }`}
             >
               <div className="absolute -top-5 left-10 w-10 h-10 bg-[#C99B3C] rounded-full flex items-center justify-center text-white shadow-lg">
                 <Quote size={18} />
@@ -64,15 +68,15 @@ const ReviewSection = () => {
                 ))}
               </div>
 
-              <p className="text-gray-600 leading-relaxed font-light italic mb-8 text-lg">
+              <p className="text-gray-600 leading-relaxed font-light italic mb-8 text-base md:text-lg flex-grow whitespace-pre-line">
                 "{review.text}"
               </p>
 
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-[#0D6D7E]/10 rounded-full flex items-center justify-center text-[#0D6D7E] font-serif font-bold">
-                  {review.author.charAt(0)}
+              <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-50">
+                <div className="w-10 h-10 bg-[#0D6D7E]/10 rounded-full flex items-center justify-center text-[#0D6D7E] font-serif font-bold shrink-0">
+                  {review.name.charAt(0)}
                 </div>
-                <span className="text-[#0D6D7E] font-bold tracking-wide">{review.author}</span>
+                <span className="text-[#0D6D7E] font-bold tracking-wide">{review.name}</span>
               </div>
             </motion.div>
           ))}
