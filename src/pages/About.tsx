@@ -206,17 +206,17 @@ const AboutPage = () => {
             </motion.div>
           </div>
 
-          {/* Full Width Image */}
+          {/* Full Width Image - Adjusted for no cropping on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full h-[60vh] md:h-[85vh] relative"
+            className="w-full h-[60vh] md:h-auto relative"
           >
             <img 
               src={hospitalityHero} 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:h-auto md:object-contain"
               alt="The Heart of Hospitality"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#F5EFE6]/20 to-transparent pointer-events-none" />
