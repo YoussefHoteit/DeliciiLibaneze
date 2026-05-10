@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import CategorySection from '@/components/CategorySection';
 import AtmosphereSection from '@/components/AtmosphereSection';
+import ReviewSection from '@/components/ReviewSection';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
@@ -85,6 +86,8 @@ const Index = () => {
             ))}
           </div>
         </section>
+
+        <ReviewSection />
       </main>
       <Footer />
     </div>

@@ -52,6 +52,14 @@ const translations: Record<Language, Record<string, string>> = {
     'gallery.subtitle': 'A glimpse into our world',
     'gallery.photos': 'Photos',
     'gallery.videos': 'Videos',
+    'reviews.title': 'Guest Experiences',
+    'reviews.subtitle': 'What our visitors say',
+    'reviews.1.text': 'The best baklava in Bucharest! Authentic taste and amazing atmosphere. It feels like a quick trip to Beirut.',
+    'reviews.1.author': 'Maria I.',
+    'reviews.2.text': 'The ashta ice cream is a must-try. It is exactly like the one I had in Lebanon. Truly authentic and delicious.',
+    'reviews.2.author': 'Ahmed K.',
+    'reviews.3.text': 'Beautiful interior and very friendly staff. A perfect spot for premium coffee and traditional sweets on Calea Victoriei.',
+    'reviews.3.author': 'Elena D.',
   },
   ro: {
     'nav.home': 'Acasă',
@@ -94,6 +102,14 @@ const translations: Record<Language, Record<string, string>> = {
     'gallery.subtitle': 'O privire în lumea noastră',
     'gallery.photos': 'Fotografii',
     'gallery.videos': 'Videoclipuri',
+    'reviews.title': 'Experiențele Oaspeților',
+    'reviews.subtitle': 'Ce spun vizitatorii noștri',
+    'reviews.1.text': 'Cea mai bună baklava din București! Gust autentic și o atmosferă uimitoare. Te simți ca într-o scurtă călătorie la Beirut.',
+    'reviews.1.author': 'Maria I.',
+    'reviews.2.text': 'Înghețata ashta este un must-try. Este exact ca cea pe care am mâncat-o în Liban. Cu adevărat autentică și delicioasă.',
+    'reviews.2.author': 'Ahmed K.',
+    'reviews.3.text': 'Interior superb și personal foarte amabil. Un loc perfect pentru o cafea premium și dulciuri tradiționale pe Calea Victoriei.',
+    'reviews.3.author': 'Elena D.',
   }
 };
 
