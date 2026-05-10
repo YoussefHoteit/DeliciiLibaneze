@@ -9,7 +9,8 @@ import { cn } from '@/lib/utils';
 import { Search, X, ZoomIn } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useLocation } from 'react-router-dom';
-import menuHero from '@/assets/menu-hero-new.jpg';
+// Swapped image
+import menuHero from '@/assets/contact-hero.jpg';
 
 const menuData = [
   {

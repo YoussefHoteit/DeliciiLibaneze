@@ -9,7 +9,8 @@ import { Phone, Mail, Clock, Send, MapPin, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import contactHero from '@/assets/contact-hero.jpg';
+// Swapped image
+import contactHero from '@/assets/menu-hero-new.jpg';
 
 const ContactPage = () => {
   const { t } = useLanguage();
