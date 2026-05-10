@@ -38,7 +38,7 @@ const AtmosphereSection = () => {
             className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#A55443] rounded-full flex items-center justify-center p-8 shadow-2xl hidden md:flex"
           >
             <p className="text-[#F5EFE6] text-center font-serif italic text-lg">
-              Authentic Lebanese Experience
+              {t('atmosphere.tagline')}
             </p>
           </motion.div>
         </motion.div>
@@ -55,13 +55,13 @@ const AtmosphereSection = () => {
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="text-[#C99B3C] uppercase tracking-[0.3em] text-sm font-bold mb-4 block"
           >
-            The Atmosphere
+            {t('atmosphere.subtitle')}
           </motion.span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">
-            Where Tradition <br /> Meets Elegance
+            {t('atmosphere.title')}
           </h2>
           <p className="text-lg text-[#F5EFE6]/80 mb-10 leading-relaxed font-light">
-            Step into a world of deep teal arches and warm terracotta tones. Our space is designed to be a sanctuary of Lebanese culture, where every detail—from the ornate wall art to the velvet seating—tells a story of hospitality and craft.
+            {t('atmosphere.text')}
           </p>
           
           <div className="grid grid-cols-2 gap-8">
@@ -71,8 +71,8 @@ const AtmosphereSection = () => {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <h4 className="text-[#C99B3C] font-serif text-2xl mb-2">Artisanal</h4>
-              <p className="text-sm text-[#F5EFE6]/60">Handcrafted desserts made daily with premium ingredients.</p>
+              <h4 className="text-[#C99B3C] font-serif text-2xl mb-2">{t('atmosphere.feature.1.title')}</h4>
+              <p className="text-sm text-[#F5EFE6]/60">{t('atmosphere.feature.1.desc')}</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -80,8 +80,8 @@ const AtmosphereSection = () => {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <h4 className="text-[#C99B3C] font-serif text-2xl mb-2">Authentic</h4>
-              <p className="text-sm text-[#F5EFE6]/60">Traditional recipes passed down through generations.</p>
+              <h4 className="text-[#C99B3C] font-serif text-2xl mb-2">{t('atmosphere.feature.2.title')}</h4>
+              <p className="text-sm text-[#F5EFE6]/60">{t('atmosphere.feature.2.desc')}</p>
             </motion.div>
           </div>
         </motion.div>

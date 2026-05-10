@@ -8,8 +8,11 @@ import AtmosphereSection from '@/components/AtmosphereSection';
 import ReviewSection from '@/components/ReviewSection';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-[#F5EFE6] selection:bg-[#0D6D7E] selection:text-[#F5EFE6]">
       <Navbar />
@@ -29,7 +32,7 @@ const Index = () => {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="text-[#A55443] uppercase tracking-[0.4em] text-xs font-bold mb-4 block"
             >
-              Welcome to Bucharest's Finest
+              {t('intro.subtitle')}
             </motion.span>
             
             <motion.h2 
@@ -39,7 +42,7 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-5xl font-serif font-bold text-[#0D6D7E] mb-8"
             >
-              A Taste of Lebanon in Every Bite
+              {t('intro.title')}
             </motion.h2>
             
             <motion.p 
@@ -49,7 +52,7 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg text-gray-600 leading-relaxed font-light"
             >
-              From the golden layers of our handcrafted baklava to the unique stretch of our traditional Arabic ice cream, we invite you to experience the true essence of Lebanese dessert culture.
+              {t('intro.text')}
             </motion.p>
           </motion.div>
         </section>
@@ -61,9 +64,9 @@ const Index = () => {
         <section className="py-32 bg-white px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { num: '01', title: 'Handcrafted', desc: 'Every dessert is prepared daily using traditional methods and premium ingredients.' },
-              { num: '02', title: 'Authentic', desc: 'Our recipes are rooted in Lebanese heritage, bringing genuine flavors to your table.' },
-              { num: '03', title: 'Premium', desc: 'From our specialty coffee to our fresh juices, quality is at the heart of everything we do.' }
+              { num: '01', title: t('feature.1.title'), desc: t('feature.1.desc') },
+              { num: '02', title: t('feature.2.title'), desc: t('feature.2.desc') },
+              { num: '03', title: t('feature.3.title'), desc: t('feature.3.desc') }
             ].map((feature, i) => (
               <motion.div 
                 key={i}

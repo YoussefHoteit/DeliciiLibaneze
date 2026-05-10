@@ -15,7 +15,7 @@ const Footer = () => {
             DELICII <span className="text-[#C99B3C]">LIBANEZE</span>
           </h3>
           <p className="text-[#F5EFE6]/60 leading-relaxed font-light max-w-md">
-            {t('footer.tagline')}. Bringing the finest Lebanese desserts and café culture to the heart of Bucharest.
+            {t('footer.tagline')}
           </p>
           <div className="flex space-x-4">
             <a href="#" className="w-10 h-10 rounded-full border border-[#F5EFE6]/20 flex items-center justify-center hover:bg-[#C99B3C] hover:border-[#C99B3C] transition-all">
@@ -29,7 +29,7 @@ const Footer = () => {
 
         <div className="md:flex md:justify-end">
           <div className="w-full md:max-w-xs">
-            <h4 className="text-[#C99B3C] uppercase tracking-widest text-sm font-bold mb-8">Contact</h4>
+            <h4 className="text-[#C99B3C] uppercase tracking-widest text-sm font-bold mb-8">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-[#F5EFE6]/60">
                 <MapPin size={18} className="mt-1 shrink-0" />

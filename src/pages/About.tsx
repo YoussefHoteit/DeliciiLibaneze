@@ -67,7 +67,7 @@ const AboutPage = () => {
                 {t('about.subtitle')}
               </motion.span>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0D6D7E] leading-tight">
-                Tradition Meets <br /> Modern Elegance
+                {t('about.story.title')}
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed font-light">
                 {t('about.text')}
@@ -95,7 +95,7 @@ const AboutPage = () => {
                 transition={{ delay: 0.5 }}
                 className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#0D6D7E] rounded-full flex items-center justify-center p-6 text-center hidden md:flex shadow-2xl"
               >
-                <p className="text-[#F5EFE6] font-serif italic text-lg">Handcrafted with Love</p>
+                <p className="text-[#F5EFE6] font-serif italic text-lg">{t('about.story.tagline')}</p>
               </motion.div>
             </motion.div>
           </div>
@@ -125,8 +125,8 @@ const AboutPage = () => {
                   transition={{ delay: 0.2 }}
                   className="border-l-2 border-[#C99B3C] pl-6"
                 >
-                  <h4 className="text-2xl font-serif text-[#C99B3C] mb-2">Premium</h4>
-                  <p className="text-sm text-[#F5EFE6]/60">Only the finest pistachios and honey.</p>
+                  <h4 className="text-2xl font-serif text-[#C99B3C] mb-2">{t('about.craft.feature.1.title')}</h4>
+                  <p className="text-sm text-[#F5EFE6]/60">{t('about.craft.feature.1.desc')}</p>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -135,8 +135,8 @@ const AboutPage = () => {
                   transition={{ delay: 0.4 }}
                   className="border-l-2 border-[#C99B3C] pl-6"
                 >
-                  <h4 className="text-2xl font-serif text-[#C99B3C] mb-2">Artisanal</h4>
-                  <p className="text-sm text-[#F5EFE6]/60">Small batches for maximum freshness.</p>
+                  <h4 className="text-2xl font-serif text-[#C99B3C] mb-2">{t('about.craft.feature.2.title')}</h4>
+                  <p className="text-sm text-[#F5EFE6]/60">{t('about.craft.feature.2.desc')}</p>
                 </motion.div>
               </div>
             </motion.div>

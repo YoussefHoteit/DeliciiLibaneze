@@ -9,7 +9,6 @@ import { Phone, Mail, Clock, Send, MapPin, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-// New hero image
 import contactHero from '@/assets/contact-hero-new.jpg';
 
 const ContactPage = () => {
@@ -19,7 +18,6 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    // Reset after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -101,7 +99,7 @@ const ContactPage = () => {
                     <MapPin className="text-[#A55443]" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">Location</h3>
+                    <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">{t('contact.info.location')}</h3>
                     <p className="text-gray-500 font-light text-sm">Calea Victoriei 25, București</p>
                   </div>
                 </motion.div>
@@ -115,7 +113,7 @@ const ContactPage = () => {
                     <Phone className="text-[#A55443]" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">Call Us</h3>
+                    <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">{t('contact.info.call')}</h3>
                     <p className="text-gray-500 font-light text-sm">+40 731 436 991</p>
                   </div>
                 </motion.a>
@@ -128,7 +126,7 @@ const ContactPage = () => {
                     <Mail className="text-[#A55443]" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">Email</h3>
+                    <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">{t('contact.info.email')}</h3>
                     <p className="text-gray-500 font-light text-sm">hello@deliciilibaneze.ro</p>
                   </div>
                 </motion.div>
@@ -154,8 +152,8 @@ const ContactPage = () => {
                       exit={{ opacity: 0, y: -20 }}
                       className="flex-1"
                     >
-                      <h2 className="text-3xl font-serif font-bold mb-2">Send a Message</h2>
-                      <p className="text-[#F5EFE6]/60 font-light mb-10">We'll get back to you as soon as possible.</p>
+                      <h2 className="text-3xl font-serif font-bold mb-2">{t('contact.form.title')}</h2>
+                      <p className="text-[#F5EFE6]/60 font-light mb-10">{t('contact.form.subtitle')}</p>
                       
                       <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -166,7 +164,7 @@ const ContactPage = () => {
                             <Input 
                               required
                               className="bg-white/5 border-white/10 text-[#F5EFE6] focus:border-[#C99B3C] focus:ring-0 rounded-xl h-14 placeholder:text-white/20"
-                              placeholder="Your Name"
+                              placeholder={t('contact.form.name.placeholder')}
                             />
                           </div>
                           <div className="space-y-2">
@@ -177,7 +175,7 @@ const ContactPage = () => {
                               required
                               type="email"
                               className="bg-white/5 border-white/10 text-[#F5EFE6] focus:border-[#C99B3C] focus:ring-0 rounded-xl h-14 placeholder:text-white/20"
-                              placeholder="Email Address"
+                              placeholder={t('contact.form.email.placeholder')}
                             />
                           </div>
                         </div>
@@ -188,7 +186,7 @@ const ContactPage = () => {
                           <Textarea 
                             required
                             className="bg-white/5 border-white/10 text-[#F5EFE6] focus:border-[#C99B3C] focus:ring-0 rounded-xl min-h-[150px] placeholder:text-white/20 resize-none"
-                            placeholder="How can we help you?"
+                            placeholder={t('contact.form.message.placeholder')}
                           />
                         </div>
                         <Button type="submit" className="w-full bg-[#C99B3C] hover:bg-[#B08835] text-[#0D6D7E] rounded-xl py-7 text-lg font-serif font-bold transition-all group">
@@ -209,16 +207,16 @@ const ContactPage = () => {
                       <div className="w-20 h-20 bg-[#C99B3C]/20 rounded-full flex items-center justify-center">
                         <CheckCircle2 className="text-[#C99B3C]" size={48} />
                       </div>
-                      <h2 className="text-3xl font-serif font-bold">Message Sent!</h2>
+                      <h2 className="text-3xl font-serif font-bold">{t('contact.form.success.title')}</h2>
                       <p className="text-[#F5EFE6]/60 font-light max-w-xs">
-                        Thank you for reaching out. We will get back to you shortly.
+                        {t('contact.form.success.text')}
                       </p>
                       <Button 
                         onClick={() => setIsSubmitted(false)}
                         variant="outline" 
                         className="border-[#C99B3C] text-[#C99B3C] hover:bg-[#C99B3C] hover:text-[#0D6D7E] rounded-xl"
                       >
-                        Send another message
+                        {t('contact.form.success.cta')}
                       </Button>
                     </motion.div>
                   )}
