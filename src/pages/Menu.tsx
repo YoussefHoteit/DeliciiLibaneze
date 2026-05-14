@@ -145,7 +145,7 @@ const MenuPage = () => {
     }
     const element = document.getElementById(id);
     if (element) {
-      const offset = 160;
+      const offset = 180; // Adjusted offset for sticky nav
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -163,7 +163,7 @@ const MenuPage = () => {
     if (location.state?.categoryId) {
       const timer = setTimeout(() => {
         scrollToCategory(location.state.categoryId);
-      }, 300);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [location.state]);
@@ -174,7 +174,7 @@ const MenuPage = () => {
         setActiveCategory('All');
       } else {
         const categoryElements = menuData.map(cat => document.getElementById(cat.id));
-        const scrollPosition = window.scrollY + 200;
+        const scrollPosition = window.scrollY + 250;
 
         for (let i = categoryElements.length - 1; i >= 0; i--) {
           const element = categoryElements[i];
