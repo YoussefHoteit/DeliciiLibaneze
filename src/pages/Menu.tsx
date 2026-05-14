@@ -25,7 +25,7 @@ const MenuPage = () => {
       icon: <UtensilsCrossed size={20} />,
       sections: [
         {
-          title: '',
+          title: t('menu.sub.sweets'),
           items: [
             { 
               name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
@@ -55,6 +55,11 @@ const MenuPage = () => {
               weight: '220g',
               image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
             },
+          ]
+        },
+        {
+          title: t('menu.sub.icecream'),
+          items: [
             { 
               name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
               desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
