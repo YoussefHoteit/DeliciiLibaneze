@@ -6,8 +6,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Search, X, ZoomIn } from 'lucide-relative';
-import { Search as SearchIcon, ZoomIn as ZoomInIcon } from 'lucide-react';
+import { Search, X, ZoomIn } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useLocation } from 'react-router-dom';
 import menuHero from '@/assets/contact-hero.jpg';
@@ -27,6 +26,7 @@ const MenuPage = () => {
       category: t('menu.main.desserts'),
       id: 'desserts',
       items: [
+        // Lebanese Desserts
         { 
           name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
           desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
@@ -55,6 +55,7 @@ const MenuPage = () => {
           weight: '220g',
           image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
         },
+        // Arabic Ice Cream
         { 
           name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
           desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
@@ -82,6 +83,7 @@ const MenuPage = () => {
       category: t('menu.main.drinks'),
       id: 'drinks',
       items: [
+        // Arabic Coffee
         { 
           name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
           desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
@@ -103,6 +105,7 @@ const MenuPage = () => {
           weight: '250ml',
           image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
         },
+        // Fresh Juices
         { 
           name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
           desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
@@ -162,8 +165,17 @@ const MenuPage = () => {
 
   useEffect(() => {
     if (location.state?.categoryId) {
+      // Map old category IDs to new ones if needed
+      const categoryMap: Record<string, string> = {
+        'lebanese-desserts': 'desserts',
+        'arabic-ice-cream': 'desserts',
+        'arabic-coffee': 'drinks',
+        'fresh-juices': 'drinks'
+      };
+      const targetId = categoryMap[location.state.categoryId] || location.state.categoryId;
+      
       const timer = setTimeout(() => {
-        scrollToCategory(location.state.categoryId);
+        scrollToCategory(targetId);
       }, 300);
       return () => clearTimeout(timer);
     }
@@ -242,7 +254,7 @@ const MenuPage = () => {
           </h1>
           
           <div className="relative max-w-md mx-auto">
-            <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 text-[#F5EFE6]/60 z-10" size={20} />
+            <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-[#F5EFE6]/60 z-10" size={20} />
             <Input 
               type="text"
               placeholder={t('menu.search')}
@@ -361,7 +373,7 @@ const MenuPage = () => {
                             className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-500 relative cursor-zoom-in"
                           >
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                              <ZoomInIcon className="text-white" size={24} />
+                              <ZoomIn className="text-white" size={24} />
                             </div>
                             <img 
                               src={item.image} 
