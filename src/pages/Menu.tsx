@@ -143,7 +143,7 @@ const MenuPage = () => {
             },
             { 
               name: language === 'ro' ? 'Fructe de Pădure' : 'Mixed Berries', 
-              desc: language === 'ro' ? 'Un mix exploziv de fructe de pădure proaspete' : 'An explosive mix of fresh forest fruits', 
+              desc: language === 'ro' ? 'Un amestec exploziv de fructe de pădure proaspete' : 'An explosive mix of fresh forest fruits', 
               price: '24 lei', weight: '150g', image: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&q=80&w=800'
             },
             { 
@@ -263,6 +263,13 @@ const MenuPage = () => {
               weight: '400ml',
               image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
             },
+            { 
+              name: language === 'ro' ? 'Sous (Erk Sous)' : 'Sous (Erk Sous)', 
+              desc: language === 'ro' ? 'Băutură tradițională răcoritoare din rădăcină de lemn dulce' : 'Traditional refreshing licorice root beverage', 
+              price: '14 lei',
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
           ]
         },
         {
@@ -296,11 +303,25 @@ const MenuPage = () => {
               weight: '200ml',
               image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
             },
+            { 
+              name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
+              desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
+              price: '16 lei', 
+              weight: '200ml',
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
           ]
         },
         {
           title: t('menu.sub.tea'),
           items: [
+            { 
+              name: language === 'ro' ? 'Sahlab' : 'Sahlab', 
+              desc: language === 'ro' ? 'Băutură caldă tradițională cu lapte, orhidee, scorțișoară și fistic' : 'Traditional warm milk drink with orchid root, cinnamon, and pistachio', 
+              price: '18 lei',
+              weight: '200ml',
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
             { 
               name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
               desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
