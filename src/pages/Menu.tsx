@@ -66,29 +66,21 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
               desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
-              price: '34 lei', 
-              weight: '250g',
               image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
               desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
-              price: '38 lei',
-              weight: '200g',
               image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
               desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
-              price: '36 lei', 
-              weight: '300g',
               image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Halawet El Jibn' : 'Halawet El Jibn', 
               desc: language === 'ro' ? 'Rulouri moi de brânză umplute cu cremă și fistic' : 'Soft cheese rolls filled with cream and pistachio', 
-              price: '35 lei',
-              weight: '220g',
               image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
             },
           ]
@@ -97,181 +89,181 @@ const MenuPage = () => {
           title: t('menu.sub.icecream'),
           info: t('menu.icecream.info'),
           addons: [
-            { name: language === 'ro' ? 'Fistic' : 'Pistachio', price: '5 lei' },
-            { name: language === 'ro' ? 'Caramel' : 'Caramel', price: '5 lei' },
-            { name: language === 'ro' ? 'Ciocolată' : 'Chocolate', price: '5 lei' },
-            { name: language === 'ro' ? 'Ciocolată Albă' : 'White Chocolate', price: '5 lei' },
+            { name: language === 'ro' ? 'Fistic' : 'Pistachio' },
+            { name: language === 'ro' ? 'Caramel' : 'Caramel' },
+            { name: language === 'ro' ? 'Ciocolată' : 'Chocolate' },
+            { name: language === 'ro' ? 'Ciocolată Albă' : 'White Chocolate' },
           ],
           items: [
             { 
               name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', 
               desc: language === 'ro' ? 'O combinație îndrăzneață de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', 
-              price: '28 lei', weight: '150g', image: imgAlmondsPinkPepper
+              image: imgAlmondsPinkPepper
             },
             { 
               name: language === 'ro' ? 'Fistic Iran' : 'Iranian Pistachio', 
               desc: language === 'ro' ? 'Înghețată premium cu cel mai fin fistic iranian' : 'Premium ice cream with the finest Iranian pistachio', 
-              price: '32 lei', weight: '150g', image: imgIranianPistachio
+              image: imgIranianPistachio
             },
             { 
               name: language === 'ro' ? 'Trandafir Picant' : 'Spicy Rose', 
               desc: language === 'ro' ? 'Aromă florală de trandafir cu un postgust surprinzător' : 'Floral rose flavor with a surprising aftertaste', 
-              price: '26 lei', weight: '150g', image: imgSpicyRose
+              image: imgSpicyRose
             },
             { 
               name: language === 'ro' ? 'Ciocolată Picantă' : 'Spicy Chocolate', 
               desc: language === 'ro' ? 'Ciocolată neagră intensă cu note de chili' : 'Intense dark chocolate with chili notes', 
-              price: '26 lei', weight: '150g', image: imgSpicyChocolate
+              image: imgSpicyChocolate
             },
             { 
               name: language === 'ro' ? 'Iaurt Libanez' : 'Lebanese Yogurt', 
               desc: language === 'ro' ? 'Gust proaspăt și ușor acrișor de iaurt tradițional' : 'Fresh and slightly tangy traditional yogurt taste', 
-              price: '24 lei', weight: '150g', image: imgYogurt
+              image: imgYogurt
             },
             { 
               name: language === 'ro' ? 'Mango Egypt' : 'Egyptian Mango', 
               desc: language === 'ro' ? 'Mango exotic și dulce din inima Egiptului' : 'Exotic and sweet mango from the heart of Egypt', 
-              price: '28 lei', weight: '150g', image: imgMango
+              image: imgMango
             },
             { 
               name: language === 'ro' ? 'Rodie Egipt' : 'Egyptian Pomegranate', 
               desc: language === 'ro' ? 'Sorbet revigorant de rodie egipteană' : 'Refreshing Egyptian pomegranate sorbet', 
-              price: '28 lei', weight: '150g', image: imgPomegranate
+              image: imgPomegranate
             },
             { 
               name: language === 'ro' ? 'Baklava Fistic' : 'Pistachio Baklava Ice Cream', 
               desc: language === 'ro' ? 'Înghețată cremoasă cu bucățele de baklava cu fistic' : 'Creamy ice cream with pistachio baklava chunks', 
-              price: '30 lei', weight: '150g', image: imgBaklavaPistachio
+              image: imgBaklavaPistachio
             },
             { 
               name: language === 'ro' ? 'Baklava Nucă' : 'Walnut Baklava Ice Cream', 
               desc: language === 'ro' ? 'Înghețată cremoasă cu bucățele de baklava cu nucă' : 'Creamy ice cream with walnut baklava chunks', 
-              price: '30 lei', weight: '150g', image: imgBaklavaWalnut
+              image: imgBaklavaWalnut
             },
             { 
               name: language === 'ro' ? 'Smochine Cognac' : 'Figs with Cognac', 
               desc: language === 'ro' ? 'Aromă sofisticată de smochine infuzate în cognac' : 'Sophisticated flavor of figs infused in cognac', 
-              price: '32 lei', weight: '150g', image: imgFigs
+              image: imgFigs
             },
             { 
               name: language === 'ro' ? 'Trandafir cu Banane' : 'Rose with Bananas', 
               desc: language === 'ro' ? 'Un amestec delicat de petale de trandafir și banane coapte' : 'A delicate blend of rose petals and ripe bananas', 
-              price: '26 lei', weight: '150g', image: imgRoseBanana
+              image: imgRoseBanana
             },
             { 
               name: language === 'ro' ? 'Fructul Pasiunii' : 'Passion Fruit', 
               desc: language === 'ro' ? 'Sorbet tropical intens și aromat' : 'Intense and aromatic tropical sorbet', 
-              price: '26 lei', weight: '150g', image: imgPassionFruit
+              image: imgPassionFruit
             },
             { 
               name: language === 'ro' ? 'Castane' : 'Chestnuts', 
               desc: language === 'ro' ? 'Aromă bogată și catifelată de castane coapte' : 'Rich and velvety flavor of roasted chestnuts', 
-              price: '28 lei', weight: '150g', image: imgChestnuts
+              image: imgChestnuts
             },
             { 
               name: language === 'ro' ? 'Caju' : 'Cashew', 
               desc: language === 'ro' ? 'Înghețată cremoasă cu nuci caju prăjite' : 'Creamy ice cream with roasted cashew nuts', 
-              price: '28 lei', weight: '150g', image: imgCashew
+              image: imgCashew
             },
             { 
               name: language === 'ro' ? 'Zmeură' : 'Raspberry', 
               desc: language === 'ro' ? 'Sorbet proaspăt de zmeură de grădină' : 'Fresh garden raspberry sorbet', 
-              price: '24 lei', weight: '150g', image: imgRaspberry
+              image: imgRaspberry
             },
             { 
               name: language === 'ro' ? 'Ciocolată cu Amarene' : 'Chocolate with Sour Cherries', 
               desc: language === 'ro' ? 'Ciocolată fină cu cireșe amarene întregi' : 'Fine chocolate with whole amarene cherries', 
-              price: '28 lei', weight: '150g', image: imgChocolateAmarene
+              image: imgChocolateAmarene
             },
             { 
               name: language === 'ro' ? 'Fructe de Pădure' : 'Mixed Berries', 
               desc: language === 'ro' ? 'Un amestec exploziv de fructe de pădure proaspete' : 'An explosive mix of fresh forest fruits', 
-              price: '24 lei', weight: '150g', image: imgMixedBerries
+              image: imgMixedBerries
             },
             { 
               name: language === 'ro' ? 'Căpșuni' : 'Strawberries', 
               desc: language === 'ro' ? 'Gustul clasic al căpșunilor de vară' : 'The classic taste of summer strawberries', 
-              price: '24 lei', weight: '150g', image: imgStrawberries
+              image: imgStrawberries
             },
             { 
               name: language === 'ro' ? 'Cafea Arabică' : 'Arabic Coffee Ice Cream', 
               desc: language === 'ro' ? 'Înghețată intensă cu aromă de cafea la nisip' : 'Intense ice cream with sand-brewed coffee flavor', 
-              price: '26 lei', weight: '150g', image: imgArabicCoffeeIce
+              image: imgArabicCoffeeIce
             },
             { 
               name: 'Kiwi', 
               desc: language === 'ro' ? 'Sorbet exotic și revigorant de kiwi' : 'Exotic and refreshing kiwi sorbet', 
-              price: '24 lei', weight: '150g', image: imgKiwi
+              image: imgKiwi
             },
             { 
               name: language === 'ro' ? 'Alune de Pădure' : 'Hazelnuts', 
               desc: language === 'ro' ? 'Înghețată bogată cu alune de pădure prăjite' : 'Rich ice cream with roasted hazelnuts', 
-              price: '28 lei', weight: '150g', image: imgHazelnuts
+              image: imgHazelnuts
             },
             { 
               name: language === 'ro' ? 'Struguri Hamburg' : 'Hamburg Grapes', 
               desc: language === 'ro' ? 'Aromă unică de struguri negri parfumați' : 'Unique flavor of fragrant black grapes', 
-              price: '26 lei', weight: '150g', image: imgHamburgGrapes
+              image: imgHamburgGrapes
             },
             { 
               name: language === 'ro' ? 'Grepfrut' : 'Grapefruit', 
               desc: language === 'ro' ? 'Sorbet răcoritor cu note amărui de grepfrut' : 'Refreshing sorbet with bitter grapefruit notes', 
-              price: '24 lei', weight: '150g', image: imgGrapefruit
+              image: imgGrapefruit
             },
             { 
               name: language === 'ro' ? 'Nucă Neagră' : 'Black Walnut', 
               desc: language === 'ro' ? 'Aromă intensă și pământie de nucă neagră' : 'Intense and earthy black walnut flavor', 
-              price: '28 lei', weight: '150g', image: imgBlackWalnut
+              image: imgBlackWalnut
             },
             { 
               name: language === 'ro' ? 'Banane' : 'Bananas', 
               desc: language === 'ro' ? 'Înghețată cremoasă cu banane proaspete' : 'Creamy ice cream with fresh bananas', 
-              price: '24 lei', weight: '150g', image: imgBananas
+              image: imgBananas
             },
             { 
               name: language === 'ro' ? 'Pepene Galben' : 'Melon', 
               desc: language === 'ro' ? 'Sorbet dulce și parfumat de pepene galben' : 'Sweet and fragrant melon sorbet', 
-              price: '24 lei', weight: '150g', image: imgMelon
+              image: imgMelon
             },
             { 
               name: language === 'ro' ? 'Cireșe' : 'Cherries', 
               desc: language === 'ro' ? 'Sorbet intens de cireșe coapte' : 'Intense ripe cherry sorbet', 
-              price: '24 lei', weight: '150g', image: imgCherries
+              image: imgCherries
             },
             { 
               name: language === 'ro' ? 'Afine' : 'Blueberries', 
               desc: language === 'ro' ? 'Sorbet bogat în antioxidanți din afine proaspete' : 'Antioxidant-rich sorbet from fresh blueberries', 
-              price: '26 lei', weight: '150g', image: imgBlueberries
+              image: imgBlueberries
             },
             { 
               name: 'Cocos', 
               desc: language === 'ro' ? 'Înghețată exotică cu lapte de cocos și fulgi' : 'Exotic ice cream with coconut milk and flakes', 
-              price: '26 lei', weight: '150g', image: imgCoconut
+              image: imgCoconut
             },
             { 
               name: language === 'ro' ? 'Vanilie Madagascar' : 'Madagascar Vanilla', 
               desc: language === 'ro' ? 'Gustul autentic al păstăilor de vanilie de Madagascar' : 'The authentic taste of Madagascar vanilla beans', 
-              price: '26 lei', weight: '150g', image: imgVanilla
+              image: imgVanilla
             },
             { 
               name: language === 'ro' ? 'Caramel Sărat cu Alune' : 'Salted Caramel with Hazelnuts', 
               desc: language === 'ro' ? 'Echilibrul perfect între dulce, sărat și crocant' : 'The perfect balance between sweet, salty, and crunchy', 
-              price: '28 lei', weight: '150g', image: imgSaltedCaramel
+              image: imgSaltedCaramel
             },
             { 
               name: language === 'ro' ? 'Ciocolată cu Portocale' : 'Chocolate with Oranges', 
               desc: language === 'ro' ? 'Combinația clasică de ciocolată neagră și citrice' : 'The classic combination of dark chocolate and citrus', 
-              price: '28 lei', weight: '150g', image: imgChocolateOrange
+              image: imgChocolateOrange
             },
             { 
               name: language === 'ro' ? 'Ciocolată Neagră' : 'Dark Chocolate', 
               desc: language === 'ro' ? 'Ciocolată belgiană intensă cu 70% cacao' : 'Intense Belgian chocolate with 70% cocoa', 
-              price: '26 lei', weight: '150g', image: imgDarkChocolate
+              image: imgDarkChocolate
             },
             { 
               name: language === 'ro' ? 'Lămâie' : 'Lemon', 
               desc: language === 'ro' ? 'Sorbet ultra-răcoritor de lămâie proaspătă' : 'Ultra-refreshing fresh lemon sorbet', 
-              price: '22 lei', weight: '150g', image: imgLemon
+              image: imgLemon
             },
           ]
         }
@@ -287,29 +279,21 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
               desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
-              price: '18 lei',
-              weight: '300ml',
               image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Suc de Rodie' : 'Pomegranate Juice', 
               desc: language === 'ro' ? 'Rodie de sezon proaspăt presată' : 'Freshly pressed seasonal pomegranate', 
-              price: '24 lei', 
-              weight: '300ml',
               image: 'https://images.unsplash.com/photo-1541324908094-89d401807b05?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Limonadă cu Mentă' : 'Lemonade with Mint', 
               desc: language === 'ro' ? 'Stil clasic libanez cu mentă proaspătă' : 'Classic Lebanese style with fresh mint', 
-              price: '16 lei',
-              weight: '400ml',
               image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Sous (Erk Sous)' : 'Sous (Erk Sous)', 
               desc: language === 'ro' ? 'Băutură tradițională răcoritoare din rădăcină de lemn dulce' : 'Traditional refreshing licorice root beverage', 
-              price: '14 lei',
-              weight: '300ml',
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
           ]
@@ -320,64 +304,46 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', 
               desc: language === 'ro' ? 'Cafea tradițională la ibric, servită cu rahat' : 'Traditional coffee boiled in a cezve, served with a side of delight', 
-              price: '14 lei', 
-              weight: '80ml',
               image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
               desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
-              price: '16 lei', 
-              weight: '100ml',
               image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Latte cu Curmale' : 'Date Latte', 
               desc: language === 'ro' ? 'O combinație unică de espresso și dulceața naturală a curmalelor' : 'A unique blend of espresso and natural date sweetness', 
-              price: '22 lei', 
-              weight: '250ml',
               image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Latte cu Fistic' : 'Pistachio Latte', 
               desc: language === 'ro' ? 'Specialitatea casei, latte cu note de fistic' : 'House specialty latte with pistachio notes', 
-              price: '21 lei', 
-              weight: '250ml',
               image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Latte cu Caramel' : 'Caramel Latte', 
               desc: language === 'ro' ? 'Espresso cremos cu lapte și sirop bogat de caramel' : 'Creamy espresso with steamed milk and rich caramel syrup', 
-              price: '19 lei', 
-              weight: '250ml',
               image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Espresso', 
               desc: language === 'ro' ? 'Cafea intensă și aromată' : 'Intense and aromatic coffee', 
-              price: '10 lei', 
-              weight: '30ml',
               image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Cappuccino', 
               desc: language === 'ro' ? 'Espresso cu lapte cremos și spumă' : 'Espresso with creamy milk and foam', 
-              price: '15 lei', 
-              weight: '200ml',
               image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Flat White', 
               desc: language === 'ro' ? 'Shot dublu de espresso cu micro-spumă catifelată' : 'Double shot of espresso with velvety microfoam', 
-              price: '18 lei', 
-              weight: '180ml',
               image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Americano', 
               desc: language === 'ro' ? 'Espresso clasic diluat cu apă fierbinte' : 'Classic espresso diluted with hot water', 
-              price: '12 lei', 
-              weight: '150ml',
               image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
             },
           ]
@@ -388,36 +354,26 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Sahlab' : 'Sahlab', 
               desc: language === 'ro' ? 'Băutură caldă tradițională cu lapte, orhidee, scorțișoară și fistic' : 'Traditional warm milk drink with orchid root, cinnamon, and pistachio', 
-              price: '18 lei',
-              weight: '200ml',
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
               desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
-              price: '16 lei', 
-              weight: '200ml',
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
               desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
-              price: '15 lei',
-              weight: '150ml',
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Ceai de Mentă Proaspătă' : 'Fresh Mint Tea', 
               desc: language === 'ro' ? 'Ceai negru sau verde cu frunze proaspete de mentă' : 'Black or green tea with fresh mint leaves', 
-              price: '14 lei', 
-              weight: '250ml',
               image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Ceai de Salvie (Marmarieh)' : 'Sage Tea (Marmarieh)', 
               desc: language === 'ro' ? 'Infuzie tradițională de salvie cu proprietăți curative' : 'Traditional sage infusion with healing properties', 
-              price: '14 lei', 
-              weight: '250ml',
               image: 'https://images.unsplash.com/photo-1576092729250-a9cdeed0d7c9?auto=format&fit=crop&q=80&w=800'
             },
           ]
@@ -560,7 +516,6 @@ const MenuPage = () => {
                             {section.addons.map((addon, aIdx) => (
                               <div key={aIdx} className="flex justify-between items-center bg-white/60 px-4 py-2 rounded-xl border border-[#0D6D7E]/5">
                                 <span className="text-sm font-medium text-[#0D6D7E]">{addon.name}</span>
-                                <span className="text-xs font-bold text-[#C99B3C]">{addon.price}</span>
                               </div>
                             ))}
                           </div>
@@ -582,16 +537,10 @@ const MenuPage = () => {
                               <h3 className="text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
                                 {item.name}
                               </h3>
-                              {item.weight && (
-                                <span className="text-xs text-gray-400 font-light tracking-widest uppercase">({item.weight})</span>
-                              )}
                             </div>
                             <p className="text-gray-500 text-base font-light italic leading-relaxed max-w-md">
                               {item.desc}
                             </p>
-                            <div className="pt-2">
-                              <span className="text-[#C99B3C] font-bold text-xl tracking-tight">{item.price}</span>
-                            </div>
                           </div>
 
                           <div className="shrink-0">
