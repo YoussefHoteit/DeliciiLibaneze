@@ -23,9 +23,10 @@ const MenuPage = () => {
 
   const menuData = useMemo(() => [
     {
-      category: t('cat.desserts'),
-      id: 'lebanese-desserts',
+      category: t('menu.main.desserts'),
+      id: 'desserts',
       items: [
+        // Lebanese Desserts
         { 
           name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
           desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
@@ -54,12 +55,7 @@ const MenuPage = () => {
           weight: '220g',
           image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
         },
-      ]
-    },
-    {
-      category: t('cat.icecream'),
-      id: 'arabic-ice-cream',
-      items: [
+        // Arabic Ice Cream
         { 
           name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
           desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
@@ -84,9 +80,10 @@ const MenuPage = () => {
       ]
     },
     {
-      category: t('cat.coffee'),
-      id: 'arabic-coffee',
+      category: t('menu.main.drinks'),
+      id: 'drinks',
       items: [
+        // Arabic Coffee
         { 
           name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
           desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
@@ -108,12 +105,7 @@ const MenuPage = () => {
           weight: '250ml',
           image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
         },
-      ]
-    },
-    {
-      category: t('cat.juices'),
-      id: 'fresh-juices',
-      items: [
+        // Fresh Juices
         { 
           name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
           desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
@@ -173,8 +165,17 @@ const MenuPage = () => {
 
   useEffect(() => {
     if (location.state?.categoryId) {
+      // Map old category IDs to new ones if needed
+      const categoryMap: Record<string, string> = {
+        'lebanese-desserts': 'desserts',
+        'arabic-ice-cream': 'desserts',
+        'arabic-coffee': 'drinks',
+        'fresh-juices': 'drinks'
+      };
+      const targetId = categoryMap[location.state.categoryId] || location.state.categoryId;
+      
       const timer = setTimeout(() => {
-        scrollToCategory(location.state.categoryId);
+        scrollToCategory(targetId);
       }, 300);
       return () => clearTimeout(timer);
     }
@@ -275,7 +276,7 @@ const MenuPage = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div 
               ref={navContainerRef}
-              className="flex items-center gap-3 overflow-x-auto py-6 no-scrollbar"
+              className="flex items-center justify-center gap-3 overflow-x-auto py-6 no-scrollbar"
             >
               <button
                 data-id="All"
