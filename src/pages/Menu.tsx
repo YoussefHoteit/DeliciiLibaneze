@@ -276,6 +276,13 @@ const MenuPage = () => {
           title: t('menu.sub.coffee'),
           items: [
             { 
+              name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', 
+              desc: language === 'ro' ? 'Cafea tradițională la ibric, servită cu rahat' : 'Traditional coffee boiled in a cezve, served with a side of delight', 
+              price: '14 lei', 
+              weight: '80ml',
+              image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
               name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
               desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
               price: '16 lei', 
@@ -283,11 +290,25 @@ const MenuPage = () => {
               image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800'
             },
             { 
+              name: language === 'ro' ? 'Latte cu Curmale' : 'Date Latte', 
+              desc: language === 'ro' ? 'O combinație unică de espresso și dulceața naturală a curmalelor' : 'A unique blend of espresso and natural date sweetness', 
+              price: '22 lei', 
+              weight: '250ml',
+              image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
               name: language === 'ro' ? 'Latte cu Fistic' : 'Pistachio Latte', 
               desc: language === 'ro' ? 'Specialitatea casei, latte cu note de fistic' : 'House specialty latte with pistachio notes', 
               price: '21 lei', 
               weight: '250ml',
               image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Latte cu Caramel' : 'Caramel Latte', 
+              desc: language === 'ro' ? 'Espresso cremos cu lapte și sirop bogat de caramel' : 'Creamy espresso with steamed milk and rich caramel syrup', 
+              price: '19 lei', 
+              weight: '250ml',
+              image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Espresso', 
@@ -304,11 +325,18 @@ const MenuPage = () => {
               image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
             },
             { 
-              name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
-              desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
-              price: '16 lei', 
-              weight: '200ml',
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+              name: 'Flat White', 
+              desc: language === 'ro' ? 'Shot dublu de espresso cu micro-spumă catifelată' : 'Double shot of espresso with velvety microfoam', 
+              price: '18 lei', 
+              weight: '180ml',
+              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: 'Americano', 
+              desc: language === 'ro' ? 'Espresso clasic diluat cu apă fierbinte' : 'Classic espresso diluted with hot water', 
+              price: '12 lei', 
+              weight: '150ml',
+              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
             },
           ]
         },
@@ -319,6 +347,13 @@ const MenuPage = () => {
               name: language === 'ro' ? 'Sahlab' : 'Sahlab', 
               desc: language === 'ro' ? 'Băutură caldă tradițională cu lapte, orhidee, scorțișoară și fistic' : 'Traditional warm milk drink with orchid root, cinnamon, and pistachio', 
               price: '18 lei',
+              weight: '200ml',
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
+              desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
+              price: '16 lei', 
               weight: '200ml',
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
