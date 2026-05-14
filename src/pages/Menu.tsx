@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Search, X, ZoomIn } from 'lucide-react';
+import { Search, X, ZoomIn, UtensilsCrossed, Coffee } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useLocation } from 'react-router-dom';
 import menuHero from '@/assets/contact-hero.jpg';
@@ -15,18 +15,15 @@ const MenuPage = () => {
   const { t, language } = useLanguage();
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [isAtEnd, setIsAtEnd] = useState(false);
+  const [activeTab, setActiveTab] = useState<'desserts' | 'drinks'>('desserts');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const menuListRef = useRef<HTMLDivElement>(null);
-  const navContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const menuData = useMemo(() => [
-    {
-      category: t('menu.main.desserts'),
-      id: 'desserts',
+  const menuData = useMemo(() => ({
+    desserts: {
+      title: t('menu.main.desserts'),
+      icon: <UtensilsCrossed size={20} />,
       items: [
-        // Lebanese Desserts
         { 
           name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
           desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
@@ -55,7 +52,6 @@ const MenuPage = () => {
           weight: '220g',
           image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
         },
-        // Arabic Ice Cream
         { 
           name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
           desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
@@ -79,11 +75,10 @@ const MenuPage = () => {
         },
       ]
     },
-    {
-      category: t('menu.main.drinks'),
-      id: 'drinks',
+    drinks: {
+      title: t('menu.main.drinks'),
+      icon: <Coffee size={20} />,
       items: [
-        // Arabic Coffee
         { 
           name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
           desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
@@ -105,7 +100,6 @@ const MenuPage = () => {
           weight: '250ml',
           image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
         },
-        // Fresh Juices
         { 
           name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
           desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
@@ -129,101 +123,32 @@ const MenuPage = () => {
         },
       ]
     }
-  ], [language, t]);
+  }), [language, t]);
 
-  const filteredMenu = useMemo(() => {
-    return menuData.map(cat => ({
-      ...cat,
-      items: cat.items.filter(item => 
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        item.desc.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    })).filter(cat => cat.items.length > 0);
-  }, [searchTerm, menuData]);
-
-  const scrollToCategory = (id: string) => {
-    if (id === 'All') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveCategory('All');
-      return;
-    }
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 160;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      setActiveCategory(id);
-    }
-  };
+  const filteredItems = useMemo(() => {
+    return menuData[activeTab].items.filter(item => 
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      item.desc.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm, activeTab, menuData]);
 
   useEffect(() => {
     if (location.state?.categoryId) {
-      // Map old category IDs to new ones if needed
-      const categoryMap: Record<string, string> = {
+      const categoryMap: Record<string, 'desserts' | 'drinks'> = {
         'lebanese-desserts': 'desserts',
         'arabic-ice-cream': 'desserts',
         'arabic-coffee': 'drinks',
-        'fresh-juices': 'drinks'
+        'fresh-juices': 'drinks',
+        'desserts': 'desserts',
+        'drinks': 'drinks'
       };
-      const targetId = categoryMap[location.state.categoryId] || location.state.categoryId;
-      
-      const timer = setTimeout(() => {
-        scrollToCategory(targetId);
-      }, 300);
-      return () => clearTimeout(timer);
+      const targetTab = categoryMap[location.state.categoryId];
+      if (targetTab) {
+        setActiveTab(targetTab);
+        window.scrollTo({ top: window.innerHeight * 0.5, behavior: 'smooth' });
+      }
     }
   }, [location.state]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY < 300) {
-        setActiveCategory('All');
-      } else {
-        const categoryElements = menuData.map(cat => document.getElementById(cat.id));
-        const scrollPosition = window.scrollY + 200;
-
-        for (let i = categoryElements.length - 1; i >= 0; i--) {
-          const element = categoryElements[i];
-          if (element && element.offsetTop <= scrollPosition) {
-            setActiveCategory(menuData[i].id);
-            break;
-          }
-        }
-      }
-
-      if (menuListRef.current) {
-        const rect = menuListRef.current.getBoundingClientRect();
-        if (rect.bottom < 250) {
-          setIsAtEnd(true);
-        } else {
-          setIsAtEnd(false);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [menuData]);
-
-  useEffect(() => {
-    if (navContainerRef.current) {
-      const activeButton = navContainerRef.current.querySelector(`[data-id="${activeCategory}"]`);
-      if (activeButton) {
-        activeButton.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
-        });
-      }
-    }
-  }, [activeCategory]);
 
   return (
     <div className="min-h-screen bg-[#F5EFE6]">
@@ -244,7 +169,7 @@ const MenuPage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-30 text-center px-6 w-full max-w-2xl will-change-transform"
+          className="relative z-30 text-center px-6 w-full max-w-2xl"
         >
           <span className="text-[#C99B3C] uppercase tracking-[0.4em] text-xs font-bold mb-4 block">
             DELICII LIBANEZE
@@ -266,131 +191,90 @@ const MenuPage = () => {
         </motion.div>
       </section>
 
-      <div className="pb-24">
-        <div 
-          className={cn(
-            "sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16 transition-transform duration-500 ease-in-out",
-            isAtEnd ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-          )}
-        >
+      <div className="pb-24" ref={containerRef}>
+        {/* Main Category Switcher */}
+        <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
-            <div 
-              ref={navContainerRef}
-              className="flex items-center justify-center gap-3 overflow-x-auto py-6 no-scrollbar"
-            >
-              <button
-                data-id="All"
-                onClick={() => scrollToCategory('All')}
-                className={cn(
-                  "px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap border",
-                  activeCategory === 'All' 
-                    ? "bg-[#A55443] border-[#A55443] text-white" 
-                    : "bg-[#0D6D7E]/5 border-transparent text-[#0D6D7E] hover:bg-[#0D6D7E]/10"
-                )}
-              >
-                {t('menu.all')}
-              </button>
-              {menuData.map((cat) => (
-                <button
-                  key={cat.id}
-                  data-id={cat.id}
-                  onClick={() => scrollToCategory(cat.id)}
-                  className={cn(
-                    "px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap border",
-                    activeCategory === cat.id 
-                      ? "bg-[#A55443] border-[#A55443] text-white" 
-                      : "bg-[#0D6D7E]/5 border-transparent text-[#0D6D7E] hover:bg-[#0D6D7E]/10"
-                  )}
-                >
-                  {cat.category}
-                </button>
-              ))}
+            <div className="flex items-center justify-center py-6">
+              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-full flex gap-2 border border-[#0D6D7E]/10">
+                {(['desserts', 'drinks'] as const).map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={cn(
+                      "px-8 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center gap-3",
+                      activeTab === tab 
+                        ? "bg-[#A55443] text-white shadow-lg scale-105" 
+                        : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5"
+                    )}
+                  >
+                    {menuData[tab].icon}
+                    {menuData[tab].title}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 space-y-20" ref={menuListRef}>
+        <div className="max-w-4xl mx-auto px-6">
           <AnimatePresence mode="wait">
             <motion.div
-              key={searchTerm + language}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="space-y-20"
+              key={activeTab + searchTerm + language}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="space-y-12"
             >
-              {filteredMenu.map((cat) => (
-                <div key={cat.id} id={cat.id} className="space-y-10 scroll-mt-40">
-                  <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, margin: "-100px" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex items-center gap-6"
-                  >
-                    <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
-                      {cat.category}
-                    </h2>
-                    <div className="h-px bg-[#0D6D7E]/10 w-full" />
-                  </motion.div>
-
-                  <div className="space-y-12">
-                    {cat.items.map((item, i) => (
-                      <motion.div 
-                        key={item.name}
-                        initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        whileHover={{ scale: 1.03 }}
-                        viewport={{ once: false, margin: "-50px" }}
-                        transition={{ 
-                          duration: 0.7, 
-                          delay: i * 0.05,
-                          ease: [0.21, 0.47, 0.32, 0.98],
-                          scale: { duration: 0.3, ease: "easeOut" }
-                        }}
-                        className="flex justify-between items-start gap-8 group cursor-pointer p-4 -m-4 rounded-3xl hover:bg-white/40 transition-colors duration-300"
-                      >
-                        <div className="flex-1 space-y-2">
-                          <div className="flex items-baseline gap-2">
-                            <h3 className="text-xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
-                              {item.name}
-                            </h3>
-                            {item.weight && (
-                              <span className="text-xs text-gray-400 font-light">({item.weight})</span>
-                            )}
-                          </div>
-                          <p className="text-gray-500 text-sm font-light italic leading-relaxed max-w-md">
-                            {item.desc}
-                          </p>
-                          <div className="pt-2">
-                            <span className="text-[#C99B3C] font-bold text-lg">{item.price}</span>
-                          </div>
+              {filteredItems.length > 0 ? (
+                <div className="grid grid-cols-1 gap-12">
+                  {filteredItems.map((item, i) => (
+                    <motion.div 
+                      key={item.name}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.05 }}
+                      className="flex justify-between items-start gap-8 group cursor-pointer p-6 -m-6 rounded-[2rem] hover:bg-white/60 transition-all duration-500"
+                    >
+                      <div className="flex-1 space-y-3">
+                        <div className="flex items-baseline gap-3">
+                          <h3 className="text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
+                            {item.name}
+                          </h3>
+                          {item.weight && (
+                            <span className="text-xs text-gray-400 font-light tracking-widest uppercase">({item.weight})</span>
+                          )}
                         </div>
-
-                        <div className="shrink-0">
-                          <div 
-                            onClick={() => setSelectedImage(item.image)}
-                            className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-500 relative cursor-zoom-in"
-                          >
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                              <ZoomIn className="text-white" size={24} />
-                            </div>
-                            <img 
-                              src={item.image} 
-                              alt={item.name} 
-                              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                            />
-                          </div>
+                        <p className="text-gray-500 text-base font-light italic leading-relaxed max-w-md">
+                          {item.desc}
+                        </p>
+                        <div className="pt-2">
+                          <span className="text-[#C99B3C] font-bold text-xl tracking-tight">{item.price}</span>
                         </div>
-                      </motion.div>
-                    ))}
-                  </div>
+                      </div>
+
+                      <div className="shrink-0">
+                        <div 
+                          onClick={() => setSelectedImage(item.image)}
+                          className="w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
+                        >
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <ZoomIn className="text-white" size={28} />
+                          </div>
+                          <img 
+                            src={item.image} 
+                            alt={item.name} 
+                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-              ))}
-
-              {filteredMenu.length === 0 && (
-                <div className="text-center py-20">
-                  <p className="text-gray-400 font-serif text-xl italic">
+              ) : (
+                <div className="text-center py-24">
+                  <p className="text-gray-400 font-serif text-2xl italic">
                     {t('menu.empty')}
                   </p>
                 </div>
@@ -408,7 +292,7 @@ const MenuPage = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-6 cursor-zoom-out"
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex items-center justify-center p-6 cursor-zoom-out"
           >
             <motion.button
               initial={{ opacity: 0, scale: 0.5 }}
@@ -424,7 +308,7 @@ const MenuPage = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative max-w-5xl w-full aspect-square md:aspect-video rounded-3xl overflow-hidden shadow-2xl"
+              className="relative max-w-5xl w-full aspect-square md:aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <img 
