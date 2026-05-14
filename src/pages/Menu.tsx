@@ -23,113 +23,164 @@ const MenuPage = () => {
     desserts: {
       title: t('menu.main.desserts'),
       icon: <UtensilsCrossed size={20} />,
-      items: [
-        { 
-          name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
-          desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
-          price: '34 lei', 
-          weight: '250g',
-          image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
-          desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
-          price: '38 lei',
-          weight: '200g',
-          image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
-          desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
-          price: '36 lei', 
-          weight: '300g',
-          image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Halawet El Jibn' : 'Halawet El Jibn', 
-          desc: language === 'ro' ? 'Rulouri moi de brânză umplute cu cremă și fistic' : 'Soft cheese rolls filled with cream and pistachio', 
-          price: '35 lei',
-          weight: '220g',
-          image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
-          desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
-          price: '24 lei', 
-          weight: '150g',
-          image: 'https://images.unsplash.com/photo-1501443762994-82bd5dabb892?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Înghețată Arabă cu Fistic' : 'Pistachio Arabic Ice Cream', 
-          desc: language === 'ro' ? 'Înghețată elastică în stil arab cu fistic' : 'Stretchy Arabic-style ice cream with pistachio', 
-          price: '28 lei',
-          weight: '150g',
-          image: 'https://images.unsplash.com/photo-1505394033343-430c7b130e31?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Înghețată de Trandafiri' : 'Rose Ice Cream', 
-          desc: language === 'ro' ? 'Aromă florală și revigorantă de trandafiri în stil arab' : 'Floral and refreshing Arabic-style rose flavor', 
-          price: '25 lei',
-          weight: '150g',
-          image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&q=80&w=800'
-        },
+      sections: [
+        {
+          title: '',
+          items: [
+            { 
+              name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
+              desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
+              price: '34 lei', 
+              weight: '250g',
+              image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
+              desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
+              price: '38 lei',
+              weight: '200g',
+              image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
+              desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
+              price: '36 lei', 
+              weight: '300g',
+              image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Halawet El Jibn' : 'Halawet El Jibn', 
+              desc: language === 'ro' ? 'Rulouri moi de brânză umplute cu cremă și fistic' : 'Soft cheese rolls filled with cream and pistachio', 
+              price: '35 lei',
+              weight: '220g',
+              image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
+              desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
+              price: '24 lei', 
+              weight: '150g',
+              image: 'https://images.unsplash.com/photo-1501443762994-82bd5dabb892?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Înghețată Arabă cu Fistic' : 'Pistachio Arabic Ice Cream', 
+              desc: language === 'ro' ? 'Înghețată elastică în stil arab cu fistic' : 'Stretchy Arabic-style ice cream with pistachio', 
+              price: '28 lei',
+              weight: '150g',
+              image: 'https://images.unsplash.com/photo-1505394033343-430c7b130e31?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Înghețată de Trandafiri' : 'Rose Ice Cream', 
+              desc: language === 'ro' ? 'Aromă florală și revigorantă de trandafiri în stil arab' : 'Floral and refreshing Arabic-style rose flavor', 
+              price: '25 lei',
+              weight: '150g',
+              image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
+        }
       ]
     },
     drinks: {
       title: t('menu.main.drinks'),
       icon: <Coffee size={20} />,
-      items: [
-        { 
-          name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
-          desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
-          price: '16 lei', 
-          weight: '100ml',
-          image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800'
+      sections: [
+        {
+          title: t('menu.sub.juices'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
+              desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
+              price: '18 lei',
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Rodie' : 'Pomegranate Juice', 
+              desc: language === 'ro' ? 'Rodie de sezon proaspăt presată' : 'Freshly pressed seasonal pomegranate', 
+              price: '24 lei', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1541324908094-89d401807b05?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Limonadă cu Mentă' : 'Lemonade with Mint', 
+              desc: language === 'ro' ? 'Stil clasic libanez cu mentă proaspătă' : 'Classic Lebanese style with fresh mint', 
+              price: '16 lei',
+              weight: '400ml',
+              image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
         },
-        { 
-          name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
-          desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
-          price: '15 lei',
-          weight: '150ml',
-          image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+        {
+          title: t('menu.sub.coffee'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
+              desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
+              price: '16 lei', 
+              weight: '100ml',
+              image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Latte cu Fistic' : 'Pistachio Latte', 
+              desc: language === 'ro' ? 'Specialitatea casei, latte cu note de fistic' : 'House specialty latte with pistachio notes', 
+              price: '21 lei', 
+              weight: '250ml',
+              image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: 'Espresso', 
+              desc: language === 'ro' ? 'Cafea intensă și aromată' : 'Intense and aromatic coffee', 
+              price: '10 lei', 
+              weight: '30ml',
+              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: 'Cappuccino', 
+              desc: language === 'ro' ? 'Espresso cu lapte cremos și spumă' : 'Espresso with creamy milk and foam', 
+              price: '15 lei', 
+              weight: '200ml',
+              image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
         },
-        { 
-          name: language === 'ro' ? 'Latte cu Fistic' : 'Pistachio Latte', 
-          desc: language === 'ro' ? 'Specialitatea casei, latte cu note de fistic' : 'House specialty latte with pistachio notes', 
-          price: '21 lei', 
-          weight: '250ml',
-          image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
-          desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
-          price: '18 lei',
-          weight: '300ml',
-          image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Suc de Rodie' : 'Pomegranate Juice', 
-          desc: language === 'ro' ? 'Rodie de sezon proaspăt presată' : 'Freshly pressed seasonal pomegranate', 
-          price: '24 lei', 
-          weight: '300ml',
-          image: 'https://images.unsplash.com/photo-1541324908094-89d401807b05?auto=format&fit=crop&q=80&w=800'
-        },
-        { 
-          name: language === 'ro' ? 'Limonadă cu Mentă' : 'Lemonade with Mint', 
-          desc: language === 'ro' ? 'Stil clasic libanez cu mentă proaspătă' : 'Classic Lebanese style with fresh mint', 
-          price: '16 lei',
-          weight: '400ml',
-          image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
-        },
+        {
+          title: t('menu.sub.tea'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
+              desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
+              price: '15 lei',
+              weight: '150ml',
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Ceai de Mentă Proaspătă' : 'Fresh Mint Tea', 
+              desc: language === 'ro' ? 'Ceai negru sau verde cu frunze proaspete de mentă' : 'Black or green tea with fresh mint leaves', 
+              price: '14 lei', 
+              weight: '250ml',
+              image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Ceai de Salvie (Marmarieh)' : 'Sage Tea (Marmarieh)', 
+              desc: language === 'ro' ? 'Infuzie tradițională de salvie cu proprietăți curative' : 'Traditional sage infusion with healing properties', 
+              price: '14 lei', 
+              weight: '250ml',
+              image: 'https://images.unsplash.com/photo-1576092729250-a9cdeed0d7c9?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
+        }
       ]
     }
   }), [language, t]);
 
-  const filteredItems = useMemo(() => {
-    return menuData[activeTab].items.filter(item => 
-      item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-      item.desc.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  const filteredSections = useMemo(() => {
+    return menuData[activeTab].sections.map(section => ({
+      ...section,
+      items: section.items.filter(item => 
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        item.desc.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    })).filter(section => section.items.length > 0);
   }, [searchTerm, activeTab, menuData]);
 
   useEffect(() => {
@@ -225,53 +276,66 @@ const MenuPage = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="space-y-12"
+              className="space-y-24"
             >
-              {filteredItems.length > 0 ? (
-                <div className="grid grid-cols-1 gap-12">
-                  {filteredItems.map((item, i) => (
-                    <motion.div 
-                      key={item.name}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05 }}
-                      className="flex justify-between items-start gap-8 group cursor-pointer p-6 -m-6 rounded-[2rem] hover:bg-white/60 transition-all duration-500"
-                    >
-                      <div className="flex-1 space-y-3">
-                        <div className="flex items-baseline gap-3">
-                          <h3 className="text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
-                            {item.name}
-                          </h3>
-                          {item.weight && (
-                            <span className="text-xs text-gray-400 font-light tracking-widest uppercase">({item.weight})</span>
-                          )}
-                        </div>
-                        <p className="text-gray-500 text-base font-light italic leading-relaxed max-w-md">
-                          {item.desc}
-                        </p>
-                        <div className="pt-2">
-                          <span className="text-[#C99B3C] font-bold text-xl tracking-tight">{item.price}</span>
-                        </div>
+              {filteredSections.length > 0 ? (
+                filteredSections.map((section, sIdx) => (
+                  <div key={sIdx} className="space-y-12">
+                    {section.title && (
+                      <div className="flex items-center gap-6">
+                        <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
+                          {section.title}
+                        </h2>
+                        <div className="h-px bg-[#0D6D7E]/10 w-full" />
                       </div>
-
-                      <div className="shrink-0">
-                        <div 
-                          onClick={() => setSelectedImage(item.image)}
-                          className="w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
+                    )}
+                    
+                    <div className="grid grid-cols-1 gap-12">
+                      {section.items.map((item, i) => (
+                        <motion.div 
+                          key={item.name}
+                          initial={{ opacity: 0, y: 30 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.05 }}
+                          className="flex justify-between items-start gap-8 group cursor-pointer p-6 -m-6 rounded-[2rem] hover:bg-white/60 transition-all duration-500"
                         >
-                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                            <ZoomIn className="text-white" size={28} />
+                          <div className="flex-1 space-y-3">
+                            <div className="flex items-baseline gap-3">
+                              <h3 className="text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
+                                {item.name}
+                              </h3>
+                              {item.weight && (
+                                <span className="text-xs text-gray-400 font-light tracking-widest uppercase">({item.weight})</span>
+                              )}
+                            </div>
+                            <p className="text-gray-500 text-base font-light italic leading-relaxed max-w-md">
+                              {item.desc}
+                            </p>
+                            <div className="pt-2">
+                              <span className="text-[#C99B3C] font-bold text-xl tracking-tight">{item.price}</span>
+                            </div>
                           </div>
-                          <img 
-                            src={item.image} 
-                            alt={item.name} 
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                          />
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
+
+                          <div className="shrink-0">
+                            <div 
+                              onClick={() => setSelectedImage(item.image)}
+                              className="w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
+                            >
+                              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <ZoomIn className="text-white" size={28} />
+                              </div>
+                              <img 
+                                src={item.image} 
+                                alt={item.name} 
+                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                              />
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                ))
               ) : (
                 <div className="text-center py-24">
                   <p className="text-gray-400 font-serif text-2xl italic">
