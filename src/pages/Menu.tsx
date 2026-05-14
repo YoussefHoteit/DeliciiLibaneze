@@ -30,49 +30,42 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
               desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
-              price: '34 lei', 
               weight: '250g',
               image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
               desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
-              price: '38 lei',
               weight: '200g',
               image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
               desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
-              price: '36 lei', 
               weight: '300g',
               image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Halawet El Jibn' : 'Halawet El Jibn', 
               desc: language === 'ro' ? 'Rulouri moi de brânză umplute cu cremă și fistic' : 'Soft cheese rolls filled with cream and pistachio', 
-              price: '35 lei',
               weight: '220g',
               image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
               desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
-              price: '24 lei', 
               weight: '150g',
               image: 'https://images.unsplash.com/photo-1501443762994-82bd5dabb892?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Înghețată Arabă cu Fistic' : 'Pistachio Arabic Ice Cream', 
               desc: language === 'ro' ? 'Înghețată elastică în stil arab cu fistic' : 'Stretchy Arabic-style ice cream with pistachio', 
-              price: '28 lei',
               weight: '150g',
               image: 'https://images.unsplash.com/photo-1505394033343-430c7b130e31?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Înghețată de Trandafiri' : 'Rose Ice Cream', 
               desc: language === 'ro' ? 'Aromă florală și revigorantă de trandafiri în stil arab' : 'Floral and refreshing Arabic-style rose flavor', 
-              price: '25 lei',
               weight: '150g',
               image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&q=80&w=800'
             },
@@ -90,23 +83,161 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
               desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
-              price: '18 lei',
               weight: '300ml',
               image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Suc de Rodie' : 'Pomegranate Juice', 
               desc: language === 'ro' ? 'Rodie de sezon proaspăt presată' : 'Freshly pressed seasonal pomegranate', 
-              price: '24 lei', 
               weight: '300ml',
               image: 'https://images.unsplash.com/photo-1541324908094-89d401807b05?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Limonadă cu Mentă' : 'Lemonade with Mint', 
               desc: language === 'ro' ? 'Stil clasic libanez cu mentă proaspătă' : 'Classic Lebanese style with fresh mint', 
-              price: '16 lei',
               weight: '400ml',
               image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Mere' : 'Apple Juice', 
+              desc: language === 'ro' ? 'Mere verzi proaspete și crocante' : 'Fresh and crisp green apples', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-15673<dyad-write path="src/pages/Menu.tsx" description="Expanding the fresh juices selection and removing all prices from the menu.">
+"use client";
+
+import React, { useState, useMemo, useRef, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { useLanguage } from '@/context/LanguageContext';
+import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { Search, X, ZoomIn, UtensilsCrossed, Coffee } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { useLocation } from 'react-router-dom';
+import menuHero from '@/assets/contact-hero.jpg';
+
+const MenuPage = () => {
+  const { t, language } = useLanguage();
+  const location = useLocation();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeTab, setActiveTab] = useState<'desserts' | 'drinks'>('desserts');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const menuData = useMemo(() => ({
+    desserts: {
+      title: t('menu.main.desserts'),
+      icon: <UtensilsCrossed size={20} />,
+      sections: [
+        {
+          title: '',
+          items: [
+            { 
+              name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
+              desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
+              weight: '250g',
+              image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
+              desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
+              weight: '200g',
+              image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
+              desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
+              weight: '300g',
+              image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Halawet El Jibn' : 'Halawet El Jibn', 
+              desc: language === 'ro' ? 'Rulouri moi de brânză umplute cu cremă și fistic' : 'Soft cheese rolls filled with cream and pistachio', 
+              weight: '220g',
+              image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
+              desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
+              weight: '150g',
+              image: 'https://images.unsplash.com/photo-1501443762994-82bd5dabb892?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Înghețată Arabă cu Fistic' : 'Pistachio Arabic Ice Cream', 
+              desc: language === 'ro' ? 'Înghețată elastică în stil arab cu fistic' : 'Stretchy Arabic-style ice cream with pistachio', 
+              weight: '150g',
+              image: 'https://images.unsplash.com/photo-1505394033343-430c7b130e31?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Înghețată de Trandafiri' : 'Rose Ice Cream', 
+              desc: language === 'ro' ? 'Aromă florală și revigorantă de trandafiri în stil arab' : 'Floral and refreshing Arabic-style rose flavor', 
+              weight: '150g',
+              image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
+        }
+      ]
+    },
+    drinks: {
+      title: t('menu.main.drinks'),
+      icon: <Coffee size={20} />,
+      sections: [
+        {
+          title: t('menu.sub.juices'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
+              desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Rodie' : 'Pomegranate Juice', 
+              desc: language === 'ro' ? 'Rodie de sezon proaspăt presată' : 'Freshly pressed seasonal pomegranate', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1541324908094-89d401807b05?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Limonadă cu Mentă' : 'Lemonade with Mint', 
+              desc: language === 'ro' ? 'Stil clasic libanez cu mentă proaspătă' : 'Classic Lebanese style with fresh mint', 
+              weight: '400ml',
+              image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Mere' : 'Apple Juice', 
+              desc: language === 'ro' ? 'Mere verzi proaspete și crocante' : 'Fresh and crisp green apples', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Morcovi' : 'Carrot Juice', 
+              desc: language === 'ro' ? 'Morcovi dulci și plini de vitamine' : 'Sweet carrots full of vitamins', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Grapefruit' : 'Grapefruit Juice', 
+              desc: language === 'ro' ? 'Grapefruit roz proaspăt stors' : 'Freshly squeezed pink grapefruit', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Suc de Ananas' : 'Pineapple Juice', 
+              desc: language === 'ro' ? 'Ananas tropical proaspăt' : 'Fresh tropical pineapple', 
+              weight: '300ml',
+              image: 'https://images.unsplash.com/photo-1589733901241-5e39127a5346?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Cocktail Libanez' : 'Lebanese Cocktail', 
+              desc: language === 'ro' ? 'Mix de fructe proaspete cu ashta și miere' : 'Fresh fruit mix with ashta and honey', 
+              weight: '400ml',
+              image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Avocado cu Miere' : 'Avocado with Honey', 
+              desc: language === 'ro' ? 'Smoothie cremos de avocado cu miere și nuci' : 'Creamy avocado smoothie with honey and nuts', 
+              weight: '350ml',
+              image: 'https://images.unsplash.com/photo-1525385133335-842822916523?auto=format&fit=crop&q=80&w=800'
             },
           ]
         },
@@ -116,28 +247,24 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
               desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
-              price: '16 lei', 
               weight: '100ml',
               image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Latte cu Fistic' : 'Pistachio Latte', 
               desc: language === 'ro' ? 'Specialitatea casei, latte cu note de fistic' : 'House specialty latte with pistachio notes', 
-              price: '21 lei', 
               weight: '250ml',
               image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Espresso', 
               desc: language === 'ro' ? 'Cafea intensă și aromată' : 'Intense and aromatic coffee', 
-              price: '10 lei', 
               weight: '30ml',
               image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: 'Cappuccino', 
               desc: language === 'ro' ? 'Espresso cu lapte cremos și spumă' : 'Espresso with creamy milk and foam', 
-              price: '15 lei', 
               weight: '200ml',
               image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
             },
@@ -149,21 +276,18 @@ const MenuPage = () => {
             { 
               name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
               desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
-              price: '15 lei',
               weight: '150ml',
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Ceai de Mentă Proaspătă' : 'Fresh Mint Tea', 
               desc: language === 'ro' ? 'Ceai negru sau verde cu frunze proaspete de mentă' : 'Black or green tea with fresh mint leaves', 
-              price: '14 lei', 
               weight: '250ml',
               image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800'
             },
             { 
               name: language === 'ro' ? 'Ceai de Salvie (Marmarieh)' : 'Sage Tea (Marmarieh)', 
               desc: language === 'ro' ? 'Infuzie tradițională de salvie cu proprietăți curative' : 'Traditional sage infusion with healing properties', 
-              price: '14 lei', 
               weight: '250ml',
               image: 'https://images.unsplash.com/photo-1576092729250-a9cdeed0d7c9?auto=format&fit=crop&q=80&w=800'
             },
@@ -311,9 +435,6 @@ const MenuPage = () => {
                             <p className="text-gray-500 text-base font-light italic leading-relaxed max-w-md">
                               {item.desc}
                             </p>
-                            <div className="pt-2">
-                              <span className="text-[#C99B3C] font-bold text-xl tracking-tight">{item.price}</span>
-                            </div>
                           </div>
 
                           <div className="shrink-0">
