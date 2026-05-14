@@ -59,6 +59,7 @@ const MenuPage = () => {
         },
         {
           title: t('menu.sub.icecream'),
+          info: t('menu.icecream.info'),
           items: [
             { 
               name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', 
@@ -435,14 +436,21 @@ const MenuPage = () => {
               {filteredSections.length > 0 ? (
                 filteredSections.map((section, sIdx) => (
                   <div key={sIdx} className="space-y-12">
-                    {section.title && (
-                      <div className="flex items-center gap-6">
-                        <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
-                          {section.title}
-                        </h2>
-                        <div className="h-px bg-[#0D6D7E]/10 w-full" />
-                      </div>
-                    )}
+                    <div className="space-y-4">
+                      {section.title && (
+                        <div className="flex items-center gap-6">
+                          <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
+                            {section.title}
+                          </h2>
+                          <div className="h-px bg-[#0D6D7E]/10 w-full" />
+                        </div>
+                      )}
+                      {section.info && (
+                        <p className="text-gray-500 font-light italic text-sm max-w-2xl leading-relaxed">
+                          {section.info}
+                        </p>
+                      )}
+                    </div>
                     
                     <div className="grid grid-cols-1 gap-12">
                       {section.items.map((item, i) => (
