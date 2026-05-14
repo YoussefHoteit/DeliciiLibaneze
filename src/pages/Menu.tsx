@@ -24,7 +24,7 @@ const MenuPage = () => {
   const menuData = useMemo(() => [
     {
       category: t('cat.desserts'),
-      id: 'lebanese-desserts',
+      id: 'desserts',
       items: [
         { 
           name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
@@ -54,12 +54,6 @@ const MenuPage = () => {
           weight: '220g',
           image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
         },
-      ]
-    },
-    {
-      category: t('cat.icecream'),
-      id: 'arabic-ice-cream',
-      items: [
         { 
           name: language === 'ro' ? 'Înghețată Ashta' : 'Ashta Ice Cream', 
           desc: language === 'ro' ? 'Înghețată tradițională arabă cu aromă de smântână' : 'Traditional Arabic ice cream with cream flavor', 
@@ -84,8 +78,8 @@ const MenuPage = () => {
       ]
     },
     {
-      category: t('cat.coffee'),
-      id: 'arabic-coffee',
+      category: t('cat.drinks'),
+      id: 'drinks',
       items: [
         { 
           name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
@@ -108,12 +102,6 @@ const MenuPage = () => {
           weight: '250ml',
           image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
         },
-      ]
-    },
-    {
-      category: t('cat.juices'),
-      id: 'fresh-juices',
-      items: [
         { 
           name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
           desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 

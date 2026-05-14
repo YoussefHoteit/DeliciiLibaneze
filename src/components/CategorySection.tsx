@@ -12,10 +12,10 @@ import categoryCoffee from '@/assets/category-coffee.jpg';
 import categoryJuices from '@/assets/category-juices.jpg';
 
 const categories = [
-  { id: 'desserts', titleKey: 'cat.desserts', img: categoryDesserts, menuId: 'lebanese-desserts' },
-  { id: 'icecream', titleKey: 'cat.icecream', img: categoryIceCream, menuId: 'arabic-ice-cream' },
-  { id: 'coffee', titleKey: 'cat.coffee', img: categoryCoffee, menuId: 'arabic-coffee' },
-  { id: 'juices', titleKey: 'cat.juices', img: categoryJuices, menuId: 'fresh-juices' },
+  { id: 'desserts', titleKey: 'cat.desserts', img: categoryDesserts, menuId: 'desserts' },
+  { id: 'icecream', titleKey: 'cat.icecream', img: categoryIceCream, menuId: 'desserts' },
+  { id: 'coffee', titleKey: 'cat.coffee', img: categoryCoffee, menuId: 'drinks' },
+  { id: 'juices', titleKey: 'cat.juices', img: categoryJuices, menuId: 'drinks' },
 ];
 
 const CategorySection = () => {
