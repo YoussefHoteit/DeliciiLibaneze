@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import logoImg from '@/assets/logo-jaber.jpg';
+import logoImg from '@/assets/logo-main.jpg';
 
 const LoadingScreen = () => {
   // Animation variants for the staggered sequence
@@ -53,8 +53,8 @@ const LoadingScreen = () => {
           initial="hidden"
           animate="visible"
           src={logoImg} 
-          alt="Delicii Libaneze by Jaber Logo" 
-          className="w-full h-auto mb-4 md:mb-8 rounded-2xl"
+          alt="Delicii Libaneze Logo" 
+          className="w-full h-auto mb-4 md:mb-8"
         />
         
         {/* Step 3: Tagline fades in */}
