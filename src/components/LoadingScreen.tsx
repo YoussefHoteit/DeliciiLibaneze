@@ -48,14 +48,16 @@ const LoadingScreen = () => {
     >
       <div className="relative max-w-[300px] md:max-w-[400px] w-full px-6 flex flex-col items-center -translate-y-8 md:translate-y-0">
         {/* Step 2: Logo fades in */}
-        <motion.img 
-          variants={logoVariants}
-          initial="hidden"
-          animate="visible"
-          src={logoImg} 
-          alt="Delicii Libaneze by jaber Logo" 
-          className="w-full h-auto mb-4 md:mb-8"
-        />
+        <div className="w-full h-48 md:h-64 flex items-center justify-center mb-4 md:mb-8">
+          <motion.img 
+            variants={logoVariants}
+            initial="hidden"
+            animate="visible"
+            src={logoImg} 
+            alt="Delicii Libaneze by jaber Logo" 
+            className="max-w-full max-h-full object-contain mix-blend-multiply"
+          />
+        </div>
         
         {/* Step 3: Tagline fades in */}
         <motion.p
