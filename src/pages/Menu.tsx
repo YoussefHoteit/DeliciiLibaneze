@@ -492,11 +492,11 @@ const MenuPage = () => {
                   <div key={sIdx} className="space-y-12">
                     <div className="space-y-4">
                       {section.title && (
-                        <div className="flex items-center gap-6">
-                          <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
+                        <div className="flex items-center gap-4 md:gap-6">
+                          <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#A55443] flex-shrink-0">
                             {section.title}
                           </h2>
-                          <div className="h-px bg-[#0D6D7E]/10 w-full" />
+                          <div className="h-px bg-[#0D6D7E]/10 flex-1" />
                         </div>
                       )}
                       {section.info && (
@@ -509,7 +509,7 @@ const MenuPage = () => {
                       {section.addons && (
                         <div className="bg-white/40 backdrop-blur-sm p-6 rounded-3xl border border-[#C99B3C]/10 mt-6">
                           <div className="flex items-center gap-2 mb-4 text-[#C99B3C]">
-                            <Sparkles size={16} />
+                            <item.icon size={16} />
                             <span className="text-xs font-bold uppercase tracking-widest">Add-ons</span>
                           </div>
                           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
