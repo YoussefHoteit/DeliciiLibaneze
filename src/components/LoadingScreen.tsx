@@ -15,10 +15,10 @@ const LoadingScreen = () => {
   };
 
   const logoVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0, y: 10 },
     visible: { 
       opacity: 1, 
-      scale: 1,
+      y: 0,
       transition: { delay: 0.5, duration: 1, ease: "easeOut" }
     }
   };
@@ -46,22 +46,18 @@ const LoadingScreen = () => {
       exit="exit"
       className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center"
     >
-      <div className="relative max-w-[300px] md:max-w-[400px] w-full px-6 flex flex-col items-center">
-        {/* Logo Container with explicit white background */}
-        <motion.div
+      <div className="relative max-w-[300px] md:max-w-[400px] w-full px-6 flex flex-col items-center -translate-y-8 md:translate-y-0">
+        {/* Step 2: Logo fades in */}
+        <motion.img 
           variants={logoVariants}
           initial="hidden"
           animate="visible"
-          className="w-full bg-white mb-4 md:mb-8"
-        >
-          <img 
-            src={logoImg} 
-            alt="Delicii Libaneze Logo" 
-            className="w-full h-auto block"
-          />
-        </motion.div>
+          src={logoImg} 
+          alt="Delicii Libaneze Logo" 
+          className="w-full h-auto mb-4 md:mb-8"
+        />
         
-        {/* Tagline */}
+        {/* Step 3: Tagline fades in */}
         <motion.p
           variants={textVariants}
           initial="hidden"
@@ -71,7 +67,7 @@ const LoadingScreen = () => {
           Authentic Lebanese Experience
         </motion.p>
         
-        {/* Loading bar */}
+        {/* Step 4: Loading bar starts */}
         <motion.div 
           variants={loaderVariants}
           initial="hidden"
