@@ -53,7 +53,7 @@ const LoadingScreen = () => {
           initial="hidden"
           animate="visible"
           src={logoImg} 
-          alt="Delicii Libaneze Logo" 
+          alt="Delicii Libaneze by jaber Logo" 
           className="w-full h-auto mb-4 md:mb-8"
         />
         
