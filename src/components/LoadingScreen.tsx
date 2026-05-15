@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import logoImg from '@/assets/logo-main.jpg';
 
 const LoadingScreen = () => {
+  // Animation variants for the staggered sequence
   const containerVariants = {
     initial: { opacity: 1 },
     exit: { 
@@ -14,19 +15,27 @@ const LoadingScreen = () => {
   };
 
   const logoVariants = {
-    hidden: { opacity: 0, scale: 0.98 },
+    hidden: { opacity: 0, scale: 0.95 },
     visible: { 
       opacity: 1, 
       scale: 1,
-      transition: { delay: 0.4, duration: 0.8, ease: "easeOut" }
+      transition: { delay: 0.5, duration: 1, ease: "easeOut" }
     }
   };
 
-  const contentVariants = {
+  const textVariants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
-      transition: { delay: 1, duration: 0.6 }
+      transition: { delay: 1.2, duration: 0.8 }
+    }
+  };
+
+  const loaderVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { delay: 1.8, duration: 0.8 }
     }
   };
 
@@ -35,39 +44,48 @@ const LoadingScreen = () => {
       variants={containerVariants}
       initial="initial"
       exit="exit"
-      className="fixed inset-0 z-[9999] bg-[#FFFFFF] flex flex-col items-center justify-center"
+      className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center"
     >
-      <div className="w-full max-w-[320px] md:max-w-[420px] px-8 flex flex-col items-center">
-        {/* Logo - Pure image on white background */}
-        <motion.img
+      <div className="relative max-w-[300px] md:max-w-[400px] w-full px-6 flex flex-col items-center">
+        {/* Logo Container with explicit white background */}
+        <motion.div
           variants={logoVariants}
           initial="hidden"
           animate="visible"
-          src={logoImg} 
-          alt="Delicii Libaneze Logo" 
-          className="w-full h-auto block mb-8"
-        />
+          className="w-full bg-white mb-4 md:mb-8"
+        >
+          <img 
+            src={logoImg} 
+            alt="Delicii Libaneze Logo" 
+            className="w-full h-auto block"
+          />
+        </motion.div>
         
-        <motion.div
-          variants={contentVariants}
+        {/* Tagline */}
+        <motion.p
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          className="mb-6 md:mb-8 text-[#0D6D7E] font-serif italic tracking-[0.3em] text-[10px] md:text-xs uppercase text-center"
+        >
+          Authentic Lebanese Experience
+        </motion.p>
+        
+        {/* Loading bar */}
+        <motion.div 
+          variants={loaderVariants}
           initial="hidden"
           animate="visible"
           className="flex flex-col items-center w-full"
         >
-          {/* Tagline */}
-          <p className="mb-8 text-[#0D6D7E] font-serif italic tracking-[0.3em] text-[10px] md:text-xs uppercase text-center opacity-80">
-            Authentic Lebanese Experience
-          </p>
-          
-          {/* Minimal Loading Bar */}
-          <div className="w-24 md:w-32 h-[1px] bg-[#0D6D7E]/10 overflow-hidden relative">
+          <div className="w-32 md:w-48 h-[2px] bg-[#0D6D7E]/10 rounded-full overflow-hidden relative">
             <motion.div
               initial={{ x: "-100%" }}
               animate={{ x: "100%" }}
               transition={{ 
                 repeat: Infinity, 
-                duration: 1.2, 
-                ease: "linear" 
+                duration: 1.5, 
+                ease: "easeInOut" 
               }}
               className="absolute inset-0 bg-[#0D6D7E]"
             />
