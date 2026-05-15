@@ -47,17 +47,17 @@ const LoadingScreen = () => {
       className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center"
     >
       <div className="relative max-w-[300px] md:max-w-[400px] w-full px-6 flex flex-col items-center -translate-y-8 md:translate-y-0">
-        {/* Step 2: Logo fades in */}
+        {/* Logo fades in - removed rounded corners to match original image */}
         <motion.img 
           variants={logoVariants}
           initial="hidden"
           animate="visible"
           src={logoImg} 
           alt="Delicii Libaneze by Jaber Logo" 
-          className="w-full h-auto mb-4 md:mb-8 rounded-2xl"
+          className="w-full h-auto mb-4 md:mb-8"
         />
         
-        {/* Step 3: Tagline fades in */}
+        {/* Tagline fades in */}
         <motion.p
           variants={textVariants}
           initial="hidden"
@@ -67,7 +67,7 @@ const LoadingScreen = () => {
           Authentic Lebanese Experience
         </motion.p>
         
-        {/* Step 4: Loading bar starts */}
+        {/* Loading bar starts */}
         <motion.div 
           variants={loaderVariants}
           initial="hidden"
