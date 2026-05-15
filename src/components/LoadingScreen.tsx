@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import logoImg from '@/assets/logo-main.jpg';
+import logoImg from '@/assets/logo-new.jpg';
 
 const LoadingScreen = () => {
   // Animation variants for the staggered sequence
