@@ -11,9 +11,14 @@ const Footer = () => {
     <footer className="bg-[#0D6D7E] text-[#F5EFE6] pt-24 pb-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
-          <h3 className="text-2xl font-serif font-bold tracking-wider">
-            DELICII <span className="text-[#C99B3C]">LIBANEZE</span>
-          </h3>
+          <div className="flex flex-col items-start">
+            <h3 className="text-2xl font-serif font-bold tracking-wider leading-none">
+              DELICII <span className="text-[#C99B3C]">LIBANEZE</span>
+            </h3>
+            <span className="text-[10px] uppercase tracking-[0.4em] text-[#C99B3C] font-bold mt-2">
+              by jaber
+            </span>
+          </div>
           <p className="text-[#F5EFE6]/60 leading-relaxed font-light max-w-md">
             {t('footer.tagline')}
           </p>
@@ -57,8 +62,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="pt-12 border-t border-[#F5EFE6]/10 text-center text-[#F5EFE6]/30 text-xs tracking-widest">
-        &copy; {new Date().getFullYear()} DELICII LIBANEZE. ALL RIGHTS RESERVED.
+      <div className="pt-12 border-t border-[#F5EFE6]/10 text-center text-[#F5EFE6]/30 text-[10px] tracking-[0.2em] uppercase">
+        &copy; {new Date().getFullYear()} DELICII LIBANEZE BY JABER. ALL RIGHTS RESERVED.
       </div>
     </footer>
   );

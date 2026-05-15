@@ -431,9 +431,14 @@ const MenuPage = () => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-30 text-center px-6 w-full max-w-2xl"
         >
-          <span className="text-[#C99B3C] uppercase tracking-[0.4em] text-xs font-bold mb-4 block">
-            DELICII LIBANEZE
-          </span>
+          <div className="mb-4 flex flex-col items-center">
+            <span className="text-[#C99B3C] uppercase tracking-[0.4em] text-xs font-bold block">
+              DELICII LIBANEZE
+            </span>
+            <span className="text-[#C99B3C]/60 uppercase tracking-[0.2em] text-[8px] font-bold block mt-1">
+              by jaber
+            </span>
+          </div>
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#F5EFE6] mb-8">
             {t('menu.title')}
           </h1>

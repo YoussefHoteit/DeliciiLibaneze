@@ -85,9 +85,14 @@ const Navbar = () => {
           <Link 
             to="/" 
             onClick={handleLogoClick}
-            className="text-xl font-serif font-bold text-[#F5EFE6] tracking-wider"
+            className="flex flex-col items-start group"
           >
-            DELICII <span className="text-[#C99B3C]">LIBANEZE</span>
+            <span className="text-xl font-serif font-bold text-[#F5EFE6] tracking-wider leading-none">
+              DELICII <span className="text-[#C99B3C]">LIBANEZE</span>
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.3em] text-[#C99B3C] font-bold mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
+              by jaber
+            </span>
           </Link>
 
           {/* Desktop Nav */}
