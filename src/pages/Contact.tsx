@@ -21,8 +21,6 @@ const ContactPage = () => {
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
-  const googleMapsUrl = "https://maps.app.goo.gl/HCWgnxZn3HY4anwn6";
-
   return (
     <div className="min-h-screen bg-[#F5EFE6]">
       <Navbar />
@@ -93,11 +91,8 @@ const ContactPage = () => {
                   </div>
                 </motion.div>
 
-                <motion.a 
+                <motion.div 
                   whileHover={{ y: -5 }}
-                  href={googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-white p-8 rounded-2xl shadow-sm border border-[#0D6D7E]/5 flex items-start gap-6 group hover:border-[#C99B3C]/30 transition-all"
                 >
                   <div className="w-12 h-12 bg-[#F5EFE6] rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#C99B3C]/10 transition-colors">
@@ -107,7 +102,7 @@ const ContactPage = () => {
                     <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">{t('contact.info.location')}</h3>
                     <p className="text-gray-500 font-light text-sm">Calea Victoriei 25, București</p>
                   </div>
-                </motion.a>
+                </motion.div>
 
                 <motion.a 
                   whileHover={{ y: -5 }}
