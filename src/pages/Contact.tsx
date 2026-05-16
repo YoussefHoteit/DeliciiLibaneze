@@ -234,7 +234,7 @@ const ContactPage = () => {
           className="w-full h-[450px] md:h-[600px] relative grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
         >
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.846444444444!2d26.09722222222222!3d44.43444444444444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4666666667%3A0x6666666666666666!2sCalea%20Victoriei%2025%2C%20Bucure%C8%99ti!5e0!3m2!1sen!2sro!4v1713790000000!5m2!1sen!2sro" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.846!2d26.097222!3d44.434444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4666666667%3A0x6666666666666666!2sDelicii%20Libaneze%20by%20jaber!5e0!3m2!1sen!2sro!4v1713790000000!5m2!1sen!2sro" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
