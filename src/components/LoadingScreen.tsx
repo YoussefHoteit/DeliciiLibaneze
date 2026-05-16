@@ -29,17 +29,17 @@ const LoadingScreen = () => {
       exit="exit"
       className="fixed inset-0 z-[9999] bg-white flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image Layer */}
+      {/* Background Image Layer - Centered and Responsively Sized */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full flex items-center justify-center p-6 md:p-12"
       >
         <img 
           src={loadingBg} 
           alt="Loading Background" 
-          className="w-full h-full object-contain md:object-cover lg:object-contain bg-white"
+          className="w-full h-full object-contain max-w-[90%] max-h-[70%] md:max-w-[50%] lg:max-w-[60%] transition-all duration-500"
         />
       </motion.div>
 
