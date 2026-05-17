@@ -23,7 +23,7 @@ import imgCoconut from '@/assets/menu/coconut.jpg';
 import imgBlueberries from '@/assets/menu/blueberries.jpg';
 import imgBananas from '@/assets/menu/bananas.jpg';
 import imgBlackWalnut from '@/assets/menu/black-walnut.jpg';
-import imgGrapefruit from '@/assets/menu/grepfrut.jpg';
+import imgGrapefruit from '@/assets/menu/grapefruit.jpg';
 import imgHamburgGrapes from '@/assets/menu/hamburg-grapes.jpg';
 import imgHazelnuts from '@/assets/menu/hazelnuts.jpg';
 import imgKiwi from '@/assets/menu/kiwi.jpg';
@@ -60,6 +60,31 @@ const MenuPage = () => {
       title: t('menu.main.desserts'),
       icon: <UtensilsCrossed size={20} />,
       sections: [
+        {
+          title: t('menu.sub.sweets'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
+              desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
+              image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
+              desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
+              image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
+              desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
+              image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Halawet El Jibn' : 'Halawet El Jibn', 
+              desc: language === 'ro' ? 'Rulouri moi de brânză umplute cu cremă și fistic' : 'Soft cheese rolls filled with cream and pistachio', 
+              image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
+        },
         {
           title: t('menu.sub.icecream'),
           info: t('menu.icecream.info'),
