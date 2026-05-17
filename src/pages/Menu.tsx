@@ -394,16 +394,17 @@ const MenuPage = () => {
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center py-6">
-              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-full flex gap-2 border border-[#0D6D7E]/10 overflow-x-auto no-scrollbar">
-                {(['desserts', 'drinks', 'food'] as const).map((tab) => (
+              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-[2rem] md:rounded-full grid grid-cols-2 md:flex gap-2 border border-[#0D6D7E]/10">
+                {(['desserts', 'drinks', 'food'] as const).map((tab, idx) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={cn(
-                      "px-8 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center gap-3 whitespace-nowrap",
+                      "px-8 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center justify-center gap-3 whitespace-nowrap",
                       activeTab === tab 
                         ? "bg-[#A55443] text-white shadow-lg scale-105" 
-                        : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5"
+                        : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5",
+                      idx === 2 ? "col-span-2 md:col-span-1" : ""
                     )}
                   >
                     {menuData[tab].icon}
@@ -431,7 +432,7 @@ const MenuPage = () => {
                     <div className="space-y-4">
                       {section.title && (
                         <div className="flex items-center gap-6">
-                          <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
+                          <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#A55443] leading-tight">
                             {section.title}
                           </h2>
                           <div className="h-px bg-[#0D6D7E]/10 w-full" />
