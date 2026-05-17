@@ -275,103 +275,11 @@ const MenuPage = () => {
       sections: [
         {
           title: t('menu.sub.juices'),
-          items: [
-            { 
-              name: language === 'ro' ? 'Suc Proaspăt de Portocale' : 'Fresh Orange Juice', 
-              desc: language === 'ro' ? '100% portocale proaspăt stoarse' : '100% freshly squeezed oranges', 
-              image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Suc de Rodie' : 'Pomegranate Juice', 
-              desc: language === 'ro' ? 'Rodie de sezon proaspăt presată' : 'Freshly pressed seasonal pomegranate', 
-              image: 'https://images.unsplash.com/photo-1541324908094-89d401807b05?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Limonadă cu Mentă' : 'Lemonade with Mint', 
-              desc: language === 'ro' ? 'Stil clasic libanez cu mentă proaspătă' : 'Classic Lebanese style with fresh mint', 
-              image: 'https://images.unsplash.com/photo-1523677012327-4488992ba7d4?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Sous (Erk Sous)' : 'Sous (Erk Sous)', 
-              desc: language === 'ro' ? 'Băutură tradițională răcoritoare din rădăcină de lemn dulce' : 'Traditional refreshing licorice root beverage', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Sahlab' : 'Sahlab', 
-              desc: language === 'ro' ? 'Băutură caldă tradițională cu lapte, orhidee, scorțișoară și fistic' : 'Traditional warm milk drink with orchid root, cinnamon, and pistachio', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
-              desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
-              desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Ceai de Mentă Proaspătă' : 'Fresh Mint Tea', 
-              desc: language === 'ro' ? 'Ceai negru sau verde cu frunze proaspete de mentă' : 'Black or green tea with fresh mint leaves', 
-              image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Ceai de Salvie (Marmarieh)' : 'Sage Tea (Marmarieh)', 
-              desc: language === 'ro' ? 'Infuzie tradițională de salvie cu proprietăți curative' : 'Traditional sage infusion with healing properties', 
-              image: 'https://images.unsplash.com/photo-1576092729250-a9cdeed0d7c9?auto=format&fit=crop&q=80&w=800'
-            },
-          ]
+          items: []
         },
         {
           title: t('menu.sub.coffee'),
-          items: [
-            { 
-              name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', 
-              desc: language === 'ro' ? 'Cafea tradițională la ibric, servită cu rahat' : 'Traditional coffee boiled in a cezve, served with a side of delight', 
-              image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Cafea Arabă' : 'Arabic Coffee', 
-              desc: language === 'ro' ? 'Cafea tradițională arabă servită fierbinte și aromată' : 'Traditional Arabic coffee served hot and aromatic', 
-              image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Latte cu Curmale' : 'Date Latte', 
-              desc: language === 'ro' ? 'O combinație unică de espresso și dulceața naturală a curmalelor' : 'A unique blend of espresso and natural date sweetness', 
-              image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Latte cu Fistic' : 'Pistachio Latte', 
-              desc: language === 'ro' ? 'Specialitatea casei, latte cu note de fistic' : 'House specialty latte with pistachio notes', 
-              image: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Latte cu Caramel' : 'Caramel Latte', 
-              desc: language === 'ro' ? 'Espresso cremos cu lapte și sirop bogat de caramel' : 'Creamy espresso with steamed milk and rich caramel syrup', 
-              image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: 'Espresso', 
-              desc: language === 'ro' ? 'Cafea intensă și aromată' : 'Intense and aromatic coffee', 
-              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: 'Cappuccino', 
-              desc: language === 'ro' ? 'Espresso cu lapte cremos și spumă' : 'Espresso with creamy milk and foam', 
-              image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: 'Flat White', 
-              desc: language === 'ro' ? 'Shot dublu de espresso cu micro-spumă catifelată' : 'Double shot of espresso with velvety microfoam', 
-              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: 'Americano', 
-              desc: language === 'ro' ? 'Espresso clasic diluat cu apă fierbinte' : 'Classic espresso diluted with hot water', 
-              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
-            },
-          ]
+          items: []
         }
       ]
     },
