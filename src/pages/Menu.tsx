@@ -74,6 +74,83 @@ const MenuPage = () => {
               image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
             },
             { 
+              name: language === 'ro' ? 'Knafeh Clasic' : 'Kna<dyad-write path="src/pages/Menu.tsx" description="Removing all items from the food category and ensuring the drinks category only contains beverages.">
+"use client";
+
+import React, { useState, useMemo, useRef, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { useLanguage } from '@/context/LanguageContext';
+import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { Search, X, ZoomIn, UtensilsCrossed, Coffee, Sparkles, Utensils } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { useLocation } from 'react-router-dom';
+import menuHero from '@/assets/contact-hero.jpg';
+
+// Import Ice Cream Images
+import imgLemon from '@/assets/menu/lemon.jpg';
+import imgDarkChocolate from '@/assets/menu/dark-chocolate.jpg';
+import imgChocolateOrange from '@/assets/menu/chocolate-orange.jpg';
+import imgSaltedCaramel from '@/assets/menu/salted-caramel.jpg';
+import imgVanilla from '@/assets/menu/vanilla.jpg';
+import imgCherries from '@/assets/menu/cherries.jpg';
+import imgMelon from '@/assets/menu/melon.jpg';
+import imgCoconut from '@/assets/menu/coconut.jpg';
+import imgBlueberries from '@/assets/menu/blueberries.jpg';
+import imgBananas from '@/assets/menu/bananas.jpg';
+import imgBlackWalnut from '@/assets/menu/black-walnut.jpg';
+import imgGrapefruit from '@/assets/menu/grapefruit.jpg';
+import imgHamburgGrapes from '@/assets/menu/hamburg-grapes.jpg';
+import imgHazelnuts from '@/assets/menu/hazelnuts.jpg';
+import imgKiwi from '@/assets/menu/kiwi.jpg';
+import imgArabicCoffeeIce from '@/assets/menu/arabic-coffee-ice.jpg';
+import imgStrawberries from '@/assets/menu/strawberries.jpg';
+import imgMixedBerries from '@/assets/menu/mixed-berries.jpg';
+import imgChocolateAmarene from '@/assets/menu/chocolate-amarene.jpg';
+import imgRaspberry from '@/assets/menu/raspberry.jpg';
+import imgCashew from '@/assets/menu/cashew.jpg';
+import imgChestnuts from '@/assets/menu/chestnuts.jpg';
+import imgPassionFruit from '@/assets/menu/passion-fruit.jpg';
+import imgRoseBanana from '@/assets/menu/rose-banana.jpg';
+import imgFigs from '@/assets/menu/figs.jpg';
+import imgBaklavaWalnut from '@/assets/menu/baklava-walnut.jpg';
+import imgBaklavaPistachio from '@/assets/menu/baklava-pistachio.jpg';
+import imgPomegranate from '@/assets/menu/pomegranate.jpg';
+import imgMango from '@/assets/menu/mango.jpg';
+import imgYogurt from '@/assets/menu/yogurt.jpg';
+import imgSpicyChocolate from '@/assets/menu/spicy-chocolate.jpg';
+import imgSpicyRose from '@/assets/menu/spicy-rose.jpg';
+import imgIranianPistachio from '@/assets/menu/iranian-pistachio.jpg';
+import imgAlmondsPinkPepper from '@/assets/menu/almonds-pink-pepper.jpg';
+
+const MenuPage = () => {
+  const { t, language } = useLanguage();
+  const location = useLocation();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeTab, setActiveTab] = useState<'desserts' | 'drinks' | 'food'>('desserts');
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const menuData = useMemo(() => ({
+    desserts: {
+      title: t('menu.main.desserts'),
+      icon: <UtensilsCrossed size={20} />,
+      sections: [
+        {
+          title: t('menu.sub.sweets'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Mix Baklava' : 'Baklava Mix', 
+              desc: language === 'ro' ? 'Sortiment de foietaje crocante cu fistic, nucă și caju' : 'Assorted crispy filo pastries with pistachio, walnut, and cashew', 
+              image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Baklava cu Fistic' : 'Pistachio Baklava', 
+              desc: language === 'ro' ? 'Foietaj bogat umplut cu fistic premium' : 'Rich layered filo pastry filled with premium pistachio', 
+              image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
               name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
               desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
               image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
@@ -381,28 +458,7 @@ const MenuPage = () => {
       sections: [
         {
           title: t('menu.sub.savory'),
-          items: [
-            { 
-              name: language === 'ro' ? 'Manakish Zaatar' : 'Zaatar Manakish', 
-              desc: language === 'ro' ? 'Lipie tradițională cu cimbru, susan și ulei de măsline' : 'Traditional flatbread with thyme, sesame, and olive oil', 
-              image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Manakish cu Brânză' : 'Cheese Manakish', 
-              desc: language === 'ro' ? 'Lipie caldă cu amestec de brânzeturi libaneze' : 'Warm flatbread with a blend of Lebanese cheeses', 
-              image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Falafel' : 'Falafel', 
-              desc: language === 'ro' ? 'Chifteluțe crocante de năut cu sos tahini' : 'Crispy chickpea patties with tahini sauce', 
-              image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Sambousek cu Carne' : 'Meat Sambousek', 
-              desc: language === 'ro' ? 'Pateuri crocante umplute cu carne tocată și muguri de pin' : 'Crispy pastries filled with minced meat and pine nuts', 
-              image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800'
-            },
-          ]
+          items: []
         }
       ]
     }
