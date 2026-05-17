@@ -61,8 +61,75 @@ const MenuPage = () => {
       icon: <UtensilsCrossed size={20} />,
       sections: [
         {
-          title: t('menu.sub.sweets'),
-          items: []
+          title: language === 'ro' ? 'Knafeh și Dulciuri Arabe Calde' : 'Knafeh & Hot Arabic Sweets',
+          items: [
+            { name: language === 'ro' ? 'Knafeh cu Brânză' : 'Cheese Knafeh', desc: language === 'ro' ? 'Desert tradițional cald cu brânză topită și sirop' : 'Traditional warm dessert with melted cheese and syrup', image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Pachet Knafeh cu Brânză' : 'Cheese Knafeh package', desc: language === 'ro' ? 'Pachet special pentru acasă' : 'Special package for home', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Knafeh cu Brânză și Înghețată' : 'Cheese Knafeh with Ice Cream', desc: language === 'ro' ? 'Combinația perfectă de cald și rece' : 'The perfect combination of hot and cold', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Asmalieh cu Cremă de Lapte' : 'Asmalieh with Milk Cream', desc: language === 'ro' ? 'Fidea crocantă cu cremă fină' : 'Crispy vermicelli with fine cream', image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Asmalieh Pătrat' : 'Square Asmalieh', desc: language === 'ro' ? 'Formă tradițională pătrată' : 'Traditional square shape', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Porție Asmalieh' : 'Asmalieh portion', desc: language === 'ro' ? 'O porție generoasă de asmalieh' : 'A generous portion of asmalieh', image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Porție Knafeh 200g' : 'Knafeh portion 200g', desc: language === 'ro' ? 'Porție individuală de 200g' : 'Individual 200g portion', image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mamoul cu Cremă de Lapte' : 'Mamoul with Milk Cream', desc: language === 'ro' ? 'Prăjitură fină umplută cu cremă' : 'Fine pastry filled with cream', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Colecția Baklava' : 'Baklava Collection',
+          items: [
+            { name: language === 'ro' ? 'Mix Baklava' : 'Mixed Baklava', desc: language === 'ro' ? 'Selecție variată de baklava artizanală' : 'Varied selection of artisanal baklava', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava Triunghi cu Fistic' : 'Pistachio Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu fistic premium' : 'Crispy triangle with premium pistachio', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava Triunghi cu Nucă' : 'Walnut Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu nucă selecționată' : 'Crispy triangle with selected walnut', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava Mare cu Nucă' : 'Large Walnut Baklava', desc: language === 'ro' ? 'Porție generoasă de baklava cu nucă' : 'Generous portion of walnut baklava', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava cu Cocos' : 'Coconut Baklava', desc: language === 'ro' ? 'Aromă exotică de cocos' : 'Exotic coconut flavor', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava cu Cacao' : 'Cocoa Baklava', desc: language === 'ro' ? 'Baklava cu note intense de cacao' : 'Baklava with intense cocoa notes', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava cu Cremă de Lapte' : 'Milk Cream Baklava', desc: language === 'ro' ? 'Baklava fină cu cremă de lapte' : 'Fine baklava with milk cream', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava cu Ciocolată' : 'Chocolate Baklava', desc: language === 'ro' ? 'Combinație modernă cu ciocolată' : 'Modern combination with chocolate', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava cu Înghețată' : 'Baklava with Ice Cream', desc: language === 'ro' ? 'Desertul suprem' : 'The ultimate dessert', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Baklava Specială cu Fistic' : 'Special Pistachio Baklava', desc: language === 'ro' ? 'Rețetă specială cu extra fistic' : 'Special recipe with extra pistachio', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cutii Cadou Baklava (500g / 600g / 1kg)' : 'Baklava gift boxes (500g / 600g / 1kg)', desc: language === 'ro' ? 'Cadoul perfect pentru cei dragi' : 'The perfect gift for loved ones', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Deserturi Arabe Tradiționale' : 'Traditional Arabic Desserts',
+          items: [
+            { name: 'Halawet El Jibn', desc: language === 'ro' ? 'Rulouri de brânză cu cremă și fistic' : 'Cheese rolls with cream and pistachio', image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Basima', desc: language === 'ro' ? 'Prăjitură densă cu cocos' : 'Dense coconut cake', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Belourieh', desc: language === 'ro' ? 'Fidea albă cu fistic' : 'White vermicelli with pistachio', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Harise', desc: language === 'ro' ? 'Prăjitură tradițională din griș' : 'Traditional semolina cake', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Halva', desc: language === 'ro' ? 'Halva tradițională artizanală' : 'Traditional artisanal halva', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Halva cu Ciocolată' : 'Halva with Chocolate', desc: language === 'ro' ? 'Halva cu inserții de ciocolată' : 'Halva with chocolate inserts', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Rahat Turcesc' : 'Turkish Delight', desc: language === 'ro' ? 'Diverse arome tradiționale' : 'Various traditional flavors', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Prăjitură Românească' : 'Romanian Cake', desc: language === 'ro' ? 'Desert local tradițional' : 'Traditional local dessert', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Sfoof', desc: language === 'ro' ? 'Prăjitură libaneză cu turmeric' : 'Lebanese turmeric cake', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Patiserie Sărată' : 'Savory Pastries',
+          items: [
+            { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Maamoul cu Curmale' : 'Maamoul with Dates', desc: language === 'ro' ? 'Biscuiți fragezi cu curmale' : 'Shortbread cookies with dates', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Maamoul cu Nuci' : 'Maamoul with Walnuts', desc: language === 'ro' ? 'Biscuiți fragezi cu nuci' : 'Shortbread cookies with walnuts', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Profiterol Libanez' : 'Lebanese Profiterole', desc: language === 'ro' ? 'Profiterol cu specific libanez' : 'Lebanese style profiterole', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Praline și Dulciuri Speciale' : 'Pralines & Specialty Sweets',
+          items: [
+            { name: language === 'ro' ? 'Praline cu Curmale și Fistic' : 'Pralines with Dates & Pistachio', desc: language === 'ro' ? 'Combinație fină de curmale și fistic' : 'Fine combination of dates and pistachio', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mix Praline' : 'Mixed Pralines', desc: language === 'ro' ? 'Selecție de praline artizanale' : 'Selection of artisanal pralines', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Tablete de Ciocolată' : 'Chocolate Tablets', desc: language === 'ro' ? 'Ciocolată artizanală premium' : 'Premium artisanal chocolate', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Fructe în Ciocolată' : 'Fruit in Chocolate', desc: language === 'ro' ? 'Fructe confiate învelite în ciocolată' : 'Candied fruit dipped in chocolate', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Orez cu Lapte' : 'Rice Pudding', desc: language === 'ro' ? 'Desert cremos tradițional' : 'Traditional creamy dessert', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mango Uscat' : 'Dried Mango', desc: language === 'ro' ? 'Fâșii de mango natural uscat' : 'Natural dried mango strips', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Caise Uscate' : 'Dried Apricots', desc: language === 'ro' ? 'Caise naturale uscate' : 'Natural dried apricots', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Năut Prăjit' : 'Roasted Chickpeas', desc: language === 'ro' ? 'Gustare crocantă tradițională' : 'Traditional crunchy snack', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Biscuiți cu Susan' : 'Sesame Biscuits', desc: language === 'ro' ? 'Biscuiți crocanți cu susan' : 'Crunchy sesame biscuits', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Graibe Biscuits', desc: language === 'ro' ? 'Biscuiți tradiționali fragezi' : 'Traditional shortbread biscuits', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+          ]
         },
         {
           title: t('menu.sub.icecream'),
@@ -74,176 +141,40 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Ciocolată Albă' : 'White Chocolate' },
           ],
           items: [
-            { 
-              name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', 
-              desc: language === 'ro' ? 'O combinație îndrăzneață de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', 
-              image: imgAlmondsPinkPepper
-            },
-            { 
-              name: language === 'ro' ? 'Fistic Iran' : 'Iranian Pistachio', 
-              desc: language === 'ro' ? 'Înghețată premium cu cel mai fin fistic iranian' : 'Premium ice cream with the finest Iranian pistachio', 
-              image: imgIranianPistachio
-            },
-            { 
-              name: language === 'ro' ? 'Trandafir Picant' : 'Spicy Rose', 
-              desc: language === 'ro' ? 'Aromă florală de trandafir cu un postgust surprinzător' : 'Floral rose flavor with a surprising aftertaste', 
-              image: imgSpicyRose
-            },
-            { 
-              name: language === 'ro' ? 'Ciocolată Picantă' : 'Spicy Chocolate', 
-              desc: language === 'ro' ? 'Ciocolată neagră intensă cu note de chili' : 'Intense dark chocolate with chili notes', 
-              image: imgSpicyChocolate
-            },
-            { 
-              name: language === 'ro' ? 'Iaurt Libanez' : 'Lebanese Yogurt', 
-              desc: language === 'ro' ? 'Gust proaspăt și ușor acrișor de iaurt tradițional' : 'Fresh and slightly tangy traditional yogurt taste', 
-              image: imgYogurt
-            },
-            { 
-              name: language === 'ro' ? 'Mango Egypt' : 'Egyptian Mango', 
-              desc: language === 'ro' ? 'Mango exotic și dulce din inima Egiptului' : 'Exotic and sweet mango from the heart of Egypt', 
-              image: imgMango
-            },
-            { 
-              name: language === 'ro' ? 'Rodie Egipt' : 'Egyptian Pomegranate', 
-              desc: language === 'ro' ? 'Sorbet revigorant de rodie egipteană' : 'Refreshing Egyptian pomegranate sorbet', 
-              image: imgPomegranate
-            },
-            { 
-              name: language === 'ro' ? 'Baklava Fistic' : 'Pistachio Baklava Ice Cream', 
-              desc: language === 'ro' ? 'Înghețată cremoasă cu bucățele de baklava cu fistic' : 'Creamy ice cream with pistachio baklava chunks', 
-              image: imgBaklavaPistachio
-            },
-            { 
-              name: language === 'ro' ? 'Baklava Nucă' : 'Walnut Baklava Ice Cream', 
-              desc: language === 'ro' ? 'Înghețată cremoasă cu bucățele de baklava cu nucă' : 'Creamy ice cream with walnut baklava chunks', 
-              image: imgBaklavaWalnut
-            },
-            { 
-              name: language === 'ro' ? 'Smochine Cognac' : 'Figs with Cognac', 
-              desc: language === 'ro' ? 'Aromă sofisticată de smochine infuzate în cognac' : 'Sophisticated flavor of figs infused in cognac', 
-              image: imgFigs
-            },
-            { 
-              name: language === 'ro' ? 'Trandafir cu Banane' : 'Rose with Bananas', 
-              desc: language === 'ro' ? 'Un amestec delicat de petale de trandafir și banane coapte' : 'A delicate blend of rose petals and ripe bananas', 
-              image: imgRoseBanana
-            },
-            { 
-              name: language === 'ro' ? 'Fructul Pasiunii' : 'Passion Fruit', 
-              desc: language === 'ro' ? 'Sorbet tropical intens și aromat' : 'Intense and aromatic tropical sorbet', 
-              image: imgPassionFruit
-            },
-            { 
-              name: language === 'ro' ? 'Castane' : 'Chestnuts', 
-              desc: language === 'ro' ? 'Aromă bogată și catifelată de castane coapte' : 'Rich and velvety flavor of roasted chestnuts', 
-              image: imgChestnuts
-            },
-            { 
-              name: language === 'ro' ? 'Caju' : 'Cashew', 
-              desc: language === 'ro' ? 'Înghețată cremoasă cu nuci caju prăjite' : 'Creamy ice cream with roasted cashew nuts', 
-              image: imgCashew
-            },
-            { 
-              name: language === 'ro' ? 'Zmeură' : 'Raspberry', 
-              desc: language === 'ro' ? 'Sorbet proaspăt de zmeură de grădină' : 'Fresh garden raspberry sorbet', 
-              image: imgRaspberry
-            },
-            { 
-              name: language === 'ro' ? 'Ciocolată cu Amarene' : 'Chocolate with Sour Cherries', 
-              desc: language === 'ro' ? 'Ciocolată fină cu cireșe amarene întregi' : 'Fine chocolate with whole amarene cherries', 
-              image: imgChocolateAmarene
-            },
-            { 
-              name: language === 'ro' ? 'Fructe de Pădure' : 'Mixed Berries', 
-              desc: language === 'ro' ? 'Un amestec exploziv de fructe de pădure proaspete' : 'An explosive mix of fresh forest fruits', 
-              image: imgMixedBerries
-            },
-            { 
-              name: language === 'ro' ? 'Căpșuni' : 'Strawberries', 
-              desc: language === 'ro' ? 'Gustul clasic al căpșunilor de vară' : 'The classic taste of summer strawberries', 
-              image: imgStrawberries
-            },
-            { 
-              name: language === 'ro' ? 'Cafea Arabică' : 'Arabic Coffee Ice Cream', 
-              desc: language === 'ro' ? 'Înghețată intensă cu aromă de cafea la nisip' : 'Intense ice cream with sand-brewed coffee flavor', 
-              image: imgArabicCoffeeIce
-            },
-            { 
-              name: 'Kiwi', 
-              desc: language === 'ro' ? 'Sorbet exotic și revigorant de kiwi' : 'Exotic and refreshing kiwi sorbet', 
-              image: imgKiwi
-            },
-            { 
-              name: language === 'ro' ? 'Alune de Pădure' : 'Hazelnuts', 
-              desc: language === 'ro' ? 'Înghețată bogată cu alune de pădure prăjite' : 'Rich ice cream with roasted hazelnuts', 
-              image: imgHazelnuts
-            },
-            { 
-              name: language === 'ro' ? 'Struguri Hamburg' : 'Hamburg Grapes', 
-              desc: language === 'ro' ? 'Aromă unică de struguri negri parfumați' : 'Unique flavor of fragrant black grapes', 
-              image: imgHamburgGrapes
-            },
-            { 
-              name: language === 'ro' ? 'Grepfrut' : 'Grapefruit', 
-              desc: language === 'ro' ? 'Sorbet răcoritor cu note amărui de grepfrut' : 'Refreshing sorbet with bitter grapefruit notes', 
-              image: imgGrapefruit
-            },
-            { 
-              name: language === 'ro' ? 'Nucă Neagră' : 'Black Walnut', 
-              desc: language === 'ro' ? 'Aromă intensă și pământie de nucă neagră' : 'Intense and earthy black walnut flavor', 
-              image: imgBlackWalnut
-            },
-            { 
-              name: language === 'ro' ? 'Banane' : 'Bananas', 
-              desc: language === 'ro' ? 'Înghețată cremoasă cu banane proaspete' : 'Creamy ice cream with fresh bananas', 
-              image: imgBananas
-            },
-            { 
-              name: language === 'ro' ? 'Pepene Galben' : 'Melon', 
-              desc: language === 'ro' ? 'Sorbet dulce și parfumat de pepene galben' : 'Sweet and fragrant melon sorbet', 
-              image: imgMelon
-            },
-            { 
-              name: language === 'ro' ? 'Cireșe' : 'Cherries', 
-              desc: language === 'ro' ? 'Sorbet intens de cireșe coapte' : 'Intense ripe cherry sorbet', 
-              image: imgCherries
-            },
-            { 
-              name: language === 'ro' ? 'Afine' : 'Blueberries', 
-              desc: language === 'ro' ? 'Sorbet bogat în antioxidanți din afine proaspete' : 'Antioxidant-rich sorbet from fresh blueberries', 
-              image: imgBlueberries
-            },
-            { 
-              name: 'Cocos', 
-              desc: language === 'ro' ? 'Înghețată exotică cu lapte de cocos și fulgi' : 'Exotic ice cream with coconut milk and flakes', 
-              image: imgCoconut
-            },
-            { 
-              name: language === 'ro' ? 'Vanilie Madagascar' : 'Madagascar Vanilla', 
-              desc: language === 'ro' ? 'Gustul autentic al păstăilor de vanilie de Madagascar' : 'The authentic taste of Madagascar vanilla beans', 
-              image: imgVanilla
-            },
-            { 
-              name: language === 'ro' ? 'Caramel Sărat cu Alune' : 'Salted Caramel with Hazelnuts', 
-              desc: language === 'ro' ? 'Echilibrul perfect între dulce, sărat și crocant' : 'The perfect balance between sweet, salty, and crunchy', 
-              image: imgSaltedCaramel
-            },
-            { 
-              name: language === 'ro' ? 'Ciocolată cu Portocale' : 'Chocolate with Oranges', 
-              desc: language === 'ro' ? 'Combinația clasică de ciocolată neagră și citrice' : 'The classic combination of dark chocolate and citrus', 
-              image: imgChocolateOrange
-            },
-            { 
-              name: language === 'ro' ? 'Ciocolată Neagră' : 'Dark Chocolate', 
-              desc: language === 'ro' ? 'Ciocolată belgiană intensă cu 70% cacao' : 'Intense Belgian chocolate with 70% cocoa', 
-              image: imgDarkChocolate
-            },
-            { 
-              name: language === 'ro' ? 'Lămâie' : 'Lemon', 
-              desc: language === 'ro' ? 'Sorbet ultra-răcoritor de lămâie proaspătă' : 'Ultra-refreshing fresh lemon sorbet', 
-              image: imgLemon
-            },
+            { name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', desc: language === 'ro' ? 'O combinație îndrăzneață de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', image: imgAlmondsPinkPepper },
+            { name: language === 'ro' ? 'Fistic Iran' : 'Iranian Pistachio', desc: language === 'ro' ? 'Înghețată premium cu cel mai fin fistic iranian' : 'Premium ice cream with the finest Iranian pistachio', image: imgIranianPistachio },
+            { name: language === 'ro' ? 'Trandafir Picant' : 'Spicy Rose', desc: language === 'ro' ? 'Aromă florală de trandafir cu un postgust surprinzător' : 'Floral rose flavor with a surprising aftertaste', image: imgSpicyRose },
+            { name: language === 'ro' ? 'Ciocolată Picantă' : 'Spicy Chocolate', desc: language === 'ro' ? 'Ciocolată neagră intensă cu note de chili' : 'Intense dark chocolate with chili notes', image: imgSpicyChocolate },
+            { name: language === 'ro' ? 'Iaurt Libanez' : 'Lebanese Yogurt', desc: language === 'ro' ? 'Gust proaspăt și ușor acrișor de iaurt tradițional' : 'Fresh and slightly tangy traditional yogurt taste', image: imgYogurt },
+            { name: language === 'ro' ? 'Mango Egypt' : 'Egyptian Mango', desc: language === 'ro' ? 'Mango exotic și dulce din inima Egiptului' : 'Exotic and sweet mango from the heart of Egypt', image: imgMango },
+            { name: language === 'ro' ? 'Rodie Egipt' : 'Egyptian Pomegranate', desc: language === 'ro' ? 'Sorbet revigorant de rodie egipteană' : 'Refreshing Egyptian pomegranate sorbet', image: imgPomegranate },
+            { name: language === 'ro' ? 'Baklava Fistic' : 'Pistachio Baklava Ice Cream', desc: language === 'ro' ? 'Înghețată cremoasă cu bucățele de baklava cu fistic' : 'Creamy ice cream with pistachio baklava chunks', image: imgBaklavaPistachio },
+            { name: language === 'ro' ? 'Baklava Nucă' : 'Walnut Baklava Ice Cream', desc: language === 'ro' ? 'Înghețată cremoasă cu bucățele de baklava cu nucă' : 'Creamy ice cream with walnut baklava chunks', image: imgBaklavaWalnut },
+            { name: language === 'ro' ? 'Smochine Cognac' : 'Figs with Cognac', desc: language === 'ro' ? 'Aromă sofisticată de smochine infuzate în cognac' : 'Sophisticated flavor of figs infused in cognac', image: imgFigs },
+            { name: language === 'ro' ? 'Trandafir cu Banane' : 'Rose with Bananas', desc: language === 'ro' ? 'Un amestec delicat de petale de trandafir și banane coapte' : 'A delicate blend of rose petals and ripe bananas', image: imgRoseBanana },
+            { name: language === 'ro' ? 'Fructul Pasiunii' : 'Passion Fruit', desc: language === 'ro' ? 'Sorbet tropical intens și aromat' : 'Intense and aromatic tropical sorbet', image: imgPassionFruit },
+            { name: language === 'ro' ? 'Castane' : 'Chestnuts', desc: language === 'ro' ? 'Aromă bogată și catifelată de castane coapte' : 'Rich and velvety flavor of roasted chestnuts', image: imgChestnuts },
+            { name: language === 'ro' ? 'Caju' : 'Cashew', desc: language === 'ro' ? 'Înghețată cremoasă cu nuci caju prăjite' : 'Creamy ice cream with roasted cashew nuts', image: imgCashew },
+            { name: language === 'ro' ? 'Zmeură' : 'Raspberry', desc: language === 'ro' ? 'Sorbet proaspăt de zmeură de grădină' : 'Fresh garden raspberry sorbet', image: imgRaspberry },
+            { name: language === 'ro' ? 'Ciocolată cu Amarene' : 'Chocolate with Sour Cherries', desc: language === 'ro' ? 'Ciocolată fină cu cireșe amarene întregi' : 'Fine chocolate with whole amarene cherries', image: imgChocolateAmarene },
+            { name: language === 'ro' ? 'Fructe de Pădure' : 'Mixed Berries', desc: language === 'ro' ? 'Un amestec exploziv de fructe de pădure proaspete' : 'An explosive mix of fresh forest fruits', image: imgMixedBerries },
+            { name: language === 'ro' ? 'Căpșuni' : 'Strawberries', desc: language === 'ro' ? 'Gustul clasic al căpșunilor de vară' : 'The classic taste of summer strawberries', image: imgStrawberries },
+            { name: language === 'ro' ? 'Cafea Arabică' : 'Arabic Coffee Ice Cream', desc: language === 'ro' ? 'Înghețată intensă cu aromă de cafea la nisip' : 'Intense ice cream with sand-brewed coffee flavor', image: imgArabicCoffeeIce },
+            { name: 'Kiwi', desc: language === 'ro' ? 'Sorbet exotic și revigorant de kiwi' : 'Exotic and refreshing kiwi sorbet', image: imgKiwi },
+            { name: language === 'ro' ? 'Alune de Pădure' : 'Hazelnuts', desc: language === 'ro' ? 'Înghețată bogată cu alune de pădure prăjite' : 'Rich ice cream with roasted hazelnuts', image: imgHazelnuts },
+            { name: language === 'ro' ? 'Struguri Hamburg' : 'Hamburg Grapes', desc: language === 'ro' ? 'Aromă unică de struguri negri parfumați' : 'Unique flavor of fragrant black grapes', image: imgHamburgGrapes },
+            { name: language === 'ro' ? 'Grepfrut' : 'Grapefruit', desc: language === 'ro' ? 'Sorbet răcoritor cu note amărui de grepfrut' : 'Refreshing sorbet with bitter grapefruit notes', image: imgGrapefruit },
+            { name: language === 'ro' ? 'Nucă Neagră' : 'Black Walnut', desc: language === 'ro' ? 'Aromă intensă și pământie de nucă neagră' : 'Intense and earthy black walnut flavor', image: imgBlackWalnut },
+            { name: language === 'ro' ? 'Banane' : 'Bananas', desc: language === 'ro' ? 'Înghețată cremoasă cu banane proaspete' : 'Creamy ice cream with fresh bananas', image: imgBananas },
+            { name: language === 'ro' ? 'Pepene Galben' : 'Melon', desc: language === 'ro' ? 'Sorbet dulce și parfumat de pepene galben' : 'Sweet and fragrant melon sorbet', image: imgMelon },
+            { name: language === 'ro' ? 'Cireșe' : 'Cherries', desc: language === 'ro' ? 'Sorbet intens de cireșe coapte' : 'Intense ripe cherry sorbet', image: imgCherries },
+            { name: language === 'ro' ? 'Afine' : 'Blueberries', desc: language === 'ro' ? 'Sorbet bogat în antioxidanți din afine proaspete' : 'Antioxidant-rich sorbet from fresh blueberries', image: imgBlueberries },
+            { name: 'Cocos', desc: language === 'ro' ? 'Înghețată exotică cu lapte de cocos și fulgi' : 'Exotic ice cream with coconut milk and flakes', image: imgCoconut },
+            { name: language === 'ro' ? 'Vanilie Madagascar' : 'Madagascar Vanilla', desc: language === 'ro' ? 'Gustul autentic al păstăilor de vanilie de Madagascar' : 'The authentic taste of Madagascar vanilla beans', image: imgVanilla },
+            { name: language === 'ro' ? 'Caramel Sărat cu Alune' : 'Salted Caramel with Hazelnuts', desc: language === 'ro' ? 'Echilibrul perfect între dulce, sărat și crocant' : 'The perfect balance between sweet, salty, and crunchy', image: imgSaltedCaramel },
+            { name: language === 'ro' ? 'Ciocolată cu Portocale' : 'Chocolate with Oranges', desc: language === 'ro' ? 'Combinația clasică de ciocolată neagră și citrice' : 'The classic combination of dark chocolate and citrus', image: imgChocolateOrange },
+            { name: language === 'ro' ? 'Ciocolată Neagră' : 'Dark Chocolate', desc: language === 'ro' ? 'Ciocolată belgiană intensă cu 70% cacao' : 'Intense Belgian chocolate with 70% cocoa', image: imgDarkChocolate },
+            { name: language === 'ro' ? 'Lămâie' : 'Lemon', desc: language === 'ro' ? 'Sorbet ultra-răcoritor de lămâie proaspătă' : 'Ultra-refreshing fresh lemon sorbet', image: imgLemon },
           ]
         }
       ]
@@ -253,12 +184,86 @@ const MenuPage = () => {
       icon: <Coffee size={20} />,
       sections: [
         {
-          title: t('menu.sub.juices'),
-          items: []
+          title: language === 'ro' ? 'Cafea și Espresso' : 'Coffee & Espresso',
+          items: [
+            { name: 'Espresso Single', desc: language === 'ro' ? 'Espresso scurt și intens' : 'Short and intense espresso', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Espresso Double', desc: language === 'ro' ? 'Doză dublă de energie' : 'Double dose of energy', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Cappuccino', desc: language === 'ro' ? 'Espresso cu spumă de lapte fină' : 'Espresso with fine milk foam', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Caffè Latte', desc: language === 'ro' ? 'Băutură cremoasă cu lapte' : 'Creamy milk drink', image: 'https://images.unsplash.com/photo-1551030173-122adbb8158a?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', desc: language === 'ro' ? 'Cafea tradițională la ibric' : 'Traditional pot-brewed coffee', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cafea Turcească cu Cardamom' : 'Turkish Coffee with Cardamom', desc: language === 'ro' ? 'Aromă autentică orientală' : 'Authentic oriental flavor', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cafea la Nisip' : 'Sand Coffee', desc: language === 'ro' ? 'Preparată tradițional pe nisip încins' : 'Traditionally prepared on hot sand', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', desc: language === 'ro' ? 'Ciocolată densă și cremoasă' : 'Thick and creamy chocolate', image: 'https://images.unsplash.com/photo-1544787210-2827448b304c?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cafea Gheață' : 'Iced Coffee', desc: language === 'ro' ? 'Cafea revigorantă cu gheață' : 'Refreshing coffee with ice', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Sahlep', desc: language === 'ro' ? 'Băutură tradițională caldă de iarnă' : 'Traditional warm winter drink', image: 'https://images.unsplash.com/photo-1544787210-2827448b304c?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Extra shot', desc: language === 'ro' ? 'Doză suplimentară de espresso' : 'Additional espresso shot', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Opțiune Lapte Vegetal' : 'Plant milk option', desc: language === 'ro' ? 'Migdale, ovăz sau soia' : 'Almond, oat, or soy', image: 'https://images.unsplash.com/photo-1551030173-122adbb8158a?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Affogato', desc: language === 'ro' ? 'Espresso peste înghețată de vanilie' : 'Espresso over vanilla ice cream', image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800' },
+          ]
         },
         {
-          title: t('menu.sub.coffee'),
-          items: []
+          title: language === 'ro' ? 'Frappe-uri și Băuturi Speciale' : 'Frappes & Specialty Drinks',
+          items: [
+            { name: 'Classic Frappe', desc: language === 'ro' ? 'Frappe clasic revigorant' : 'Refreshing classic frappe', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Banana Frappe', desc: language === 'ro' ? 'Frappe cu aromă de banane' : 'Banana flavored frappe', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Strawberry Frappe', desc: language === 'ro' ? 'Frappe cu căpșuni proaspete' : 'Frappe with fresh strawberries', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Ice Cream Frappe', desc: language === 'ro' ? 'Frappe cu o cupă de înghețată' : 'Frappe with a scoop of ice cream', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Variații Frappe Speciale' : 'Specialty Frappe variations', desc: language === 'ro' ? 'Arome sezoniere' : 'Seasonal flavors', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Sucuri Proaspete și Băuturi ale Casei' : 'Fresh Juices & House Drinks',
+          items: [
+            { name: language === 'ro' ? 'Portocale Proaspete' : 'Fresh Orange', desc: language === 'ro' ? 'Suc de portocale proaspăt stors' : 'Freshly squeezed orange juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Grepfrut Proaspăt' : 'Fresh Grapefruit', desc: language === 'ro' ? 'Suc de grepfrut proaspăt stors' : 'Freshly squeezed grapefruit juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mix Proaspăt' : 'Mixed Fresh', desc: language === 'ro' ? 'Combinație de fructe proaspete' : 'Combination of fresh fruits', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Vitamin Protein Fresh', desc: language === 'ro' ? 'Mix energizant' : 'Energizing mix', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă Clasică' : 'Classic Lemonade', desc: language === 'ro' ? 'Lămâie, apă și miere' : 'Lemon, water, and honey', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Mentă' : 'Mint Lemonade', desc: language === 'ro' ? 'Limonadă cu mentă proaspătă' : 'Lemonade with fresh mint', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Mango' : 'Mango Lemonade', desc: language === 'ro' ? 'Limonadă cu piure de mango' : 'Lemonade with mango puree', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Zmeură' : 'Raspberry Lemonade', desc: language === 'ro' ? 'Limonadă cu zmeură proaspătă' : 'Lemonade with fresh raspberries', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Căpșuni' : 'Strawberry Lemonade', desc: language === 'ro' ? 'Limonadă cu căpșuni proaspete' : 'Lemonade with fresh strawberries', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Rodie' : 'Pomegranate Lemonade', desc: language === 'ro' ? 'Limonadă cu suc de rodie' : 'Lemonade with pomegranate juice', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Hibiscus' : 'Hibiscus Lemonade', desc: language === 'ro' ? 'Limonadă cu infuzie de hibiscus' : 'Lemonade with hibiscus infusion', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Ghimbir și Lime' : 'Ginger & Lime Lemonade', desc: language === 'ro' ? 'Limonadă picantă și revigorantă' : 'Spicy and refreshing lemonade', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă cu Mango Egiptean' : 'Egyptian Mango Lemonade', desc: language === 'ro' ? 'Limonadă cu mango premium' : 'Lemonade with premium mango', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Limonadă Caldă' : 'Hot Lemonade', desc: language === 'ro' ? 'Limonadă caldă pentru zile reci' : 'Warm lemonade for cold days', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Citronada', desc: language === 'ro' ? 'Băutură tradițională de citrice' : 'Traditional citrus drink', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Suc de Guava' : 'Guava Juice', desc: language === 'ro' ? 'Suc exotic de guava' : 'Exotic guava juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Suc de Mango' : 'Mango Juice', desc: language === 'ro' ? 'Suc dens de mango' : 'Thick mango juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: 'Mocktails',
+          items: [
+            { name: 'Nojito', desc: language === 'ro' ? 'Mojito fără alcool' : 'Non-alcoholic mojito', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Green Apple', desc: language === 'ro' ? 'Mocktail cu măr verde' : 'Green apple mocktail', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Strawberry Daiquiri', desc: language === 'ro' ? 'Daiquiri cu căpșuni fără alcool' : 'Non-alcoholic strawberry daiquiri', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Freez Pineapple & Coconut', desc: language === 'ro' ? 'Băutură carbogazoasă exotică' : 'Exotic carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Freez Berry', desc: language === 'ro' ? 'Băutură carbogazoasă cu fructe de pădure' : 'Berry carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Freez Kiwi Lime', desc: language === 'ro' ? 'Băutură carbogazoasă cu kiwi și lime' : 'Kiwi lime carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Freez Lemon Mint', desc: language === 'ro' ? 'Băutură carbogazoasă cu lămâie și mentă' : 'Lemon mint carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Freez Mango Peach', desc: language === 'ro' ? 'Băutură carbogazoasă cu mango și piersică' : 'Mango peach carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Băuturi Răcoritoare' : 'Soft Drinks',
+          items: [
+            { name: 'Pepsi / Zero / Twist', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: '7UP', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Mirinda', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Lipton Ice Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Prigat', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Coca-Cola / Zero', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Fanta', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Sprite', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Schweppes', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Fuze Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Apă' : 'Water', desc: '330ml / 750ml', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Rockstar', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Ursus Fără Alcool' : 'Ursus Non-Alcoholic Beer', desc: '330ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+          ]
         }
       ]
     },
@@ -267,8 +272,28 @@ const MenuPage = () => {
       icon: <Utensils size={20} />,
       sections: [
         {
-          title: t('menu.sub.savory'),
-          items: []
+          title: language === 'ro' ? 'Mic Dejun și Sărat' : 'Breakfast & Savory',
+          items: [
+            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Labneh', desc: language === 'ro' ? 'Cremă de iaurt libanez' : 'Lebanese yogurt cream', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Kabis', desc: language === 'ro' ? 'Murături libaneze asortate' : 'Assorted Lebanese pickles', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Makdous', desc: language === 'ro' ? 'Vinete umplute cu nuci și ardei' : 'Eggplants stuffed with walnuts and peppers', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Halloumi Grill', desc: language === 'ro' ? 'Brânză halloumi la grătar' : 'Grilled halloumi cheese', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Falafel (5 pcs)', desc: language === 'ro' ? 'Chifteluțe de năut crocante' : 'Crispy chickpea patties', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Fattoush', desc: language === 'ro' ? 'Salată proaspătă cu lipie crocantă' : 'Fresh salad with crispy flatbread', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Lipie' : 'Flatbread', desc: language === 'ro' ? 'Lipie proaspătă' : 'Fresh flatbread', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Falafel Sandwich', desc: language === 'ro' ? 'Sandwich cu falafel și legume' : 'Sandwich with falafel and vegetables', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Halloumi Sandwich', desc: language === 'ro' ? 'Sandwich cu halloumi la grătar' : 'Sandwich with grilled halloumi', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Pizza Libaneză' : 'Lebanese Pizza', desc: language === 'ro' ? 'Pizza cu specific oriental' : 'Oriental style pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+          ]
         }
       ]
     }
