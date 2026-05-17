@@ -53,7 +53,8 @@ const MenuPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState<'desserts' | 'drinks' | 'food'>('desserts');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
 
   const menuData = useMemo(() => ({
     desserts: {
@@ -309,6 +310,20 @@ const MenuPage = () => {
     })).filter(section => section.items.length > 0);
   }, [searchTerm, activeTab, menuData]);
 
+  // Handle automatic scroll when activeTab changes
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    if (contentRef.current) {
+      const yOffset = -160; // Offset for sticky navbar + category switcher
+      const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [activeTab]);
+
   useEffect(() => {
     if (location.state?.categoryId) {
       const categoryMap: Record<string, 'desserts' | 'drinks' | 'food'> = {
@@ -323,7 +338,6 @@ const MenuPage = () => {
       const targetTab = categoryMap[location.state.categoryId];
       if (targetTab) {
         setActiveTab(targetTab);
-        window.scrollTo({ top: window.innerHeight * 0.5, behavior: 'smooth' });
       }
     }
   }, [location.state]);
@@ -374,7 +388,7 @@ const MenuPage = () => {
         </motion.div>
       </section>
 
-      <div className="pb-24" ref={containerRef}>
+      <div className="pb-24">
         {/* Main Category Switcher */}
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
@@ -400,7 +414,7 @@ const MenuPage = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6" ref={contentRef}>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab + searchTerm + language}
