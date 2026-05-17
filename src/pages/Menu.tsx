@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Search, X, ZoomIn, UtensilsCrossed, Coffee, Sparkles } from 'lucide-react';
+import { Search, X, ZoomIn, UtensilsCrossed, Coffee, Sparkles, Utensils } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { useLocation } from 'react-router-dom';
 import menuHero from '@/assets/contact-hero.jpg';
@@ -51,7 +51,7 @@ const MenuPage = () => {
   const { t, language } = useLanguage();
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [activeTab, setActiveTab] = useState<'desserts' | 'drinks'>('desserts');
+  const [activeTab, setActiveTab] = useState<'desserts' | 'drinks' | 'food'>('desserts');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -374,6 +374,37 @@ const MenuPage = () => {
           ]
         }
       ]
+    },
+    food: {
+      title: t('menu.main.food'),
+      icon: <Utensils size={20} />,
+      sections: [
+        {
+          title: t('menu.sub.savory'),
+          items: [
+            { 
+              name: language === 'ro' ? 'Manakish Zaatar' : 'Zaatar Manakish', 
+              desc: language === 'ro' ? 'Lipie tradițională cu cimbru, susan și ulei de măsline' : 'Traditional flatbread with thyme, sesame, and olive oil', 
+              image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Manakish cu Brânză' : 'Cheese Manakish', 
+              desc: language === 'ro' ? 'Lipie caldă cu amestec de brânzeturi libaneze' : 'Warm flatbread with a blend of Lebanese cheeses', 
+              image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Falafel' : 'Falafel', 
+              desc: language === 'ro' ? 'Chifteluțe crocante de năut cu sos tahini' : 'Crispy chickpea patties with tahini sauce', 
+              image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Sambousek cu Carne' : 'Meat Sambousek', 
+              desc: language === 'ro' ? 'Pateuri crocante umplute cu carne tocată și muguri de pin' : 'Crispy pastries filled with minced meat and pine nuts', 
+              image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800'
+            },
+          ]
+        }
+      ]
     }
   }), [language, t]);
 
@@ -389,13 +420,14 @@ const MenuPage = () => {
 
   useEffect(() => {
     if (location.state?.categoryId) {
-      const categoryMap: Record<string, 'desserts' | 'drinks'> = {
+      const categoryMap: Record<string, 'desserts' | 'drinks' | 'food'> = {
         'lebanese-desserts': 'desserts',
         'arabic-ice-cream': 'desserts',
         'arabic-coffee': 'drinks',
         'fresh-juices': 'drinks',
         'desserts': 'desserts',
-        'drinks': 'drinks'
+        'drinks': 'drinks',
+        'food': 'food'
       };
       const targetTab = categoryMap[location.state.categoryId];
       if (targetTab) {
@@ -456,13 +488,13 @@ const MenuPage = () => {
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center py-6">
-              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-full flex gap-2 border border-[#0D6D7E]/10">
-                {(['desserts', 'drinks'] as const).map((tab) => (
+              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-full flex gap-2 border border-[#0D6D7E]/10 overflow-x-auto no-scrollbar">
+                {(['desserts', 'drinks', 'food'] as const).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={cn(
-                      "px-8 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center gap-3",
+                      "px-8 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center gap-3 whitespace-nowrap",
                       activeTab === tab 
                         ? "bg-[#A55443] text-white shadow-lg scale-105" 
                         : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5"
