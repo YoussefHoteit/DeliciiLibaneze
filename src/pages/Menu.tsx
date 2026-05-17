@@ -54,6 +54,7 @@ const MenuPage = () => {
   const [activeTab, setActiveTab] = useState<'desserts' | 'drinks' | 'food'>('desserts');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const menuContentRef = useRef<HTMLDivElement>(null);
 
   const menuData = useMemo(() => ({
     desserts: {
@@ -309,6 +310,15 @@ const MenuPage = () => {
     })).filter(section => section.items.length > 0);
   }, [searchTerm, activeTab, menuData]);
 
+  // Scroll to top of menu content when activeTab changes
+  useEffect(() => {
+    if (menuContentRef.current) {
+      const yOffset = -140; // Adjust based on sticky header height
+      const y = menuContentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [activeTab]);
+
   useEffect(() => {
     if (location.state?.categoryId) {
       const categoryMap: Record<string, 'desserts' | 'drinks' | 'food'> = {
@@ -323,7 +333,6 @@ const MenuPage = () => {
       const targetTab = categoryMap[location.state.categoryId];
       if (targetTab) {
         setActiveTab(targetTab);
-        window.scrollTo({ top: window.innerHeight * 0.5, behavior: 'smooth' });
       }
     }
   }, [location.state]);
@@ -400,7 +409,7 @@ const MenuPage = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6" ref={menuContentRef}>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab + searchTerm + language}
