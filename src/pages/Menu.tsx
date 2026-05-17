@@ -74,7 +74,8 @@ const MenuPage = () => {
               image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800'
             },
             { 
-              name: language === 'ro' ? 'Knafeh Clasic' : 'Knafeh Classic', 
+              name: language === 'ro' ? 'Knafeh Clasic' : 'Kna
+feh Clasic' : 'Knafeh Classic', 
               desc: language === 'ro' ? 'Knafeh cald cu brânză dulce și sirop' : 'Warm knafeh with sweet cheese and syrup', 
               image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800'
             },
@@ -381,28 +382,7 @@ const MenuPage = () => {
       sections: [
         {
           title: t('menu.sub.savory'),
-          items: [
-            { 
-              name: language === 'ro' ? 'Manakish Zaatar' : 'Zaatar Manakish', 
-              desc: language === 'ro' ? 'Lipie tradițională cu cimbru, susan și ulei de măsline' : 'Traditional flatbread with thyme, sesame, and olive oil', 
-              image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Manakish cu Brânză' : 'Cheese Manakish', 
-              desc: language === 'ro' ? 'Lipie caldă cu amestec de brânzeturi libaneze' : 'Warm flatbread with a blend of Lebanese cheeses', 
-              image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Falafel' : 'Falafel', 
-              desc: language === 'ro' ? 'Chifteluțe crocante de năut cu sos tahini' : 'Crispy chickpea patties with tahini sauce', 
-              image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Sambousek cu Carne' : 'Meat Sambousek', 
-              desc: language === 'ro' ? 'Pateuri crocante umplute cu carne tocată și muguri de pin' : 'Crispy pastries filled with minced meat and pine nuts', 
-              image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800'
-            },
-          ]
+          items: []
         }
       ]
     }
