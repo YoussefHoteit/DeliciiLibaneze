@@ -296,6 +296,31 @@ const MenuPage = () => {
               desc: language === 'ro' ? 'Băutură tradițională răcoritoare din rădăcină de lemn dulce' : 'Traditional refreshing licorice root beverage', 
               image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
             },
+            { 
+              name: language === 'ro' ? 'Sahlab' : 'Sahlab', 
+              desc: language === 'ro' ? 'Băutură caldă tradițională cu lapte, orhidee, scorțișoară și fistic' : 'Traditional warm milk drink with orchid root, cinnamon, and pistachio', 
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
+              desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
+              desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
+              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Ceai de Mentă Proaspătă' : 'Fresh Mint Tea', 
+              desc: language === 'ro' ? 'Ceai negru sau verde cu frunze proaspete de mentă' : 'Black or green tea with fresh mint leaves', 
+              image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800'
+            },
+            { 
+              name: language === 'ro' ? 'Ceai de Salvie (Marmarieh)' : 'Sage Tea (Marmarieh)', 
+              desc: language === 'ro' ? 'Infuzie tradițională de salvie cu proprietăți curative' : 'Traditional sage infusion with healing properties', 
+              image: 'https://images.unsplash.com/photo-1576092729250-a9cdeed0d7c9?auto=format&fit=crop&q=80&w=800'
+            },
           ]
         },
         {
@@ -345,36 +370,6 @@ const MenuPage = () => {
               name: 'Americano', 
               desc: language === 'ro' ? 'Espresso clasic diluat cu apă fierbinte' : 'Classic espresso diluted with hot water', 
               image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=800'
-            },
-          ]
-        },
-        {
-          title: t('menu.sub.tea'),
-          items: [
-            { 
-              name: language === 'ro' ? 'Sahlab' : 'Sahlab', 
-              desc: language === 'ro' ? 'Băutură caldă tradițională cu lapte, orhidee, scorțișoară și fistic' : 'Traditional warm milk drink with orchid root, cinnamon, and pistachio', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', 
-              desc: language === 'ro' ? 'Ciocolată caldă densă și cremoasă' : 'Rich and creamy thick hot chocolate', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Cafea Albă Libaneză' : 'Lebanese White Coffee', 
-              desc: language === 'ro' ? 'Băutură caldă delicată infuzată cu flori de portocal' : 'Delicate orange blossom infused hot drink', 
-              image: 'https://images.unsplash.com/photo-1544787210-2827443cb69b?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Ceai de Mentă Proaspătă' : 'Fresh Mint Tea', 
-              desc: language === 'ro' ? 'Ceai negru sau verde cu frunze proaspete de mentă' : 'Black or green tea with fresh mint leaves', 
-              image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800'
-            },
-            { 
-              name: language === 'ro' ? 'Ceai de Salvie (Marmarieh)' : 'Sage Tea (Marmarieh)', 
-              desc: language === 'ro' ? 'Infuzie tradițională de salvie cu proprietăți curative' : 'Traditional sage infusion with healing properties', 
-              image: 'https://images.unsplash.com/photo-1576092729250-a9cdeed0d7c9?auto=format&fit=crop&q=80&w=800'
             },
           ]
         }
