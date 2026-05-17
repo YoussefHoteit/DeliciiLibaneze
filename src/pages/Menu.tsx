@@ -193,7 +193,7 @@ const MenuPage = () => {
             { name: 'Caffè Latte', desc: language === 'ro' ? 'Băutură cremoasă cu lapte' : 'Creamy milk drink', image: 'https://images.unsplash.com/photo-1551030173-122adbb8158a?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', desc: language === 'ro' ? 'Cafea tradițională la ibric' : 'Traditional pot-brewed coffee', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea Turcească cu Cardamom' : 'Turkish Coffee with Cardamom', desc: language === 'ro' ? 'Aromă autentică orientală' : 'Authentic oriental flavor', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&get=80&w=800' },
             { name: language === 'ro' ? 'Cafea la Nisip' : 'Sand Coffee', desc: language === 'ro' ? 'Preparată tradițional pe nisip încins' : 'Traditionally prepared on hot sand', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', desc: language === 'ro' ? 'Ciocolată densă și cremoasă' : 'Thick and creamy chocolate', image: 'https://images.unsplash.com/photo-1544787210-2827448b304c?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea Gheață' : 'Iced Coffee', desc: language === 'ro' ? 'Cafea revigorantă cu gheață' : 'Refreshing coffee with ice', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=800' },
@@ -394,16 +394,17 @@ const MenuPage = () => {
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center py-6">
-              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-full flex gap-2 border border-[#0D6D7E]/10 overflow-x-auto no-scrollbar">
+              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-3xl md:rounded-full grid grid-cols-2 md:flex gap-2 border border-[#0D6D7E]/10 w-full max-w-md md:max-w-none">
                 {(['desserts', 'drinks', 'food'] as const).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={cn(
-                      "px-8 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center gap-3 whitespace-nowrap",
+                      "px-6 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center justify-center gap-3 whitespace-nowrap",
                       activeTab === tab 
                         ? "bg-[#A55443] text-white shadow-lg scale-105" 
-                        : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5"
+                        : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5",
+                      tab === 'food' ? "col-span-2 md:col-span-1" : "col-span-1"
                     )}
                   >
                     {menuData[tab].icon}
@@ -431,10 +432,10 @@ const MenuPage = () => {
                     <div className="space-y-4">
                       {section.title && (
                         <div className="flex items-center gap-6">
-                          <h2 className="text-3xl font-serif font-bold text-[#A55443] whitespace-nowrap">
+                          <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#A55443] leading-tight">
                             {section.title}
                           </h2>
-                          <div className="h-px bg-[#0D6D7E]/10 w-full" />
+                          <div className="h-px bg-[#0D6D7E]/10 w-full hidden md:block" />
                         </div>
                       )}
                       {section.info && (
@@ -472,11 +473,11 @@ const MenuPage = () => {
                         >
                           <div className="flex-1 space-y-3">
                             <div className="flex items-baseline gap-3">
-                              <h3 className="text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
+                              <h3 className="text-xl md:text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
                                 {item.name}
                               </h3>
                             </div>
-                            <p className="text-gray-500 text-base font-light italic leading-relaxed max-w-md">
+                            <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed max-w-md">
                               {item.desc}
                             </p>
                           </div>
@@ -484,7 +485,7 @@ const MenuPage = () => {
                           <div className="shrink-0">
                             <div 
                               onClick={() => setSelectedImage(item.image)}
-                              className="w-28 h-28 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
+                              className="w-24 h-24 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
                             >
                               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
                                 <ZoomIn className="text-white" size={28} />
