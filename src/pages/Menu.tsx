@@ -53,7 +53,6 @@ const MenuPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState<'desserts' | 'drinks' | 'food'>('desserts');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
   const menuContentRef = useRef<HTMLDivElement>(null);
 
   const menuData = useMemo(() => ({
@@ -251,12 +250,15 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Băuturi Răcoritoare' : 'Soft Drinks',
           items: [
-            { name: 'Pepsi / Zero / Twist', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Pepsi', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Pepsi Zero', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Pepsi Twist', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: '7UP', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: 'Mirinda', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: 'Lipton Ice Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: 'Prigat', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Coca-Cola / Zero', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Coca-Cola', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Coca-Cola Zero', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: 'Fanta', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: 'Sprite', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
             { name: 'Schweppes', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
@@ -313,7 +315,7 @@ const MenuPage = () => {
   // Scroll to top of menu content when activeTab changes
   useEffect(() => {
     if (menuContentRef.current) {
-      const yOffset = -140; // Adjust based on sticky header height
+      const yOffset = -160; // Increased offset to ensure section title is fully visible below sticky nav
       const y = menuContentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -383,7 +385,7 @@ const MenuPage = () => {
         </motion.div>
       </section>
 
-      <div className="pb-24" ref={containerRef}>
+      <div className="pb-24">
         {/* Main Category Switcher */}
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
