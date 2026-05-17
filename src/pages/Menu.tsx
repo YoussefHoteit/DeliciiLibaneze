@@ -318,7 +318,8 @@ const MenuPage = () => {
     }
 
     if (contentRef.current) {
-      const yOffset = -160; // Offset for sticky navbar + category switcher
+      // Increased offset to ensure the section title is fully visible below the sticky header
+      const yOffset = -220; 
       const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
