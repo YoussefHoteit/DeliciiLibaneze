@@ -96,18 +96,15 @@ const MenuPage = () => {
       icon: <UtensilsCrossed size={20} />,
       sections: [
         {
-          title: language === 'ro' ? 'Knafeh și Dulciuri Arabe Calde' : 'Knafeh & Hot Arabic Sweets',
+          title: language === 'ro' ? 'Deserturi Arabe Tradiționale' : 'Traditional Arabic Desserts',
           items: [
+            // Knafeh Items
             { name: language === 'ro' ? 'Knafeh cu Brânză' : 'Cheese Knafeh', desc: language === 'ro' ? 'Desert tradițional cald cu brânză topită și sirop' : 'Traditional warm dessert with melted cheese and syrup', image: imgCheeseKnafeh },
             { name: language === 'ro' ? 'Knafeh cu Brânză și Înghețată' : 'Cheese Knafeh with Ice Cream', desc: language === 'ro' ? 'Combinația perfectă de cald și rece' : 'The perfect combination of hot and cold', image: imgCheeseKnafehIceCream },
             { name: language === 'ro' ? 'Asmalieh cu Cremă de Lapte' : 'Asmalieh with Milk Cream', desc: language === 'ro' ? 'Fidea crocantă cu cremă fină' : 'Crispy vermicelli with fine cream', image: imgAsmaliehMilkCream },
             { name: language === 'ro' ? 'Asmalieh Pătrat' : 'Square Asmalieh', desc: language === 'ro' ? 'Formă tradițională pătrată' : 'Traditional square shape', image: imgSquareAsmalieh },
             { name: language === 'ro' ? 'Mamoul cu Cremă de Lapte' : 'Mamoul with Milk Cream', desc: language === 'ro' ? 'Prăjitură fină umplută cu cremă' : 'Fine pastry filled with cream', image: imgMaamoulMilkCream },
-          ]
-        },
-        {
-          title: language === 'ro' ? 'Colecția Baklava' : 'Baklava Collection',
-          items: [
+            // Baklava Items
             { name: language === 'ro' ? 'Mix Baklava' : 'Mixed Baklava', desc: language === 'ro' ? 'Selecție variată de baklava artizanală' : 'Varied selection of artisanal baklava', image: imgMixedBaklava },
             { name: language === 'ro' ? 'Baklava Triunghi cu Fistic' : 'Pistachio Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu fistic premium' : 'Crispy triangle with premium pistachio', image: imgPistachioTriangleBaklava },
             { name: language === 'ro' ? 'Baklava Triunghi cu Nucă' : 'Walnut Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu nucă selecționată' : 'Crispy triangle with selected walnut', image: imgWalnutTriangleBaklava },
@@ -118,11 +115,7 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Baklava cu Ciocolată' : 'Chocolate Baklava', desc: language === 'ro' ? 'Combinație modernă cu ciocolată' : 'Modern combination with chocolate', image: imgChocolateBaklava },
             { name: language === 'ro' ? 'Baklava cu Înghețată' : 'Baklava with Ice Cream', desc: language === 'ro' ? 'Desertul suprem' : 'The ultimate dessert', image: imgBaklavaIceCream },
             { name: language === 'ro' ? 'Baklava Specială cu Fistic' : 'Special Pistachio Baklava', desc: language === 'ro' ? 'Rețetă specială cu extra fistic' : 'Special recipe with extra pistachio', image: imgSpecialPistachioBaklava },
-          ]
-        },
-        {
-          title: language === 'ro' ? 'Deserturi Arabe Tradiționale' : 'Traditional Arabic Desserts',
-          items: [
+            // Traditional Items
             { name: 'Halawet El Jibn', desc: language === 'ro' ? 'Rulouri de brânză cu cremă și fistic' : 'Cheese rolls with cream and pistachio', image: imgHalawetElJibn },
             { name: 'Basima', desc: language === 'ro' ? 'Prăjitură densă cu cocos' : 'Dense coconut cake', image: imgBasima },
             { name: 'Belourieh', desc: language === 'ro' ? 'Fidea albă cu fistic' : 'White vermicelli with pistachio', image: imgBelourieh },
