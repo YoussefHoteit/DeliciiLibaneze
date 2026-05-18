@@ -47,7 +47,7 @@ import imgSpicyRose from '@/assets/menu/spicy-rose.jpg';
 import imgIranianPistachio from '@/assets/menu/iranian-pistachio.jpg';
 import imgAlmondsPinkPepper from '@/assets/menu/almonds-pink-pepper.jpg';
 
-// Import New Product Images
+// Import Dessert Images
 import imgCheeseKnafeh from '@/assets/menu/cheese-knafeh.jpg';
 import imgCheeseKnafehIceCream from '@/assets/menu/cheese-knafeh-ice-cream.jpg';
 import imgAsmaliehMilkCream from '@/assets/menu/asmalieh-milk-cream.jpg';
@@ -80,6 +80,46 @@ import imgRicePudding from '@/assets/menu/rice-pudding.jpg';
 import imgDriedMango from '@/assets/menu/dried-mango.jpg';
 import imgDriedApricots from '@/assets/menu/dried-apricots.jpg';
 import imgSesameBiscuits from '@/assets/menu/sesame-biscuits.jpg';
+import imgGraibeBiscuits from '@/assets/menu/graibe-biscuits.jpg';
+
+// Import Drink Images
+import imgEspressoSingle from '@/assets/menu/espresso-single.jpg';
+import imgEspressoDouble from '@/assets/menu/espresso-double.jpg';
+import imgCappuccino from '@/assets/menu/cappuccino.jpg';
+import imgCaffeLatte from '@/assets/menu/caffe-latte.jpg';
+import imgTurkishCoffee from '@/assets/menu/turkish-coffee.jpg';
+import imgTurkishCoffeeCardamom from '@/assets/menu/turkish-coffee-cardamom.jpg';
+import imgClassicFrappe from '@/assets/menu/classic-frappe.jpg';
+import imgBananaFrappe from '@/assets/menu/banana-frappe.jpg';
+import imgStrawberryFrappe from '@/assets/menu/strawberry-frappe.jpg';
+import imgIceCreamFrappe from '@/assets/menu/ice-cream-frappe.jpg';
+import imgHotChocolate from '@/assets/menu/hot-chocolate.jpg';
+import imgIcedCoffee from '@/assets/menu/iced-coffee.jpg';
+import imgSahlep from '@/assets/menu/sahlep.jpg';
+import imgFreshOrange from '@/assets/menu/fresh-orange.jpg';
+import imgFreshGrapefruit from '@/assets/menu/fresh-grapefruit.jpg';
+import imgMixedFresh from '@/assets/menu/mixed-fresh.jpg';
+import imgClassicLemonade from '@/assets/menu/classic-lemonade.jpg';
+import imgMintLemonade from '@/assets/menu/mint-lemonade.jpg';
+import imgMangoLemonade from '@/assets/menu/mango-lemonade.jpg';
+import imgRaspberryLemonade from '@/assets/menu/raspberry-lemonade.jpg';
+import imgStrawberryLemonade from '@/assets/menu/strawberry-lemonade.jpg';
+import imgPomegranateLemonade from '@/assets/menu/pomegranate-lemonade.jpg';
+import imgHibiscusLemonade from '@/assets/menu/hibiscus-lemonade.jpg';
+import imgGingerLimeLemonade from '@/assets/menu/ginger-lime-lemonade.jpg';
+import imgEgyptianMangoLemonade from '@/assets/menu/egyptian-mango-lemonade.jpg';
+import imgHotLemonade from '@/assets/menu/hot-lemonade.jpg';
+import imgCitronada from '@/assets/menu/citronada.jpg';
+import imgGuavaJuice from '@/assets/menu/guava-juice.jpg';
+import imgMangoJuice from '@/assets/menu/mango-juice.jpg';
+import imgNojito from '@/assets/menu/nojito.jpg';
+import imgGreenApple from '@/assets/menu/green-apple.jpg';
+import imgStrawberryDaiquiri from '@/assets/menu/strawberry-daiquiri.jpg';
+import imgFreezPineappleCoconut from '@/assets/menu/freez-pineapple-coconut.jpg';
+import imgFreezBerry from '@/assets/menu/freez-berry.jpg';
+import imgFreezKiwiLime from '@/assets/menu/freez-kiwi-lime.jpg';
+import imgFreezLemonMint from '@/assets/menu/freez-lemon-mint.jpg';
+import imgFreezMangoPeach from '@/assets/menu/freez-mango-peach.jpg';
 
 const MenuPage = () => {
   const { t, language } = useLanguage();
@@ -152,7 +192,7 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Biscuiți cu Susan' : 'Sesame Biscuits', desc: language === 'ro' ? 'Biscuiți crocanți cu susan' : 'Crunchy sesame biscuits', image: imgSesameBiscuits },
-            { name: 'Graibe Biscuits', desc: language === 'ro' ? 'Biscuiți tradiționali fragezi' : 'Traditional shortbread biscuits', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Graibe Biscuits', desc: language === 'ro' ? 'Biscuiți tradiționali fragezi' : 'Traditional shortbread biscuits', image: imgGraibeBiscuits },
           ]
         },
         {
@@ -210,65 +250,65 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Cafea și Espresso' : 'Coffee & Espresso',
           items: [
-            { name: 'Espresso Single', desc: language === 'ro' ? 'Espresso scurt și intens' : 'Short and intense espresso', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Espresso Double', desc: language === 'ro' ? 'Doză dublă de energie' : 'Double dose of energy', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Cappuccino', desc: language === 'ro' ? 'Espresso cu spumă de lapte fină' : 'Espresso with fine milk foam', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Caffè Latte', desc: language === 'ro' ? 'Băutură cremoasă cu lapte' : 'Creamy milk drink', image: 'https://images.unsplash.com/photo-1551030173-122adbb8158a?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', desc: language === 'ro' ? 'Cafea tradițională la ibric' : 'Traditional pot-brewed coffee', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea Turcească cu Cardamom' : 'Turkish Coffee with Cardamom', desc: language === 'ro' ? 'Aromă autentică orientală' : 'Authentic oriental flavor', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea la Nisip' : 'Sand Coffee', desc: language === 'ro' ? 'Preparată tradițional pe nisip încins' : 'Traditionally prepared on hot sand', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', desc: language === 'ro' ? 'Ciocolată densă și cremoasă' : 'Thick and creamy chocolate', image: 'https://images.unsplash.com/photo-1544787210-2827448b304c?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea Gheață' : 'Iced Coffee', desc: language === 'ro' ? 'Cafea revigorantă cu gheață' : 'Refreshing coffee with ice', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Sahlep', desc: language === 'ro' ? 'Băutură tradițională caldă de iarnă' : 'Traditional warm winter drink', image: 'https://images.unsplash.com/photo-1544787210-2827448b304c?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Extra shot', desc: language === 'ro' ? 'Doză suplimentară de espresso' : 'Additional espresso shot', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Opțiune Lapte Vegetal' : 'Plant milk option', desc: language === 'ro' ? 'Migdale, ovăz sau soia' : 'Almond, oat, or soy', image: 'https://images.unsplash.com/photo-1551030173-122adbb8158a?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Espresso Single', desc: language === 'ro' ? 'Espresso scurt și intens' : 'Short and intense espresso', image: imgEspressoSingle },
+            { name: 'Espresso Double', desc: language === 'ro' ? 'Doză dublă de energie' : 'Double dose of energy', image: imgEspressoDouble },
+            { name: 'Cappuccino', desc: language === 'ro' ? 'Espresso cu spumă de lapte fină' : 'Espresso with fine milk foam', image: imgCappuccino },
+            { name: 'Caffè Latte', desc: language === 'ro' ? 'Băutură cremoasă cu lapte' : 'Creamy milk drink', image: imgCaffeLatte },
+            { name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', desc: language === 'ro' ? 'Cafea tradițională la ibric' : 'Traditional pot-brewed coffee', image: imgTurkishCoffee },
+            { name: language === 'ro' ? 'Cafea Turcească cu Cardamom' : 'Turkish Coffee with Cardamom', desc: language === 'ro' ? 'Aromă autentică orientală' : 'Authentic oriental flavor', image: imgTurkishCoffeeCardamom },
+            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: imgTurkishCoffee },
+            { name: language === 'ro' ? 'Cafea la Nisip' : 'Sand Coffee', desc: language === 'ro' ? 'Preparată tradițional pe nisip încins' : 'Traditionally prepared on hot sand', image: imgTurkishCoffee },
+            { name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', desc: language === 'ro' ? 'Ciocolată densă și cremoasă' : 'Thick and creamy chocolate', image: imgHotChocolate },
+            { name: language === 'ro' ? 'Cafea Gheață' : 'Iced Coffee', desc: language === 'ro' ? 'Cafea revigorantă cu gheață' : 'Refreshing coffee with ice', image: imgIcedCoffee },
+            { name: 'Sahlep', desc: language === 'ro' ? 'Băutură tradițională caldă de iarnă' : 'Traditional warm winter drink', image: imgSahlep },
+            { name: 'Extra shot', desc: language === 'ro' ? 'Doză suplimentară de espresso' : 'Additional espresso shot', image: imgEspressoSingle },
+            { name: language === 'ro' ? 'Opțiune Lapte Vegetal' : 'Plant milk option', desc: language === 'ro' ? 'Migdale, ovăz sau soia' : 'Almond, oat, or soy', image: imgCaffeLatte },
             { name: 'Affogato', desc: language === 'ro' ? 'Espresso peste înghețată de vanilie' : 'Espresso over vanilla ice cream', image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800' },
           ]
         },
         {
           title: language === 'ro' ? 'Frappe-uri și Băuturi Speciale' : 'Frappes & Specialty Drinks',
           items: [
-            { name: 'Classic Frappe', desc: language === 'ro' ? 'Frappe clasic revigorant' : 'Refreshing classic frappe', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Banana Frappe', desc: language === 'ro' ? 'Frappe cu aromă de banane' : 'Banana flavored frappe', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Strawberry Frappe', desc: language === 'ro' ? 'Frappe cu căpșuni proaspete' : 'Frappe with fresh strawberries', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Ice Cream Frappe', desc: language === 'ro' ? 'Frappe cu o cupă de înghețată' : 'Frappe with a scoop of ice cream', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Variații Frappe Speciale' : 'Specialty Frappe variations', desc: language === 'ro' ? 'Arome sezoniere' : 'Seasonal flavors', image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Classic Frappe', desc: language === 'ro' ? 'Frappe clasic revigorant' : 'Refreshing classic frappe', image: imgClassicFrappe },
+            { name: 'Banana Frappe', desc: language === 'ro' ? 'Frappe cu aromă de banane' : 'Banana flavored frappe', image: imgBananaFrappe },
+            { name: 'Strawberry Frappe', desc: language === 'ro' ? 'Frappe cu căpșuni proaspete' : 'Frappe with fresh strawberries', image: imgStrawberryFrappe },
+            { name: 'Ice Cream Frappe', desc: language === 'ro' ? 'Frappe cu o cupă de înghețată' : 'Frappe with a scoop of ice cream', image: imgIceCreamFrappe },
+            { name: language === 'ro' ? 'Variații Frappe Speciale' : 'Specialty Frappe variations', desc: language === 'ro' ? 'Arome sezoniere' : 'Seasonal flavors', image: imgClassicFrappe },
           ]
         },
         {
           title: language === 'ro' ? 'Sucuri Proaspete și Băuturi ale Casei' : 'Fresh Juices & House Drinks',
           items: [
-            { name: language === 'ro' ? 'Portocale Proaspete' : 'Fresh Orange', desc: language === 'ro' ? 'Suc de portocale proaspăt stors' : 'Freshly squeezed orange juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Grepfrut Proaspăt' : 'Fresh Grapefruit', desc: language === 'ro' ? 'Suc de grepfrut proaspăt stors' : 'Freshly squeezed grapefruit juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Mix Proaspăt' : 'Mixed Fresh', desc: language === 'ro' ? 'Combinație de fructe proaspete' : 'Combination of fresh fruits', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Vitamin Protein Fresh', desc: language === 'ro' ? 'Mix energizant' : 'Energizing mix', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă Clasică' : 'Classic Lemonade', desc: language === 'ro' ? 'Lămâie, apă și miere' : 'Lemon, water, and honey', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Mentă' : 'Mint Lemonade', desc: language === 'ro' ? 'Limonadă cu mentă proaspătă' : 'Lemonade with fresh mint', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Mango' : 'Mango Lemonade', desc: language === 'ro' ? 'Limonadă cu piure de mango' : 'Lemonade with mango puree', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Zmeură' : 'Raspberry Lemonade', desc: language === 'ro' ? 'Limonadă cu zmeură proaspătă' : 'Lemonade with fresh raspberries', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Căpșuni' : 'Strawberry Lemonade', desc: language === 'ro' ? 'Limonadă cu căpșuni proaspete' : 'Lemonade with fresh strawberries', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Rodie' : 'Pomegranate Lemonade', desc: language === 'ro' ? 'Limonadă cu suc de rodie' : 'Lemonade with pomegranate juice', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Hibiscus' : 'Hibiscus Lemonade', desc: language === 'ro' ? 'Limonadă cu infuzie de hibiscus' : 'Lemonade with hibiscus infusion', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Ghimbir și Lime' : 'Ginger & Lime Lemonade', desc: language === 'ro' ? 'Limonadă picantă și revigorantă' : 'Spicy and refreshing lemonade', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă cu Mango Egiptean' : 'Egyptian Mango Lemonade', desc: language === 'ro' ? 'Limonadă cu mango premium' : 'Lemonade with premium mango', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Limonadă Caldă' : 'Hot Lemonade', desc: language === 'ro' ? 'Limonadă caldă pentru zile reci' : 'Warm lemonade for cold days', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Citronada', desc: language === 'ro' ? 'Băutură tradițională de citrice' : 'Traditional citrus drink', image: 'https://images.unsplash.com/photo-1523677012304-3c7c89a2e9a9?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Suc de Guava' : 'Guava Juice', desc: language === 'ro' ? 'Suc exotic de guava' : 'Exotic guava juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Suc de Mango' : 'Mango Juice', desc: language === 'ro' ? 'Suc dens de mango' : 'Thick mango juice', image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Portocale Proaspete' : 'Fresh Orange', desc: language === 'ro' ? 'Suc de portocale proaspăt stors' : 'Freshly squeezed orange juice', image: imgFreshOrange },
+            { name: language === 'ro' ? 'Grepfrut Proaspăt' : 'Fresh Grapefruit', desc: language === 'ro' ? 'Suc de grepfrut proaspăt stors' : 'Freshly squeezed grapefruit juice', image: imgFreshGrapefruit },
+            { name: language === 'ro' ? 'Mix Proaspăt' : 'Mixed Fresh', desc: language === 'ro' ? 'Combinație de fructe proaspete' : 'Combination of fresh fruits', image: imgMixedFresh },
+            { name: 'Vitamin Protein Fresh', desc: language === 'ro' ? 'Mix energizant' : 'Energizing mix', image: imgMixedFresh },
+            { name: language === 'ro' ? 'Limonadă Clasică' : 'Classic Lemonade', desc: language === 'ro' ? 'Lămâie, apă și miere' : 'Lemon, water, and honey', image: imgClassicLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Mentă' : 'Mint Lemonade', desc: language === 'ro' ? 'Limonadă cu mentă proaspătă' : 'Lemonade with fresh mint', image: imgMintLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Mango' : 'Mango Lemonade', desc: language === 'ro' ? 'Limonadă cu piure de mango' : 'Lemonade with mango puree', image: imgMangoLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Zmeură' : 'Raspberry Lemonade', desc: language === 'ro' ? 'Limonadă cu zmeură proaspătă' : 'Lemonade with fresh raspberries', image: imgRaspberryLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Căpșuni' : 'Strawberry Lemonade', desc: language === 'ro' ? 'Limonadă cu căpșuni proaspete' : 'Lemonade with fresh strawberries', image: imgStrawberryLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Rodie' : 'Pomegranate Lemonade', desc: language === 'ro' ? 'Limonadă cu suc de rodie' : 'Lemonade with pomegranate juice', image: imgPomegranateLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Hibiscus' : 'Hibiscus Lemonade', desc: language === 'ro' ? 'Limonadă cu infuzie de hibiscus' : 'Lemonade with hibiscus infusion', image: imgHibiscusLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Ghimbir și Lime' : 'Ginger & Lime Lemonade', desc: language === 'ro' ? 'Limonadă picantă și revigorantă' : 'Spicy and refreshing lemonade', image: imgGingerLimeLemonade },
+            { name: language === 'ro' ? 'Limonadă cu Mango Egiptean' : 'Egyptian Mango Lemonade', desc: language === 'ro' ? 'Limonadă cu mango premium' : 'Lemonade with premium mango', image: imgEgyptianMangoLemonade },
+            { name: language === 'ro' ? 'Limonadă Caldă' : 'Hot Lemonade', desc: language === 'ro' ? 'Limonadă caldă pentru zile reci' : 'Warm lemonade for cold days', image: imgHotLemonade },
+            { name: 'Citronada', desc: language === 'ro' ? 'Băutură tradițională de citrice' : 'Traditional citrus drink', image: imgCitronada },
+            { name: language === 'ro' ? 'Suc de Guava' : 'Guava Juice', desc: language === 'ro' ? 'Suc exotic de guava' : 'Exotic guava juice', image: imgGuavaJuice },
+            { name: language === 'ro' ? 'Suc de Mango' : 'Mango Juice', desc: language === 'ro' ? 'Suc dens de mango' : 'Thick mango juice', image: imgMangoJuice },
           ]
         },
         {
           title: 'Mocktails',
           items: [
-            { name: 'Nojito', desc: language === 'ro' ? 'Mojito fără alcool' : 'Non-alcoholic mojito', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Green Apple', desc: language === 'ro' ? 'Mocktail cu măr verde' : 'Green apple mocktail', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Strawberry Daiquiri', desc: language === 'ro' ? 'Daiquiri cu căpșuni fără alcool' : 'Non-alcoholic strawberry daiquiri', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Freez Pineapple & Coconut', desc: language === 'ro' ? 'Băutură carbogazoasă exotică' : 'Exotic carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Freez Berry', desc: language === 'ro' ? 'Băutură carbogazoasă cu fructe de pădure' : 'Berry carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Freez Kiwi Lime', desc: language === 'ro' ? 'Băutură carbogazoasă cu kiwi și lime' : 'Kiwi lime carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Freez Lemon Mint', desc: language === 'ro' ? 'Băutură carbogazoasă cu lămâie și mentă' : 'Lemon mint carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Freez Mango Peach', desc: language === 'ro' ? 'Băutură carbogazoasă cu mango și piersică' : 'Mango peach carbonated drink', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Nojito', desc: language === 'ro' ? 'Mojito fără alcool' : 'Non-alcoholic mojito', image: imgNojito },
+            { name: 'Green Apple', desc: language === 'ro' ? 'Mocktail cu măr verde' : 'Green apple mocktail', image: imgGreenApple },
+            { name: 'Strawberry Daiquiri', desc: language === 'ro' ? 'Daiquiri cu căpșuni fără alcool' : 'Non-alcoholic strawberry daiquiri', image: imgStrawberryDaiquiri },
+            { name: 'Freez Pineapple & Coconut', desc: language === 'ro' ? 'Băutură carbogazoasă exotică' : 'Exotic carbonated drink', image: imgFreezPineappleCoconut },
+            { name: 'Freez Berry', desc: language === 'ro' ? 'Băutură carbogazoasă cu fructe de pădure' : 'Berry carbonated drink', image: imgFreezBerry },
+            { name: 'Freez Kiwi Lime', desc: language === 'ro' ? 'Băutură carbogazoasă cu kiwi și lime' : 'Kiwi lime carbonated drink', image: imgFreezKiwiLime },
+            { name: 'Freez Lemon Mint', desc: language === 'ro' ? 'Băutură carbogazoasă cu lămâie și mentă' : 'Lemon mint carbonated drink', image: imgFreezLemonMint },
+            { name: 'Freez Mango Peach', desc: language === 'ro' ? 'Băutură carbogazoasă cu mango și piersică' : 'Mango peach carbonated drink', image: imgFreezMangoPeach },
           ]
         },
         {
