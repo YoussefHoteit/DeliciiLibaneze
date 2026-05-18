@@ -381,9 +381,8 @@ const MenuPage = () => {
     }
 
     if (contentRef.current) {
-      // Responsive offset based on screen width
       const isMobile = window.innerWidth < 768;
-      const yOffset = isMobile ? -280 : -220; 
+      const yOffset = isMobile ? -200 : -180; 
       const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -411,7 +410,7 @@ const MenuPage = () => {
     <div className="min-h-screen bg-[#F5EFE6]">
       <Navbar />
       
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img 
@@ -454,25 +453,33 @@ const MenuPage = () => {
       </section>
 
       <div className="pb-24">
-        {/* Main Category Switcher */}
-        <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
+        {/* Main Category Switcher - Redesigned for better aesthetics */}
+        <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex items-center justify-center py-6">
-              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-3xl md:rounded-full grid grid-cols-2 md:flex gap-2 border border-[#0D6D7E]/10 w-full max-w-md md:max-w-none">
+            <div className="flex items-center justify-center py-4 md:py-6">
+              <div className="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar pb-2 md:pb-0">
                 {(['desserts', 'drinks', 'food'] as const).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={cn(
-                      "px-6 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center justify-center gap-3 whitespace-nowrap",
-                      activeTab === tab 
-                        ? "bg-[#A55443] text-white shadow-lg scale-105" 
-                        : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5",
-                      tab === 'food' ? "col-span-2 md:col-span-1" : "col-span-1"
+                      "relative px-4 py-2 text-sm md:text-base font-bold transition-all duration-300 flex items-center gap-2 whitespace-nowrap",
+                      activeTab === tab ? "text-[#A55443]" : "text-[#0D6D7E]/60 hover:text-[#0D6D7E]"
                     )}
                   >
-                    {menuData[tab].icon}
+                    <span className={cn(
+                      "p-2 rounded-xl transition-colors duration-300",
+                      activeTab === tab ? "bg-[#A55443]/10" : "bg-transparent"
+                    )}>
+                      {React.cloneElement(menuData[tab].icon as React.ReactElement, { size: 18 })}
+                    </span>
                     {menuData[tab].title}
+                    {activeTab === tab && (
+                      <motion.div 
+                        layoutId="activeTab"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#A55443]"
+                      />
+                    )}
                   </button>
                 ))}
               </div>
@@ -480,7 +487,7 @@ const MenuPage = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6" ref={contentRef}>
+        <div className="max-w-7xl mx-auto px-6 mt-16" ref={contentRef}>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab + searchTerm + language}
@@ -493,32 +500,31 @@ const MenuPage = () => {
               {filteredSections.length > 0 ? (
                 filteredSections.map((section, sIdx) => (
                   <div key={sIdx} className="space-y-12">
-                    <div className="space-y-4">
+                    <div className="space-y-4 text-center md:text-left">
                       {section.title && (
-                        <div className="flex items-center gap-6">
-                          <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#A55443] leading-tight">
+                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#0D6D7E] leading-tight">
                             {section.title}
                           </h2>
-                          <div className="h-px bg-[#0D6D7E]/10 w-full hidden md:block" />
+                          <div className="h-px bg-[#C99B3C]/30 flex-1 hidden md:block" />
                         </div>
                       )}
                       {section.info && (
-                        <p className="text-gray-500 font-light italic text-sm max-w-2xl leading-relaxed">
+                        <p className="text-gray-500 font-light italic text-sm md:text-base max-w-3xl leading-relaxed mx-auto md:mx-0">
                           {section.info}
                         </p>
                       )}
                       
-                      {/* Add-ons Section */}
                       {section.addons && (
-                        <div className="bg-white/40 backdrop-blur-sm p-6 rounded-3xl border border-[#C99B3C]/10 mt-6">
-                          <div className="flex items-center gap-2 mb-4 text-[#C99B3C]">
+                        <div className="bg-white/50 backdrop-blur-sm p-6 rounded-[2rem] border border-[#C99B3C]/20 mt-8">
+                          <div className="flex items-center justify-center md:justify-start gap-2 mb-4 text-[#C99B3C]">
                             <Sparkles size={16} />
-                            <span className="text-xs font-bold uppercase tracking-widest">Add-ons</span>
+                            <span className="text-xs font-bold uppercase tracking-widest">Customization</span>
                           </div>
-                          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          <div className="flex flex-wrap justify-center md:justify-start gap-3">
                             {section.addons.map((addon, aIdx) => (
-                              <div key={aIdx} className="flex justify-between items-center bg-white/60 px-4 py-2 rounded-xl border border-[#0D6D7E]/5">
-                                <span className="text-sm font-medium text-[#0D6D7E]">{addon.name}</span>
+                              <div key={aIdx} className="bg-white px-5 py-2 rounded-full border border-[#0D6D7E]/5 shadow-sm text-sm font-medium text-[#0D6D7E]">
+                                {addon.name}
                               </div>
                             ))}
                           </div>
@@ -526,39 +532,46 @@ const MenuPage = () => {
                       )}
                     </div>
                     
-                    <div className="grid grid-cols-1 gap-12">
+                    {/* Redesigned Grid Layout for Menu Items */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                       {section.items.map((item, i) => (
                         <motion.div 
                           key={item.name}
                           initial={{ opacity: 0, y: 30 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.05 }}
-                          className="flex justify-between items-start gap-8 group cursor-pointer p-6 -m-6 rounded-[2rem] hover:bg-white/60 transition-all duration-500"
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: (i % 2) * 0.1 }}
+                          className="flex flex-col sm:flex-row items-center sm:items-start gap-6 group cursor-pointer"
+                          onClick={() => setSelectedImage(item.image)}
                         >
-                          <div className="flex-1 space-y-3">
-                            <div className="flex items-baseline gap-3">
-                              <h3 className="text-xl md:text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#C99B3C] transition-colors duration-300">
-                                {item.name}
-                              </h3>
-                            </div>
-                            <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed max-w-md">
-                              {item.desc}
-                            </p>
-                          </div>
-
-                          <div className="shrink-0">
-                            <div 
-                              onClick={() => setSelectedImage(item.image)}
-                              className="w-24 h-24 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
-                            >
+                          <div className="shrink-0 relative">
+                            <div className="w-32 h-32 md:w-40 md:h-40 rounded-[2rem] overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-700 relative">
                               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                                <ZoomIn className="text-white" size={28} />
+                                <ZoomIn className="text-white" size={24} />
                               </div>
                               <img 
                                 src={item.image} 
                                 alt={item.name} 
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                               />
+                            </div>
+                            {/* Decorative element */}
+                            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#C99B3C] rounded-full flex items-center justify-center text-white shadow-lg z-20 scale-0 group-hover:scale-100 transition-transform duration-500">
+                              <Sparkles size={14} />
+                            </div>
+                          </div>
+
+                          <div className="flex-1 space-y-2 text-center sm:text-left">
+                            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                              <h3 className="text-xl md:text-2xl font-serif font-bold text-[#0D6D7E] group-hover:text-[#A55443] transition-colors duration-300">
+                                {item.name}
+                              </h3>
+                            </div>
+                            <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed line-clamp-3">
+                              {item.desc}
+                            </p>
+                            <div className="pt-2 flex justify-center sm:justify-start">
+                              <div className="h-0.5 w-0 group-hover:w-12 bg-[#C99B3C] transition-all duration-500" />
                             </div>
                           </div>
                         </motion.div>
@@ -567,7 +580,10 @@ const MenuPage = () => {
                   </div>
                 ))
               ) : (
-                <div className="text-center py-24">
+                <div className="text-center py-32">
+                  <div className="w-20 h-20 bg-[#0D6D7E]/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Search className="text-[#0D6D7E]/20" size={32} />
+                  </div>
                   <p className="text-gray-400 font-serif text-2xl italic">
                     {t('menu.empty')}
                   </p>
