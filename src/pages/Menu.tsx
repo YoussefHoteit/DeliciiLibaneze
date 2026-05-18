@@ -64,9 +64,6 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Knafeh și Dulciuri Arabe Calde' : 'Knafeh & Hot Arabic Sweets',
           items: [
-            { name: language === 'ro' ? 'Knafeh cu Brânză' : 'Cheese Knafeh', desc: language === 'ro' ? 'Desert tradițional cald cu brânză topită și sirop' : 'Traditional warm dessert with melted cheese and syrup', image: 'https://images.unsplash.com/photo-1630953899906-d16511a72558?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Pachet Knafeh cu Brânză' : 'Cheese Knafeh package', desc: language === 'ro' ? 'Pachet special pentru acasă' : 'Special package for home', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Knafeh cu Brânză și Înghețată' : 'Cheese Knafeh with Ice Cream', desc: language === 'ro' ? 'Combinația perfectă de cald și rece' : 'The perfect combination of hot and cold', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Asmalieh cu Cremă de Lapte' : 'Asmalieh with Milk Cream', desc: language === 'ro' ? 'Fidea crocantă cu cremă fină' : 'Crispy vermicelli with fine cream', image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Asmalieh Pătrat' : 'Square Asmalieh', desc: language === 'ro' ? 'Formă tradițională pătrată' : 'Traditional square shape', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Porție Asmalieh' : 'Asmalieh portion', desc: language === 'ro' ? 'O porție generoasă de asmalieh' : 'A generous portion of asmalieh', image: 'https://images.unsplash.com/photo-1589119908995-c6837fa14848?auto=format&fit=crop&q=80&w=800' },
@@ -193,7 +190,7 @@ const MenuPage = () => {
             { name: 'Caffè Latte', desc: language === 'ro' ? 'Băutură cremoasă cu lapte' : 'Creamy milk drink', image: 'https://images.unsplash.com/photo-1551030173-122adbb8158a?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea Turcească' : 'Turkish Coffee', desc: language === 'ro' ? 'Cafea tradițională la ibric' : 'Traditional pot-brewed coffee', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea Turcească cu Cardamom' : 'Turkish Coffee with Cardamom', desc: language === 'ro' ? 'Aromă autentică orientală' : 'Authentic oriental flavor', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&get=80&w=800' },
+            { name: language === 'ro' ? 'Cafea Turcească Specială' : 'Specialty Turkish Coffee', desc: language === 'ro' ? 'Selecție premium de cafea' : 'Premium coffee selection', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea la Nisip' : 'Sand Coffee', desc: language === 'ro' ? 'Preparată tradițional pe nisip încins' : 'Traditionally prepared on hot sand', image: 'https://images.unsplash.com/photo-1578374173705-969cbe6f2d6b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', desc: language === 'ro' ? 'Ciocolată densă și cremoasă' : 'Thick and creamy chocolate', image: 'https://images.unsplash.com/photo-1544787210-2827448b304c?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Cafea Gheață' : 'Iced Coffee', desc: language === 'ro' ? 'Cafea revigorantă cu gheață' : 'Refreshing coffee with ice', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=800' },
@@ -318,8 +315,8 @@ const MenuPage = () => {
     }
 
     if (contentRef.current) {
-      // Increased offset to ensure the section title is fully visible below the sticky header
-      const yOffset = -220; 
+      // Increased offset to ensure the section title is fully visible below the sticky header on mobile
+      const yOffset = -280; 
       const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
