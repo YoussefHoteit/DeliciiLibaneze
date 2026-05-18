@@ -23,7 +23,7 @@ import imgCoconut from '@/assets/menu/coconut.jpg';
 import imgBlueberries from '@/assets/menu/blueberries.jpg';
 import imgBananas from '@/assets/menu/bananas.jpg';
 import imgBlackWalnut from '@/assets/menu/black-walnut.jpg';
-import imgGrapefruit from '@/assets/menu/grepfrut.jpg';
+import imgGrapefruit from '@/assets/menu/grapefruit.jpg';
 import imgHamburgGrapes from '@/assets/menu/hamburg-grapes.jpg';
 import imgHazelnuts from '@/assets/menu/hazelnuts.jpg';
 import imgKiwi from '@/assets/menu/kiwi.jpg';
@@ -165,7 +165,14 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Rahat Turcesc' : 'Turkish Delight', desc: language === 'ro' ? 'Diverse arome tradiționale' : 'Various traditional flavors', image: imgTurkishDelight },
             { name: language === 'ro' ? 'Prăjitură Românească' : 'Romanian Cake', desc: language === 'ro' ? 'Desert local tradițional' : 'Traditional local dessert', image: imgRomanianCake },
             { name: 'Sfoof', desc: language === 'ro' ? 'Prăjitură libaneză cu turmeric' : 'Lebanese turmeric cake', image: imgSfoof },
-            // Merged from Savory Pastries
+            { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
+          ]
+        },
+        {
+          title: language === 'ro' ? 'Patiserie Sărată' : 'Savory Pastries',
+          items: [
+            { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Maamoul cu Curmale' : 'Maamoul with Dates', desc: language === 'ro' ? 'Biscuiți fragezi cu curmale' : 'Shortbread cookies with dates', image: imgMaamoulDates },
             { name: language === 'ro' ? 'Maamoul cu Nuci' : 'Maamoul with Walnuts', desc: language === 'ro' ? 'Biscuiți fragezi cu nuci' : 'Shortbread cookies with walnuts', image: imgMaamoulWalnuts },
             { name: language === 'ro' ? 'Profiterol Libanez' : 'Lebanese Profiterole', desc: language === 'ro' ? 'Profiterol cu specific libanez' : 'Lebanese style profiterole', image: imgLebaneseProfiterole },
@@ -350,10 +357,6 @@ const MenuPage = () => {
             { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Pizza Libaneză' : 'Lebanese Pizza', desc: language === 'ro' ? 'Pizza cu specific oriental' : 'Oriental style pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            // Moved from Desserts
-            { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800' },
           ]
         }
       ]
