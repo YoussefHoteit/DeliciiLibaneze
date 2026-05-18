@@ -17,7 +17,7 @@ import imgDarkChocolate from '@/assets/menu/dark-chocolate.jpg';
 import imgChocolateOrange from '@/assets/menu/chocolate-orange.jpg';
 import imgSaltedCaramel from '@/assets/menu/salted-caramel.jpg';
 import imgVanilla from '@/assets/menu/vanilla.jpg';
-import imgCherries from '@/assets/menu/berries.jpg'; // Fixed potential missing import
+import imgCherries from '@/assets/menu/cherries.jpg';
 import imgMelon from '@/assets/menu/melon.jpg';
 import imgCoconut from '@/assets/menu/coconut.jpg';
 import imgBlueberries from '@/assets/menu/blueberries.jpg';
@@ -395,13 +395,13 @@ const MenuPage = () => {
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center py-6">
-              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-[2rem] md:rounded-full grid grid-cols-2 md:flex gap-2 border border-[#0D6D7E]/10 w-full max-w-[22rem] md:max-w-none mx-auto">
+              <div className="bg-[#0D6D7E]/5 p-1.5 rounded-3xl md:rounded-full grid grid-cols-2 md:flex gap-2 border border-[#0D6D7E]/10 w-full max-w-md md:max-w-none">
                 {(['desserts', 'drinks', 'food'] as const).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={cn(
-                      "px-4 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center justify-center gap-2 md:gap-3 whitespace-nowrap",
+                      "px-6 md:px-12 py-3 rounded-full text-sm font-bold transition-all duration-500 flex items-center justify-center gap-3 whitespace-nowrap",
                       activeTab === tab 
                         ? "bg-[#A55443] text-white shadow-lg scale-105" 
                         : "text-[#0D6D7E] hover:bg-[#0D6D7E]/5",
