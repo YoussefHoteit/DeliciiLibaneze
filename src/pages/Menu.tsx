@@ -99,12 +99,9 @@ const MenuPage = () => {
           title: language === 'ro' ? 'Knafeh și Dulciuri Arabe Calde' : 'Knafeh & Hot Arabic Sweets',
           items: [
             { name: language === 'ro' ? 'Knafeh cu Brânză' : 'Cheese Knafeh', desc: language === 'ro' ? 'Desert tradițional cald cu brânză topită și sirop' : 'Traditional warm dessert with melted cheese and syrup', image: imgCheeseKnafeh },
-            { name: language === 'ro' ? 'Pachet Knafeh cu Brânză' : 'Cheese Knafeh package', desc: language === 'ro' ? 'Pachet special pentru acasă' : 'Special package for home', image: imgCheeseKnafeh },
             { name: language === 'ro' ? 'Knafeh cu Brânză și Înghețată' : 'Cheese Knafeh with Ice Cream', desc: language === 'ro' ? 'Combinația perfectă de cald și rece' : 'The perfect combination of hot and cold', image: imgCheeseKnafehIceCream },
             { name: language === 'ro' ? 'Asmalieh cu Cremă de Lapte' : 'Asmalieh with Milk Cream', desc: language === 'ro' ? 'Fidea crocantă cu cremă fină' : 'Crispy vermicelli with fine cream', image: imgAsmaliehMilkCream },
             { name: language === 'ro' ? 'Asmalieh Pătrat' : 'Square Asmalieh', desc: language === 'ro' ? 'Formă tradițională pătrată' : 'Traditional square shape', image: imgSquareAsmalieh },
-            { name: language === 'ro' ? 'Porție Asmalieh' : 'Asmalieh portion', desc: language === 'ro' ? 'O porție generoasă de asmalieh' : 'A generous portion of asmalieh', image: imgAsmaliehMilkCream },
-            { name: language === 'ro' ? 'Porție Knafeh 200g' : 'Knafeh portion 200g', desc: language === 'ro' ? 'Porție individuală de 200g' : 'Individual 200g portion', image: imgCheeseKnafeh },
             { name: language === 'ro' ? 'Mamoul cu Cremă de Lapte' : 'Mamoul with Milk Cream', desc: language === 'ro' ? 'Prăjitură fină umplută cu cremă' : 'Fine pastry filled with cream', image: imgMaamoulMilkCream },
           ]
         },
@@ -121,7 +118,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Baklava cu Ciocolată' : 'Chocolate Baklava', desc: language === 'ro' ? 'Combinație modernă cu ciocolată' : 'Modern combination with chocolate', image: imgChocolateBaklava },
             { name: language === 'ro' ? 'Baklava cu Înghețată' : 'Baklava with Ice Cream', desc: language === 'ro' ? 'Desertul suprem' : 'The ultimate dessert', image: imgBaklavaIceCream },
             { name: language === 'ro' ? 'Baklava Specială cu Fistic' : 'Special Pistachio Baklava', desc: language === 'ro' ? 'Rețetă specială cu extra fistic' : 'Special recipe with extra pistachio', image: imgSpecialPistachioBaklava },
-            { name: language === 'ro' ? 'Cutii Cadou Baklava (500g / 600g / 1kg)' : 'Baklava gift boxes (500g / 600g / 1kg)', desc: language === 'ro' ? 'Cadoul perfect pentru cei dragi' : 'The perfect gift for loved ones', image: imgMixedBaklava },
           ]
         },
         {
