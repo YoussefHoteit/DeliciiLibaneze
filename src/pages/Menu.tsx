@@ -136,11 +136,14 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Rahat Turcesc' : 'Turkish Delight', desc: language === 'ro' ? 'Diverse arome tradiționale' : 'Various traditional flavors', image: imgTurkishDelight },
             { name: language === 'ro' ? 'Prăjitură Românească' : 'Romanian Cake', desc: language === 'ro' ? 'Desert local tradițional' : 'Traditional local dessert', image: imgRomanianCake },
             { name: 'Sfoof', desc: language === 'ro' ? 'Prăjitură libaneză cu turmeric' : 'Lebanese turmeric cake', image: imgSfoof },
+            { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
           ]
         },
         {
           title: language === 'ro' ? 'Patiserie Sărată' : 'Savory Pastries',
           items: [
+            { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Maamoul cu Curmale' : 'Maamoul with Dates', desc: language === 'ro' ? 'Biscuiți fragezi cu curmale' : 'Shortbread cookies with dates', image: imgMaamoulDates },
             { name: language === 'ro' ? 'Maamoul cu Nuci' : 'Maamoul with Walnuts', desc: language === 'ro' ? 'Biscuiți fragezi cu nuci' : 'Shortbread cookies with walnuts', image: imgMaamoulWalnuts },
             { name: language === 'ro' ? 'Profiterol Libanez' : 'Lebanese Profiterole', desc: language === 'ro' ? 'Profiterol cu specific libanez' : 'Lebanese style profiterole', image: imgLebaneseProfiterole },
@@ -149,11 +152,18 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Praline și Dulciuri Speciale' : 'Pralines & Specialty Sweets',
           items: [
+            { name: language === 'ro' ? 'Praline cu Curmale și Fistic' : 'Pralines with Dates & Pistachio', desc: language === 'ro' ? 'Combinație fină de curmale și fistic' : 'Fine combination of dates and pistachio', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mix Praline' : 'Mixed Pralines', desc: language === 'ro' ? 'Selecție de praline artizanale' : 'Selection of artisanal pralines', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Tablete de Ciocolată' : 'Chocolate Tablets', desc: language === 'ro' ? 'Ciocolată artizanală premium' : 'Premium artisanal chocolate', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Fructe în Ciocolată' : 'Fruit in Chocolate', desc: language === 'ro' ? 'Fructe confiate învelite în ciocolată' : 'Candied fruit dipped in chocolate', image: imgFruitChocolate },
             { name: language === 'ro' ? 'Orez cu Lapte' : 'Rice Pudding', desc: language === 'ro' ? 'Desert cremos tradițional' : 'Traditional creamy dessert', image: imgRicePudding },
             { name: language === 'ro' ? 'Mango Uscat' : 'Dried Mango', desc: language === 'ro' ? 'Fâșii de mango natural uscat' : 'Natural dried mango strips', image: imgDriedMango },
             { name: language === 'ro' ? 'Caise Uscate' : 'Dried Apricots', desc: language === 'ro' ? 'Caise naturale uscate' : 'Natural dried apricots', image: imgDriedApricots },
+            { name: language === 'ro' ? 'Năut Prăjit' : 'Roasted Chickpeas', desc: language === 'ro' ? 'Gustare crocantă tradițională' : 'Traditional crunchy snack', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Biscuiți cu Susan' : 'Sesame Biscuits', desc: language === 'ro' ? 'Biscuiți crocanți cu susan' : 'Crunchy sesame biscuits', image: imgSesameBiscuits },
+            { name: 'Graibe Biscuits', desc: language === 'ro' ? 'Biscuiți tradiționali fragezi' : 'Traditional shortbread biscuits', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
           ]
         },
         {
