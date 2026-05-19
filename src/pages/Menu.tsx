@@ -183,8 +183,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Mango Uscat' : 'Dried Mango', desc: language === 'ro' ? 'Fâșii de mango natural uscat' : 'Natural dried mango strips', image: imgDriedMango },
             { name: language === 'ro' ? 'Caise Uscate' : 'Dried Apricots', desc: language === 'ro' ? 'Caise naturale uscate' : 'Natural dried apricots', image: imgDriedApricots },
             { name: language === 'ro' ? 'Năut Prăjit' : 'Roasted Chickpeas', desc: language === 'ro' ? 'Gustare crocantă tradițională' : 'Traditional crunchy snack', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Biscuiți cu Susan' : 'Sesame Biscuits', desc: language === 'ro' ? 'Biscuiți crocanți cu susan' : 'Crunchy sesame biscuits', image: imgSesameBiscuits },
             { name: 'Graibe Biscuits', desc: language === 'ro' ? 'Biscuiți tradiționali fragezi' : 'Traditional shortbread biscuits', image: imgGraibeBiscuits },
           ]
@@ -332,7 +330,7 @@ const MenuPage = () => {
           items: [
             { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pine prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
@@ -353,6 +351,9 @@ const MenuPage = () => {
             { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
             { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800' },
+            // Moved from Desserts (Pralines & Specialty Sweets)
+            { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
           ]
         }
       ]
