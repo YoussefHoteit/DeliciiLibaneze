@@ -120,6 +120,7 @@ import imgFreezBerry from '@/assets/menu/freez-berry.jpg';
 import imgFreezKiwiLime from '@/assets/menu/freez-kiwi-lime.jpg';
 import imgFreezLemonMint from '@/assets/menu/freez-lemon-mint.jpg';
 import imgFreezMangoPeach from '@/assets/menu/freez-mango-peach.jpg';
+import imgAffogato from '@/assets/menu/affogato.jpg';
 
 const MenuPage = () => {
   const { t, language } = useLanguage();
@@ -256,7 +257,7 @@ const MenuPage = () => {
             { name: 'Sahlep', desc: language === 'ro' ? 'Băutură tradițională caldă de iarnă' : 'Traditional warm winter drink', image: imgSahlep },
             { name: 'Extra shot', desc: language === 'ro' ? 'Doză suplimentară de espresso' : 'Additional espresso shot', image: imgEspressoSingle },
             { name: language === 'ro' ? 'Opțiune Lapte Vegetal' : 'Plant milk option', desc: language === 'ro' ? 'Migdale, ovăz sau soia' : 'Almond, oat, or soy', image: imgCaffeLatte },
-            { name: 'Affogato', desc: language === 'ro' ? 'Espresso peste înghețată de vanilie' : 'Espresso over vanilla ice cream', image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Affogato', desc: language === 'ro' ? 'Espresso peste înghețată de vanilie' : 'Espresso over vanilla ice cream', image: imgAffogato },
           ]
         },
         {
