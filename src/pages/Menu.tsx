@@ -255,8 +255,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Ciocolată Caldă' : 'Hot Chocolate', desc: language === 'ro' ? 'Ciocolată densă și cremoasă' : 'Thick and creamy chocolate', image: imgHotChocolate },
             { name: language === 'ro' ? 'Cafea Gheață' : 'Iced Coffee', desc: language === 'ro' ? 'Cafea revigorantă cu gheață' : 'Refreshing coffee with ice', image: imgIcedCoffee },
             { name: 'Sahlep', desc: language === 'ro' ? 'Băutură tradițională caldă de iarnă' : 'Traditional warm winter drink', image: imgSahlep },
-            { name: 'Extra shot', desc: language === 'ro' ? 'Doză suplimentară de espresso' : 'Additional espresso shot', image: imgEspressoSingle },
-            { name: language === 'ro' ? 'Opțiune Lapte Vegetal' : 'Plant milk option', desc: language === 'ro' ? 'Migdale, ovăz sau soia' : 'Almond, oat, or soy', image: imgCaffeLatte },
             { name: 'Affogato', desc: language === 'ro' ? 'Espresso peste înghețată de vanilie' : 'Espresso over vanilla ice cream', image: imgAffogato },
           ]
         },
@@ -334,7 +332,7 @@ const MenuPage = () => {
           items: [
             { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pine prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
             { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
