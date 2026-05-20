@@ -3,10 +3,10 @@
 import React, { useState, useMemo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import GalleryItem from '@/components/GalleryItem';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 // Import hero image
 import galleryHero from '@/assets/gallery-hero.jpg';
@@ -122,16 +122,35 @@ const GalleryPage = () => {
         </section>
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 pb-24">
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-6">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-6 space-y-3 md:space-y-6"
+          >
             {shuffledPhotos.map((photo, index) => (
-              <GalleryItem 
-                key={index} 
-                photo={photo} 
-                index={index} 
-                onClick={setSelectedMedia} 
-              />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (index % 6) * 0.05 }}
+                className="relative group cursor-zoom-in rounded-xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 break-inside-avoid"
+                onClick={() => setSelectedMedia(photo)}
+              >
+                <img 
+                  src={photo} 
+                  alt={`Gallery ${index + 1}`} 
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white">
+                    <ZoomIn size={18} className="md:hidden" />
+                    <ZoomIn size={24} className="hidden md:block" />
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </main>
 
