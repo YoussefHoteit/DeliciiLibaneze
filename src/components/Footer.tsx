@@ -23,20 +23,10 @@ const Footer = () => {
             {t('footer.tagline')}
           </p>
           <div className="flex space-x-4">
-            <a 
-              href="https://www.instagram.com/delicii_libaneze?igsh=MW96bXRyenkyZmpsbA==" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-[#F5EFE6]/20 flex items-center justify-center hover:bg-[#C99B3C] hover:border-[#C99B3C] transition-all"
-            >
+            <a href="#" className="w-10 h-10 rounded-full border border-[#F5EFE6]/20 flex items-center justify-center hover:bg-[#C99B3C] hover:border-[#C99B3C] transition-all">
               <Instagram size={18} />
             </a>
-            <a 
-              href="https://www.facebook.com/share/18Fm7b6c3R/?mibextid=wwXIfr" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-[#F5EFE6]/20 flex items-center justify-center hover:bg-[#C99B3C] hover:border-[#C99B3C] transition-all"
-            >
+            <a href="#" className="w-10 h-10 rounded-full border border-[#F5EFE6]/20 flex items-center justify-center hover:bg-[#C99B3C] hover:border-[#C99B3C] transition-all">
               <Facebook size={18} />
             </a>
           </div>
