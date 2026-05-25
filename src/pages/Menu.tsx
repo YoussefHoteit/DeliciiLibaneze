@@ -33,6 +33,42 @@ import imgMixedBerries from '@/assets/menu/mixed-berries.jpg';
 import imgChocolateAmarene from '@/assets/menu/chocolate-amarene.jpg';
 import imgRaspberry from '@/assets/menu/raspberry.jpg';
 import imgCashew from '@/assets/menu/cashew.jpg';
+import imgChestnuts from '@/assets/<dyad-write path="src/pages/Menu.tsx" description="Removing images from all food category items while maintaining layout space">
+"use client";
+
+import React, { useState, useMemo, useRef, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { useLanguage } from '@/context/LanguageContext';
+import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { Search, X, ZoomIn, UtensilsCrossed, Coffee, Sparkles, Utensils } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { useLocation } from 'react-router-dom';
+import menuHero from '@/assets/contact-hero.jpg';
+
+// Import Ice Cream Images
+import imgLemon from '@/assets/menu/lemon.jpg';
+import imgDarkChocolate from '@/assets/menu/dark-chocolate.jpg';
+import imgChocolateOrange from '@/assets/menu/chocolate-orange.jpg';
+import imgSaltedCaramel from '@/assets/menu/salted-caramel.jpg';
+import imgVanilla from '@/assets/menu/vanilla.jpg';
+import imgCherries from '@/assets/menu/cherries.jpg';
+import imgMelon from '@/assets/menu/melon.jpg';
+import imgCoconut from '@/assets/menu/coconut.jpg';
+import imgBlueberries from '@/assets/menu/blueberries.jpg';
+import imgBananas from '@/assets/menu/bananas.jpg';
+import imgBlackWalnut from '@/assets/menu/black-walnut.jpg';
+import imgGrapefruit from '@/assets/menu/grapefruit.jpg';
+import imgHamburgGrapes from '@/assets/menu/hamburg-grapes.jpg';
+import imgHazelnuts from '@/assets/menu/hazelnuts.jpg';
+import imgKiwi from '@/assets/menu/kiwi.jpg';
+import imgArabicCoffeeIce from '@/assets/menu/arabic-coffee-ice.jpg';
+import imgStrawberries from '@/assets/menu/strawberries.jpg';
+import imgMixedBerries from '@/assets/menu/mixed-berries.jpg';
+import imgChocolateAmarene from '@/assets/menu/chocolate-amarene.jpg';
+import imgRaspberry from '@/assets/menu/raspberry.jpg';
+import imgCashew from '@/assets/menu/cashew.jpg';
 import imgChestnuts from '@/assets/menu/chestnuts.jpg';
 import imgPassionFruit from '@/assets/menu/passion-fruit.jpg';
 import imgRoseBanana from '@/assets/menu/rose-banana.jpg';
@@ -328,25 +364,25 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Mic Dejun și Sărat' : 'Breakfast & Savory',
           items: [
-            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Labneh', desc: language === 'ro' ? 'Cremă de iaurt libanez' : 'Lebanese yogurt cream', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Kabis', desc: language === 'ro' ? 'Murături libaneze asortate' : 'Assorted Lebanese pickles', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Makdous', desc: language === 'ro' ? 'Vinete umplute cu nuci și ardei' : 'Eggplants stuffed with walnuts and peppers', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Halloumi Grill', desc: language === 'ro' ? 'Brânză halloumi la grătar' : 'Grilled halloumi cheese', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Falafel (5 pcs)', desc: language === 'ro' ? 'Chifteluțe de năut crocante' : 'Crispy chickpea patties', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Fattoush', desc: language === 'ro' ? 'Salată proaspătă cu lipie crocantă' : 'Fresh salad with crispy flatbread', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Lipie' : 'Flatbread', desc: language === 'ro' ? 'Lipie proaspătă' : 'Fresh flatbread', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Falafel Sandwich', desc: language === 'ro' ? 'Sandwich cu falafel și legume' : 'Sandwich with falafel and vegetables', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Halloumi Sandwich', desc: language === 'ro' ? 'Sandwich cu halloumi la grătar' : 'Sandwich with grilled halloumi', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast' },
+            { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini' },
+            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts' },
+            { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad' },
+            { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini' },
+            { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini' },
+            { name: 'Labneh', desc: language === 'ro' ? 'Cremă de iaurt libanez' : 'Lebanese yogurt cream' },
+            { name: 'Kabis', desc: language === 'ro' ? 'Murături libaneze asortate' : 'Assorted Lebanese pickles' },
+            { name: 'Makdous', desc: language === 'ro' ? 'Vinete umplute cu nuci și ardei' : 'Eggplants stuffed with walnuts and peppers' },
+            { name: 'Halloumi Grill', desc: language === 'ro' ? 'Brânză halloumi la grătar' : 'Grilled halloumi cheese' },
+            { name: 'Falafel (5 pcs)', desc: language === 'ro' ? 'Chifteluțe de năut crocante' : 'Crispy chickpea patties' },
+            { name: 'Fattoush', desc: language === 'ro' ? 'Salată proaspătă cu lipie crocantă' : 'Fresh salad with crispy flatbread' },
+            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur' },
+            { name: language === 'ro' ? 'Lipie' : 'Flatbread', desc: language === 'ro' ? 'Lipie proaspătă' : 'Fresh flatbread' },
+            { name: 'Falafel Sandwich', desc: language === 'ro' ? 'Sandwich cu falafel și legume' : 'Sandwich with falafel and vegetables' },
+            { name: 'Halloumi Sandwich', desc: language === 'ro' ? 'Sandwich cu halloumi la grătar' : 'Sandwich with grilled halloumi' },
+            { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages' },
             { name: language === 'ro' ? 'Pizza Libaneză' : 'Lebanese Pizza', desc: language === 'ro' ? 'Pizza cu specific oriental' : 'Oriental style pizza' },
-            { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix' },
             // Moved from Desserts
             { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza' },
             { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie' },
