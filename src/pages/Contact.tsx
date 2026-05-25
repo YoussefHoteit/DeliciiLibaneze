@@ -127,7 +127,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-serif font-bold text-[#0D6D7E] mb-1">{t('contact.info.email')}</h3>
-                    <p className="text-gray-500 font-light text-sm">hello@deliciilibaneze.ro</p>
+                    <p className="text-gray-500 font-light text-sm">deliciilibaneze@gmail.com</p>
                   </div>
                 </motion.div>
               </div>
