@@ -139,13 +139,11 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Deserturi Arabe Tradiționale' : 'Traditional Arabic Desserts',
           items: [
-            // Knafeh Items
             { name: language === 'ro' ? 'Knafeh cu Brânză' : 'Cheese Knafeh', desc: language === 'ro' ? 'Desert tradițional cald cu brânză topită și sirop' : 'Traditional warm dessert with melted cheese and syrup', image: imgCheeseKnafeh },
             { name: language === 'ro' ? 'Knafeh cu Brânză și Înghețată' : 'Cheese Knafeh with Ice Cream', desc: language === 'ro' ? 'Combinația perfectă de cald și rece' : 'The perfect combination of hot and cold', image: imgCheeseKnafehIceCream },
             { name: language === 'ro' ? 'Asmalieh cu Cremă de Lapte' : 'Asmalieh with Milk Cream', desc: language === 'ro' ? 'Fidea crocantă cu cremă fină' : 'Crispy vermicelli with fine cream', image: imgAsmaliehMilkCream },
             { name: language === 'ro' ? 'Asmalieh Pătrat' : 'Square Asmalieh', desc: language === 'ro' ? 'Formă tradițională pătrată' : 'Traditional square shape', image: imgSquareAsmalieh },
             { name: language === 'ro' ? 'Mamoul cu Cremă de Lapte' : 'Mamoul with Milk Cream', desc: language === 'ro' ? 'Prăjitură fină umplută cu cremă' : 'Fine pastry filled with cream', image: imgMaamoulMilkCream },
-            // Baklava Items
             { name: language === 'ro' ? 'Mix Baklava' : 'Mixed Baklava', desc: language === 'ro' ? 'Selecție variată de baklava artizanală' : 'Varied selection of artisanal baklava', image: imgMixedBaklava },
             { name: language === 'ro' ? 'Baklava Triunghi cu Fistic' : 'Pistachio Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu fistic premium' : 'Crispy triangle with premium pistachio', image: imgPistachioTriangleBaklava },
             { name: language === 'ro' ? 'Baklava Triunghi cu Nucă' : 'Walnut Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu nucă selecționată' : 'Crispy triangle with selected walnut', image: imgWalnutTriangleBaklava },
@@ -156,7 +154,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Baklava cu Ciocolată' : 'Chocolate Baklava', desc: language === 'ro' ? 'Combinație modernă cu ciocolată' : 'Modern combination with chocolate', image: imgChocolateBaklava },
             { name: language === 'ro' ? 'Baklava cu Înghețată' : 'Baklava with Ice Cream', desc: language === 'ro' ? 'Desertul suprem' : 'The ultimate dessert', image: imgBaklavaIceCream },
             { name: language === 'ro' ? 'Baklava Specială cu Fistic' : 'Special Pistachio Baklava', desc: language === 'ro' ? 'Rețetă specială cu extra fistic' : 'Special recipe with extra pistachio', image: imgSpecialPistachioBaklava },
-            // Traditional Items
             { name: 'Halawet El Jibn', desc: language === 'ro' ? 'Rulouri de brânză cu cremă și fistic' : 'Cheese rolls with cream and pistachio', image: imgHalawetElJibn },
             { name: 'Basima', desc: language === 'ro' ? 'Prăjitură densă cu cocos' : 'Dense coconut cake', image: imgBasima },
             { name: 'Belourieh', desc: language === 'ro' ? 'Fidea albă cu fistic' : 'White vermicelli with pistachio', image: imgBelourieh },
@@ -166,7 +163,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Rahat Turcesc' : 'Turkish Delight', desc: language === 'ro' ? 'Diverse arome tradiționale' : 'Various traditional flavors', image: imgTurkishDelight },
             { name: language === 'ro' ? 'Prăjitură Românească' : 'Romanian Cake', desc: language === 'ro' ? 'Desert local tradițional' : 'Traditional local dessert', image: imgRomanianCake },
             { name: 'Sfoof', desc: language === 'ro' ? 'Prăjitură libaneză cu turmeric' : 'Lebanese turmeric cake', image: imgSfoof },
-            // Merged from Savory Pastries
             { name: language === 'ro' ? 'Maamoul cu Curmale' : 'Maamoul with Dates', desc: language === 'ro' ? 'Biscuiți fragezi cu curmale' : 'Shortbread cookies with dates', image: imgMaamoulDates },
             { name: language === 'ro' ? 'Maamoul cu Nuci' : 'Maamoul with Walnuts', desc: language === 'ro' ? 'Biscuiți fragezi cu nuci' : 'Shortbread cookies with walnuts', image: imgMaamoulWalnuts },
             { name: language === 'ro' ? 'Profiterol Libanez' : 'Lebanese Profiterole', desc: language === 'ro' ? 'Profiterol cu specific libanez' : 'Lebanese style profiterole', image: imgLebaneseProfiterole },
@@ -175,14 +171,14 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Praline și Dulciuri Speciale' : 'Pralines & Specialty Sweets',
           items: [
-            { name: language === 'ro' ? 'Praline cu Curmale și Fistic' : 'Pralines with Dates & Pistachio', desc: language === 'ro' ? 'Combinație fină de curmale și fistic' : 'Fine combination of dates and pistachio', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Mix Praline' : 'Mixed Pralines', desc: language === 'ro' ? 'Selecție de praline artizanale' : 'Selection of artisanal pralines', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Tablete de Ciocolată' : 'Chocolate Tablets', desc: language === 'ro' ? 'Ciocolată artizanală premium' : 'Premium artisanal chocolate', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Praline cu Curmale și Fistic' : 'Pralines with Dates & Pistachio', desc: language === 'ro' ? 'Combinație fină de curmale și fistic' : 'Fine combination of dates and pistachio' },
+            { name: language === 'ro' ? 'Mix Praline' : 'Mixed Pralines', desc: language === 'ro' ? 'Selecție de praline artizanale' : 'Selection of artisanal pralines' },
+            { name: language === 'ro' ? 'Tablete de Ciocolată' : 'Chocolate Tablets', desc: language === 'ro' ? 'Ciocolată artizanală premium' : 'Premium artisanal chocolate' },
             { name: language === 'ro' ? 'Fructe în Ciocolată' : 'Fruit in Chocolate', desc: language === 'ro' ? 'Fructe confiate învelite în ciocolată' : 'Candied fruit dipped in chocolate', image: imgFruitChocolate },
             { name: language === 'ro' ? 'Orez cu Lapte' : 'Rice Pudding', desc: language === 'ro' ? 'Desert cremos tradițional' : 'Traditional creamy dessert', image: imgRicePudding },
             { name: language === 'ro' ? 'Mango Uscat' : 'Dried Mango', desc: language === 'ro' ? 'Fâșii de mango natural uscat' : 'Natural dried mango strips', image: imgDriedMango },
             { name: language === 'ro' ? 'Caise Uscate' : 'Dried Apricots', desc: language === 'ro' ? 'Caise naturale uscate' : 'Natural dried apricots', image: imgDriedApricots },
-            { name: language === 'ro' ? 'Năut Prăjit' : 'Roasted Chickpeas', desc: language === 'ro' ? 'Gustare crocantă tradițională' : 'Traditional crunchy snack', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: language === 'ro' ? 'Năut Prăjit' : 'Roasted Chickpeas', desc: language === 'ro' ? 'Gustare crocantă tradițională' : 'Traditional crunchy snack' },
             { name: language === 'ro' ? 'Biscuiți cu Susan' : 'Sesame Biscuits', desc: language === 'ro' ? 'Biscuiți crocanți cu susan' : 'Crunchy sesame biscuits', image: imgSesameBiscuits },
             { name: 'Graibe Biscuits', desc: language === 'ro' ? 'Biscuiți tradiționali fragezi' : 'Traditional shortbread biscuits', image: imgGraibeBiscuits },
           ]
@@ -304,19 +300,19 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Băuturi Răcoritoare' : 'Soft Drinks',
           items: [
-            { name: 'Pepsi / Zero / Twist', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: '7UP', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Mirinda', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Lipton Ice Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Prigat', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Coca-Cola / Zero', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Fanta', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Sprite', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Schweppes', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Fuze Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Apă' : 'Water', desc: '330ml / 750ml', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Rockstar', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Ursus Fără Alcool' : 'Ursus Non-Alcoholic Beer', desc: '330ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Pepsi / Zero / Twist', desc: '250ml' },
+            { name: '7UP', desc: '250ml' },
+            { name: 'Mirinda', desc: '250ml' },
+            { name: 'Lipton Ice Tea', desc: '250ml' },
+            { name: 'Prigat', desc: '250ml' },
+            { name: 'Coca-Cola / Zero', desc: '250ml' },
+            { name: 'Fanta', desc: '250ml' },
+            { name: 'Sprite', desc: '250ml' },
+            { name: 'Schweppes', desc: '250ml' },
+            { name: 'Fuze Tea', desc: '250ml' },
+            { name: language === 'ro' ? 'Apă' : 'Water', desc: '330ml / 750ml' },
+            { name: 'Rockstar', desc: '250ml' },
+            { name: language === 'ro' ? 'Ursus Fără Alcool' : 'Ursus Non-Alcoholic Beer', desc: '330ml' },
           ]
         }
       ]
@@ -328,32 +324,30 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Mic Dejun și Sărat' : 'Breakfast & Savory',
           items: [
-            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Labneh', desc: language === 'ro' ? 'Cremă de iaurt libanez' : 'Lebanese yogurt cream', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Kabis', desc: language === 'ro' ? 'Murături libaneze asortate' : 'Assorted Lebanese pickles', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Makdous', desc: language === 'ro' ? 'Vinete umplute cu nuci și ardei' : 'Eggplants stuffed with walnuts and peppers', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Halloumi Grill', desc: language === 'ro' ? 'Brânză halloumi la grătar' : 'Grilled halloumi cheese', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Falafel (5 pcs)', desc: language === 'ro' ? 'Chifteluțe de năut crocante' : 'Crispy chickpea patties', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Fattoush', desc: language === 'ro' ? 'Salată proaspătă cu lipie crocantă' : 'Fresh salad with crispy flatbread', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Lipie' : 'Flatbread', desc: language === 'ro' ? 'Lipie proaspătă' : 'Fresh flatbread', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Falafel Sandwich', desc: language === 'ro' ? 'Sandwich cu falafel și legume' : 'Sandwich with falafel and vegetables', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Halloumi Sandwich', desc: language === 'ro' ? 'Sandwich cu halloumi la grătar' : 'Sandwich with grilled halloumi', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Pizza Libaneză' : 'Lebanese Pizza', desc: language === 'ro' ? 'Pizza cu specific oriental' : 'Oriental style pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix', image: 'https://images.unsplash.com/photo-1593001874117-c99c4edb8186?auto=format&fit=crop&q=80&w=800' },
-            // Moved from Desserts
-            { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&q=80&w=800' },
-            // Moved from Desserts (Pralines & Specialty Sweets)
-            { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast' },
+            { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini' },
+            { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts' },
+            { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad' },
+            { name: 'Moutabbal', desc: language === 'ro' ? 'Vinete coapte cu tahini' : 'Roasted eggplant with tahini' },
+            { name: language === 'ro' ? 'Moutabbal de Dovlecei' : 'Zucchini Moutabbal', desc: language === 'ro' ? 'Dovlecei copți cu iaurt și tahini' : 'Roasted zucchini with yogurt and tahini' },
+            { name: 'Labneh', desc: language === 'ro' ? 'Cremă de iaurt libanez' : 'Lebanese yogurt cream' },
+            { name: 'Kabis', desc: language === 'ro' ? 'Murături libaneze asortate' : 'Assorted Lebanese pickles' },
+            { name: 'Makdous', desc: language === 'ro' ? 'Vinete umplute cu nuci și ardei' : 'Eggplants stuffed with walnuts and peppers' },
+            { name: 'Halloumi Grill', desc: language === 'ro' ? 'Brânză halloumi la grătar' : 'Grilled halloumi cheese' },
+            { name: 'Falafel (5 pcs)', desc: language === 'ro' ? 'Chifteluțe de năut crocante' : 'Crispy chickpea patties' },
+            { name: 'Fattoush', desc: language === 'ro' ? 'Salată proaspătă cu lipie crocantă' : 'Fresh salad with crispy flatbread' },
+            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur' },
+            { name: language === 'ro' ? 'Lipie' : 'Flatbread', desc: language === 'ro' ? 'Lipie proaspătă' : 'Fresh flatbread' },
+            { name: 'Falafel Sandwich', desc: language === 'ro' ? 'Sandwich cu falafel și legume' : 'Sandwich with falafel and vegetables' },
+            { name: 'Halloumi Sandwich', desc: language === 'ro' ? 'Sandwich cu halloumi la grătar' : 'Sandwich with grilled halloumi' },
+            { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages' },
+            { name: language === 'ro' ? 'Pizza Libaneză' : 'Lebanese Pizza', desc: language === 'ro' ? 'Pizza cu specific oriental' : 'Oriental style pizza' },
+            { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix' },
+            { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza' },
+            { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie' },
+            { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie' },
+            { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels' },
+            { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix' },
           ]
         }
       ]
@@ -370,7 +364,6 @@ const MenuPage = () => {
     })).filter(section => section.items.length > 0);
   }, [searchTerm, activeTab, menuData]);
 
-  // Handle automatic scroll when activeTab changes
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
@@ -378,7 +371,6 @@ const MenuPage = () => {
     }
 
     if (contentRef.current) {
-      // Responsive offset based on screen width
       const isMobile = window.innerWidth < 768;
       const yOffset = isMobile ? -280 : -220; 
       const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -451,7 +443,6 @@ const MenuPage = () => {
       </section>
 
       <div className="pb-24">
-        {/* Main Category Switcher - Fixed for Tablet/Desktop */}
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center py-6">
@@ -504,7 +495,6 @@ const MenuPage = () => {
                         </p>
                       )}
                       
-                      {/* Add-ons Section */}
                       {section.addons && (
                         <div className="bg-white/40 backdrop-blur-sm p-6 rounded-3xl border border-[#C99B3C]/10 mt-6">
                           <div className="flex items-center gap-2 mb-4 text-[#C99B3C]">
@@ -537,26 +527,30 @@ const MenuPage = () => {
                                 {item.name}
                               </h3>
                             </div>
-                            <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed max-w-md">
-                              {item.desc}
-                            </p>
+                            {item.desc && (
+                              <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed max-w-md">
+                                {item.desc}
+                              </p>
+                            )}
                           </div>
 
-                          <div className="shrink-0">
-                            <div 
-                              onClick={() => setSelectedImage(item.image)}
-                              className="w-24 h-24 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
-                            >
-                              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                                <ZoomIn className="text-white" size={28} />
+                          {item.image && (
+                            <div className="shrink-0">
+                              <div 
+                                onClick={() => setSelectedImage(item.image!)}
+                                className="w-24 h-24 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
+                              >
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                  <ZoomIn className="text-white" size={28} />
+                                </div>
+                                <img 
+                                  src={item.image} 
+                                  alt={item.name} 
+                                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                />
                               </div>
-                              <img 
-                                src={item.image} 
-                                alt={item.name} 
-                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                              />
                             </div>
-                          </div>
+                          )}
                         </motion.div>
                       ))}
                     </div>
@@ -574,7 +568,6 @@ const MenuPage = () => {
         </div>
       </div>
 
-      {/* Image Lightbox */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
