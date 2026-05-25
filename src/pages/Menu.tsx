@@ -304,19 +304,19 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Băuturi Răcoritoare' : 'Soft Drinks',
           items: [
-            { name: 'Pepsi / Zero / Twist', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: '7UP', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Mirinda', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Lipton Ice Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Prigat', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Coca-Cola / Zero', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Fanta', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Sprite', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Schweppes', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Fuze Tea', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Apă' : 'Water', desc: '330ml / 750ml', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=800' },
-            { name: 'Rockstar', desc: '250ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
-            { name: language === 'ro' ? 'Ursus Fără Alcool' : 'Ursus Non-Alcoholic Beer', desc: '330ml', image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&q=80&w=800' },
+            { name: 'Pepsi / Zero / Twist', desc: '' },
+            { name: '7UP', desc: '' },
+            { name: 'Mirinda', desc: '' },
+            { name: 'Lipton Ice Tea', desc: '' },
+            { name: 'Prigat', desc: '' },
+            { name: 'Coca-Cola / Zero', desc: '' },
+            { name: 'Fanta', desc: '' },
+            { name: 'Sprite', desc: '' },
+            { name: 'Schweppes', desc: '' },
+            { name: 'Fuze Tea', desc: '' },
+            { name: language === 'ro' ? 'Apă' : 'Water', desc: '' },
+            { name: 'Rockstar', desc: '' },
+            { name: language === 'ro' ? 'Ursus Fără Alcool' : 'Ursus Non-Alcoholic Beer', desc: '' },
           ]
         }
       ]
@@ -365,7 +365,7 @@ const MenuPage = () => {
       ...section,
       items: section.items.filter(item => 
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        item.desc.toLowerCase().includes(searchTerm.toLowerCase())
+        (item.desc && item.desc.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     })).filter(section => section.items.length > 0);
   }, [searchTerm, activeTab, menuData]);
@@ -537,26 +537,30 @@ const MenuPage = () => {
                                 {item.name}
                               </h3>
                             </div>
-                            <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed max-w-md">
-                              {item.desc}
-                            </p>
+                            {item.desc && (
+                              <p className="text-gray-500 text-sm md:text-base font-light italic leading-relaxed max-w-md">
+                                {item.desc}
+                              </p>
+                            )}
                           </div>
 
-                          <div className="shrink-0">
-                            <div 
-                              onClick={() => setSelectedImage(item.image)}
-                              className="w-24 h-24 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
-                            >
-                              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                                <ZoomIn className="text-white" size={28} />
+                          {item.image && (
+                            <div className="shrink-0">
+                              <div 
+                                onClick={() => setSelectedImage(item.image!)}
+                                className="w-24 h-24 md:w-40 md:h-40 rounded-3xl overflow-hidden shadow-md group-hover:shadow-2xl transition-all duration-700 relative cursor-zoom-in"
+                              >
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                  <ZoomIn className="text-white" size={28} />
+                                </div>
+                                <img 
+                                  src={item.image} 
+                                  alt={item.name} 
+                                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                />
                               </div>
-                              <img 
-                                src={item.image} 
-                                alt={item.name} 
-                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                              />
                             </div>
-                          </div>
+                          )}
                         </motion.div>
                       ))}
                     </div>
