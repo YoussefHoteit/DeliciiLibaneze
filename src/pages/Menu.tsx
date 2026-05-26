@@ -31,6 +31,7 @@ import imgArabicCoffeeIce from '@/assets/menu/arabic-coffee-ice.jpg';
 import imgStrawberries from '@/assets/menu/strawberries.jpg';
 import imgMixedBerries from '@/assets/menu/mixed-berries.jpg';
 import imgChocolateAmarene from '@/assets/menu/chocolate-amarene.jpg';
+import imgChocolateOrangeIce from '@/assets/menu/chocolate-orange.jpg';
 import imgRaspberry from '@/assets/menu/raspberry.jpg';
 import imgCashew from '@/assets/menu/cashew.jpg';
 import imgChestnuts from '@/assets/menu/chestnuts.jpg';
@@ -145,6 +146,8 @@ import imgSfiha from '@/assets/menu/sfiha.jpg';
 import imgSpinachPastry from '@/assets/menu/spinach-pastry.jpg';
 import imgWalnutKernels from '@/assets/menu/walnut-kernels.jpg';
 import imgMixedNuts from '@/assets/menu/mixed-nuts.jpg';
+import imgFulMedames from '@/assets/menu/ful-medames.jpg';
+import imgTabbouleh from '@/assets/menu/tabbouleh.jpg';
 
 const MenuPage = () => {
   const { t, language } = useLanguage();
@@ -221,7 +224,7 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Ciocolată Albă' : 'White Chocolate' },
           ],
           items: [
-            { name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', desc: language === 'ro' ? 'O combinație îndrazdneață de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', image: imgAlmondsPinkPepper },
+            { name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', desc: language === 'ro' ? 'O combinație îndrăzneață de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', image: imgAlmondsPinkPepper },
             { name: language === 'ro' ? 'Fistic Iran' : 'Iranian Pistachio', desc: language === 'ro' ? 'Înghețată premium cu cel mai fin fistic iranian' : 'Premium ice cream with the finest Iranian pistachio', image: imgIranianPistachio },
             { name: language === 'ro' ? 'Trandafir Picant' : 'Spicy Rose', desc: language === 'ro' ? 'Aromă florală de trandafir cu un postgust surprinzător' : 'Floral rose flavor with a surprising aftertaste', image: imgSpicyRose },
             { name: language === 'ro' ? 'Ciocolată Picantă' : 'Spicy Chocolate', desc: language === 'ro' ? 'Ciocolată neagră intensă cu note de chili' : 'Intense dark chocolate with chili notes', image: imgSpicyChocolate },
@@ -352,7 +355,7 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Mic Dejun și Sărat' : 'Breakfast & Savory',
           items: [
-            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast' },
+            { name: 'Full', desc: language === 'ro' ? 'Mic dejun tradițional' : 'Traditional breakfast', image: imgFulMedames },
             { name: 'Hummus', desc: language === 'ro' ? 'Pastă de năut cu tahini' : 'Chickpea puree with tahini', image: imgHummus },
             { name: language === 'ro' ? 'Hummus cu Muguri de Pin' : 'Hummus with Pine Nuts', desc: language === 'ro' ? 'Hummus cremos cu muguri de pin prăjiți' : 'Creamy hummus with roasted pine nuts', image: imgHummusPineNuts },
             { name: 'Baba Ghanoush', desc: language === 'ro' ? 'Salată de vinete coapte' : 'Roasted eggplant salad', image: imgBabaGhanoush },
@@ -364,7 +367,7 @@ const MenuPage = () => {
             { name: 'Halloumi Grill', desc: language === 'ro' ? 'Brânză halloumi la grătar' : 'Grilled halloumi cheese', image: imgHalloumiGrill },
             { name: 'Falafel (5 pcs)', desc: language === 'ro' ? 'Chifteluțe de năut crocante' : 'Crispy chickpea patties', image: imgFalafelPatties },
             { name: 'Fattoush', desc: language === 'ro' ? 'Salată proaspătă cu lipie crocantă' : 'Fresh salad with crispy flatbread', image: imgFattoush },
-            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur' },
+            { name: 'Tabbouleh', desc: language === 'ro' ? 'Salată de pătrunjel cu bulgur' : 'Parsley salad with bulgur', image: imgTabbouleh },
             { name: language === 'ro' ? 'Lipie' : 'Flatbread', desc: language === 'ro' ? 'Lipie proaspătă' : 'Fresh flatbread', image: imgFlatbread },
             { name: 'Falafel Sandwich', desc: language === 'ro' ? 'Sandwich cu falafel și legume' : 'Sandwich with falafel and vegetables', image: imgFalafelSandwich },
             { name: 'Halloumi Sandwich', desc: language === 'ro' ? 'Sandwich cu halloumi la grătar' : 'Sandwich with grilled halloumi', image: imgHalloumiSandwich },
