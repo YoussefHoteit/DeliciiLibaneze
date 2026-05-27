@@ -31,7 +31,6 @@ import imgArabicCoffeeIce from '@/assets/menu/arabic-coffee-ice.jpg';
 import imgStrawberries from '@/assets/menu/strawberries.jpg';
 import imgMixedBerries from '@/assets/menu/mixed-berries.jpg';
 import imgChocolateAmarene from '@/assets/menu/chocolate-amarene.jpg';
-import imgChocolateOrangeIce from '@/assets/menu/chocolate-orange.jpg';
 import imgRaspberry from '@/assets/menu/raspberry.jpg';
 import imgCashew from '@/assets/menu/cashew.jpg';
 import imgChestnuts from '@/assets/menu/chestnuts.jpg';
@@ -166,13 +165,11 @@ const MenuPage = () => {
         {
           title: language === 'ro' ? 'Deserturi Arabe Tradiționale' : 'Traditional Arabic Desserts',
           items: [
-            // Knafeh Items
             { name: language === 'ro' ? 'Knafeh cu Brânză' : 'Cheese Knafeh', desc: language === 'ro' ? 'Desert tradițional cald cu brânză topită și sirop' : 'Traditional warm dessert with melted cheese and syrup', image: imgCheeseKnafeh },
             { name: language === 'ro' ? 'Knafeh cu Brânză și Înghețată' : 'Cheese Knafeh with Ice Cream', desc: language === 'ro' ? 'Combinația perfectă de cald și rece' : 'The perfect combination of hot and cold', image: imgCheeseKnafehIceCream },
             { name: language === 'ro' ? 'Asmalieh cu Cremă de Lapte' : 'Asmalieh with Milk Cream', desc: language === 'ro' ? 'Fidea crocantă cu cremă fină' : 'Crispy vermicelli with fine cream', image: imgAsmaliehMilkCream },
             { name: language === 'ro' ? 'Asmalieh Pătrat' : 'Square Asmalieh', desc: language === 'ro' ? 'Formă tradițională pătrată' : 'Traditional square shape', image: imgSquareAsmalieh },
             { name: language === 'ro' ? 'Mamoul cu Cremă de Lapte' : 'Mamoul with Milk Cream', desc: language === 'ro' ? 'Prăjitură fină umplută cu cremă' : 'Fine pastry filled with cream', image: imgMaamoulMilkCream },
-            // Baklava Items
             { name: language === 'ro' ? 'Mix Baklava' : 'Mixed Baklava', desc: language === 'ro' ? 'Selecție variată de baklava artizanală' : 'Varied selection of artisanal baklava', image: imgMixedBaklava },
             { name: language === 'ro' ? 'Baklava Triunghi cu Fistic' : 'Pistachio Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu fistic premium' : 'Crispy triangle with premium pistachio', image: imgPistachioTriangleBaklava },
             { name: language === 'ro' ? 'Baklava Triunghi cu Nucă' : 'Walnut Triangle Baklava', desc: language === 'ro' ? 'Triunghi crocant cu nucă selecționată' : 'Crispy triangle with selected walnut', image: imgWalnutTriangleBaklava },
@@ -183,7 +180,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Baklava cu Ciocolată' : 'Chocolate Baklava', desc: language === 'ro' ? 'Combinație modernă cu ciocolată' : 'Modern combination with chocolate', image: imgChocolateBaklava },
             { name: language === 'ro' ? 'Baklava cu Înghețată' : 'Baklava with Ice Cream', desc: language === 'ro' ? 'Desertul suprem' : 'The ultimate dessert', image: imgBaklavaIceCream },
             { name: language === 'ro' ? 'Baklava Specială cu Fistic' : 'Special Pistachio Baklava', desc: language === 'ro' ? 'Rețetă specială cu extra fistic' : 'Special recipe with extra pistachio', image: imgSpecialPistachioBaklava },
-            // Traditional Items
             { name: 'Halawet El Jibn', desc: language === 'ro' ? 'Rulouri de brânză cu cremă și fistic' : 'Cheese rolls with cream and pistachio', image: imgHalawetElJibn },
             { name: 'Basima', desc: language === 'ro' ? 'Prăjitură densă cu cocos' : 'Dense coconut cake', image: imgBasima },
             { name: 'Belourieh', desc: language === 'ro' ? 'Fidea albă cu fistic' : 'White vermicelli with pistachio', image: imgBelourieh },
@@ -193,7 +189,6 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Rahat Turcesc' : 'Turkish Delight', desc: language === 'ro' ? 'Diverse arome tradiționale' : 'Various traditional flavors', image: imgTurkishDelight },
             { name: language === 'ro' ? 'Prăjitură Românească' : 'Romanian Cake', desc: language === 'ro' ? 'Desert local tradițional' : 'Traditional local dessert', image: imgRomanianCake },
             { name: 'Sfoof', desc: language === 'ro' ? 'Prăjitură libaneză cu turmeric' : 'Lebanese turmeric cake', image: imgSfoof },
-            // Merged from Savory Pastries
             { name: language === 'ro' ? 'Maamoul cu Curmale' : 'Maamoul with Dates', desc: language === 'ro' ? 'Biscuiți fragezi cu curmale' : 'Shortbread cookies with dates', image: imgMaamoulDates },
             { name: language === 'ro' ? 'Maamoul cu Nuci' : 'Maamoul with Walnuts', desc: language === 'ro' ? 'Biscuiți fragezi cu nuci' : 'Shortbread cookies with walnuts', image: imgMaamoulWalnuts },
             { name: language === 'ro' ? 'Profiterol Libanez' : 'Lebanese Profiterole', desc: language === 'ro' ? 'Profiterol cu specific libanez' : 'Lebanese style profiterole', image: imgLebaneseProfiterole },
@@ -224,7 +219,7 @@ const MenuPage = () => {
             { name: language === 'ro' ? 'Ciocolată Albă' : 'White Chocolate' },
           ],
           items: [
-            { name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', desc: language === 'ro' ? 'O combinație îndrăzneață de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', image: imgAlmondsPinkPepper },
+            { name: language === 'ro' ? 'Migdale cu Piper Roz' : 'Almonds with Pink Pepper', desc: language === 'ro' ? 'O combinație îndrăzneală de migdale crocante și note picante' : 'A bold combination of crunchy almonds and spicy notes', image: imgAlmondsPinkPepper },
             { name: language === 'ro' ? 'Fistic Iran' : 'Iranian Pistachio', desc: language === 'ro' ? 'Înghețată premium cu cel mai fin fistic iranian' : 'Premium ice cream with the finest Iranian pistachio', image: imgIranianPistachio },
             { name: language === 'ro' ? 'Trandafir Picant' : 'Spicy Rose', desc: language === 'ro' ? 'Aromă florală de trandafir cu un postgust surprinzător' : 'Floral rose flavor with a surprising aftertaste', image: imgSpicyRose },
             { name: language === 'ro' ? 'Ciocolată Picantă' : 'Spicy Chocolate', desc: language === 'ro' ? 'Ciocolată neagră intensă cu note de chili' : 'Intense dark chocolate with chili notes', image: imgSpicyChocolate },
@@ -374,11 +369,9 @@ const MenuPage = () => {
             { name: 'Makanek Sandwich', desc: language === 'ro' ? 'Sandwich cu cârnați libanezi' : 'Sandwich with Lebanese sausages', image: imgMakanekSandwich },
             { name: language === 'ro' ? 'Pizza Libaneză' : 'Lebanese Pizza', desc: language === 'ro' ? 'Pizza cu specific oriental' : 'Oriental style pizza', image: imgLebanesePizza },
             { name: language === 'ro' ? 'Platou Salată' : 'Salad Platter', desc: language === 'ro' ? 'Mix de salate proaspete' : 'Fresh salad mix', image: imgSaladPlatter },
-            // Moved from Desserts
             { name: 'Mini Pizza', desc: language === 'ro' ? 'Mini pizza tradițională' : 'Traditional mini pizza', image: imgMiniPizza },
             { name: 'Sfiha', desc: language === 'ro' ? 'Plăcintă cu carne tocată' : 'Minced meat pie', image: imgSfiha },
             { name: language === 'ro' ? 'Patiserie cu Spanac' : 'Spinach Pastry', desc: language === 'ro' ? 'Plăcintă tradițională cu spanac' : 'Traditional spinach pie', image: imgSpinachPastry },
-            // Moved from Desserts (Pralines & Specialty Sweets)
             { name: language === 'ro' ? 'Miez de Nucă' : 'Walnut Kernels', desc: language === 'ro' ? 'Miez de nucă selecționat' : 'Selected walnut kernels', image: imgWalnutKernels },
             { name: language === 'ro' ? 'Mix Nuci' : 'Mixed Nuts', desc: language === 'ro' ? 'Amestec de nuci premium' : 'Premium nut mix', image: imgMixedNuts },
           ]
@@ -397,7 +390,6 @@ const MenuPage = () => {
     })).filter(section => section.items.length > 0);
   }, [searchTerm, activeTab, menuData]);
 
-  // Handle automatic scroll when activeTab changes
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
@@ -405,7 +397,6 @@ const MenuPage = () => {
     }
 
     if (contentRef.current) {
-      // Responsive offset based on screen width
       const isMobile = window.innerWidth < 768;
       const yOffset = isMobile ? -280 : -220; 
       const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -478,7 +469,6 @@ const MenuPage = () => {
       </section>
 
       <div className="pb-24">
-        {/* Main Category Switcher - Fixed for Tablet/Desktop */}
         <div className="sticky top-[72px] z-40 bg-[#F5EFE6]/95 backdrop-blur-md border-b border-[#0D6D7E]/10 mb-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center py-6">
@@ -531,7 +521,6 @@ const MenuPage = () => {
                         </p>
                       )}
                       
-                      {/* Add-ons Section */}
                       {section.addons && (
                         <div className="bg-white/40 backdrop-blur-sm p-6 rounded-3xl border border-[#C99B3C]/10 mt-6">
                           <div className="flex items-center gap-2 mb-4 text-[#C99B3C]">
@@ -571,7 +560,6 @@ const MenuPage = () => {
                             )}
                           </div>
 
-                          {/* Always show space unless it's a soft drink */}
                           {(item.image || section.title !== (language === 'ro' ? 'Băuturi Răcoritoare' : 'Soft Drinks')) && (
                             <div className="shrink-0">
                               <div 
@@ -617,7 +605,6 @@ const MenuPage = () => {
         </div>
       </div>
 
-      {/* Image Lightbox */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
