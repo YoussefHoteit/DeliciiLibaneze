@@ -11,7 +11,6 @@ const Hero = () => {
   const { t } = useLanguage();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
