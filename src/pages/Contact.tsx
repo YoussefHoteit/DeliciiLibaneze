@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
@@ -14,6 +14,10 @@ import contactHero from '@/assets/contact-hero-new.jpg';
 const ContactPage = () => {
   const { t } = useLanguage();
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    document.title = `${t('nav.contact')} | Delicii Libaneze by jaber`;
+  }, [t]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +36,7 @@ const ContactPage = () => {
             <img 
               src={contactHero} 
               className="w-full h-full object-cover"
-              alt="Contact Hero"
+              alt="Contact Us"
             />
             <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#F5EFE6] to-transparent z-20" />
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import CategorySection from '@/components/CategorySection';
@@ -13,13 +13,16 @@ import { useLanguage } from '@/context/LanguageContext';
 const Index = () => {
   const { t } = useLanguage();
 
+  useEffect(() => {
+    document.title = `Delicii Libaneze by jaber | Authentic Lebanese Sweets in Bucharest`;
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#F5EFE6] selection:bg-[#0D6D7E] selection:text-[#F5EFE6]">
       <Navbar />
       <main>
         <Hero />
         
-        {/* Intro Section */}
         <section className="pt-24 pb-4 px-6 text-center max-w-3xl mx-auto overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -60,7 +63,6 @@ const Index = () => {
         <CategorySection />
         <AtmosphereSection />
         
-        {/* Featured Section */}
         <section className="py-32 bg-white px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             {[

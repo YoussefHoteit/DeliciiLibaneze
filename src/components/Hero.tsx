@@ -6,24 +6,24 @@ import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import aboutHero from '@/assets/about-hero-new.jpg';
 
 const Hero = () => {
   const { t } = useLanguage();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Background Image with Parallax */}
+      {/* Background Image with Parallax - Using existing asset as fallback */}
       <motion.div 
         style={{ y: y1 }}
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-black/50 z-10" />
         <img 
-          src="/assets/hero-bg.jpg" 
-          alt="Lebanese Desserts" 
+          src={aboutHero} 
+          alt="Authentic Lebanese Desserts and Atmosphere" 
           className="w-full h-full object-cover"
         />
       </motion.div>
@@ -77,7 +77,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative Arch Overlay */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#F5EFE6] to-transparent z-20" />
     </section>
   );
