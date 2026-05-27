@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
@@ -8,29 +8,26 @@ import { motion } from 'framer-motion';
 import aboutHero from '@/assets/about-hero-new.jpg';
 import storyImage from '@/assets/story-image.jpg';
 import craftPastries from '@/assets/craft-pastries.jpg';
-import craftIceCream from '@/assets/category-icecream.jpg';
-import craftBaklava from '@/assets/category-desserts.jpg';
-import craftLemonade from '@/assets/category-juices.jpg';
-import atmosphereImg from '@/assets/atmosphere-new.jpg';
+import craftIceCream from '@/assets/craft-icecream.jpg';
+import craftBaklava from '@/assets/craft-baklava.jpg';
+import craftLemonade from '@/assets/craft-lemonade.jpg';
+import hospitalityHero from '@/assets/hospitality-hero.jpg';
 
 const AboutPage = () => {
   const { t } = useLanguage();
-
-  useEffect(() => {
-    document.title = `${t('nav.about')} | Delicii Libaneze by jaber`;
-  }, [t]);
 
   return (
     <div className="min-h-screen bg-[#F5EFE6]">
       <Navbar />
       <main>
+        {/* Hero Section */}
         <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-black/40 z-10" />
             <img 
               src={aboutHero} 
               className="w-full h-full object-cover"
-              alt="About Delicii Libaneze"
+              alt="About Hero"
             />
             <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#F5EFE6] to-transparent z-20" />
           </div>
@@ -52,6 +49,7 @@ const AboutPage = () => {
           </motion.div>
         </section>
 
+        {/* Story Section */}
         <section className="py-24 px-6 relative z-30">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -87,7 +85,7 @@ const AboutPage = () => {
                 <img 
                   src={storyImage} 
                   className="w-full h-full object-cover"
-                  alt="Our Story and Heritage"
+                  alt="Story Image"
                 />
               </div>
               <motion.div 
@@ -103,6 +101,7 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Craftsmanship Section */}
         <section className="py-24 bg-[#0D6D7E] text-[#F5EFE6] px-6 overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -181,6 +180,7 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Hospitality Section */}
         <section className="pt-32 pb-0 bg-[#F5EFE6] relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center px-6 mb-20">
             <motion.div
@@ -206,6 +206,7 @@ const AboutPage = () => {
             </motion.div>
           </div>
 
+          {/* Full Width Image - Adjusted for no cropping on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -214,13 +215,14 @@ const AboutPage = () => {
             className="w-full h-[60vh] md:h-auto relative"
           >
             <img 
-              src={atmosphereImg} 
-              className="w-full h-full object-cover md:h-[600px] md:object-cover"
+              src={hospitalityHero} 
+              className="w-full h-full object-cover md:h-auto md:object-contain"
               alt="The Heart of Hospitality"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#F5EFE6]/20 to-transparent pointer-events-none" />
           </motion.div>
           
+          {/* Decorative Elements */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-[#0D6D7E]/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#C99B3C]/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl" />
         </section>

@@ -1,16 +1,17 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 // Import hero image
 import galleryHero from '@/assets/gallery-hero.jpg';
 
-// Import existing gallery photos (removed missing ones: 17, 22, 42, 50)
+// Import all gallery photos
 import photo1 from '@/assets/gallery/photo-1.jpg';
 import photo2 from '@/assets/gallery/photo-2.jpg';
 import photo3 from '@/assets/gallery/photo-3.jpg';
@@ -27,10 +28,12 @@ import photo13 from '@/assets/gallery/photo-13.jpg';
 import photo14 from '@/assets/gallery/photo-14.jpg';
 import photo15 from '@/assets/gallery/photo-15.jpg';
 import photo16 from '@/assets/gallery/photo-16.jpg';
+import photo17 from '@/assets/gallery/photo-17.jpg';
 import photo18 from '@/assets/gallery/photo-18.jpg';
 import photo19 from '@/assets/gallery/photo-19.jpg';
 import photo20 from '@/assets/gallery/photo-20.jpg';
 import photo21 from '@/assets/gallery/photo-21.jpg';
+import photo22 from '@/assets/gallery/photo-22.jpg';
 import photo23 from '@/assets/gallery/photo-23.jpg';
 import photo24 from '@/assets/gallery/photo-24.jpg';
 import photo25 from '@/assets/gallery/photo-25.jpg';
@@ -50,6 +53,7 @@ import photo38 from '@/assets/gallery/photo-38.jpg';
 import photo39 from '@/assets/gallery/photo-39.jpg';
 import photo40 from '@/assets/gallery/photo-40.jpg';
 import photo41 from '@/assets/gallery/photo-41.jpg';
+import photo42 from '@/assets/gallery/photo-42.jpg';
 import photo43 from '@/assets/gallery/photo-43.jpg';
 import photo44 from '@/assets/gallery/photo-44.jpg';
 import photo45 from '@/assets/gallery/photo-45.jpg';
@@ -57,23 +61,21 @@ import photo46 from '@/assets/gallery/photo-46.jpg';
 import photo47 from '@/assets/gallery/photo-47.jpg';
 import photo48 from '@/assets/gallery/photo-48.jpg';
 import photo49 from '@/assets/gallery/photo-49.jpg';
+import photo50 from '@/assets/gallery/photo-50.jpg';
 
 const rawPhotos = [
   photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10,
-  photo11, photo12, photo13, photo14, photo15, photo16, photo18, photo19, photo20,
-  photo21, photo23, photo24, photo25, photo26, photo27, photo28, photo29, photo30,
+  photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20,
+  photo21, photo22, photo23, photo24, photo25, photo26, photo27, photo28, photo29, photo30,
   photo31, photo32, photo33, photo34, photo35, photo36, photo37, photo38, photo39, photo40,
-  photo41, photo43, photo44, photo45, photo46, photo47, photo48, photo49
+  photo41, photo42, photo43, photo44, photo45, photo46, photo47, photo48, photo49, photo50
 ];
 
 const GalleryPage = () => {
   const { t } = useLanguage();
   const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = `${t('nav.gallery')} | Delicii Libaneze by jaber`;
-  }, [t]);
-
+  // Shuffle photos once on component mount to create a "random" distribution
   const shuffledPhotos = useMemo(() => {
     return [...rawPhotos].sort(() => Math.random() - 0.5);
   }, []);
@@ -83,6 +85,7 @@ const GalleryPage = () => {
       <Navbar />
       
       <main>
+        {/* Hero Section */}
         <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-black/40 z-10" />
@@ -138,7 +141,6 @@ const GalleryPage = () => {
                   src={photo} 
                   alt={`Gallery ${index + 1}`} 
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <div className="w-8 h-8 md:w-12 md:h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white">
@@ -152,6 +154,7 @@ const GalleryPage = () => {
         </div>
       </main>
 
+      {/* Lightbox */}
       <AnimatePresence>
         {selectedMedia && (
           <motion.div
